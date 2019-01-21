@@ -6,6 +6,7 @@ using SteffenTools.FloatObject;
 public class UsingFloatObjects : MonoBehaviour
 {
     public FloatObject printDelay;
+    public FloatObject printDelay2;
 
     private void Update()
     {

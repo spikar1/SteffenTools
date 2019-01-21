@@ -33,12 +33,24 @@ namespace SteffenTools.FloatObject
                     EditorGUI.BeginChangeCheck();
                     EditorGUI.PropertyField(valueRect, floatSO.FindProperty("myFloat"), GUIContent.none);
                     floatSO.ApplyModifiedProperties();
+                    EditorGUI.PropertyField(objectRect, property, GUIContent.none);
                 }
                 else //If there is no FloatObject, display "Not A Number"
                 {
+                    objectRect = new Rect(objectRect.x, objectRect.y, objectRect.width / 2, objectRect.height);
+                    EditorGUI.PropertyField(objectRect, property, GUIContent.none);
+                    Rect buttonRect = new Rect(objectRect.x + objectRect.width, objectRect.y, objectRect.width / 2, objectRect.height);
+                    if(GUI.Button(buttonRect, "Hello"))
+                    {
+                        //var floatSO = new SerializedObject(property.objectReferenceValue);
+                        object obj = property.serializedObject;
+                        var fo = ScriptableObjectUtility.CreateAsset<FloatObject>();
+                        obj = fo;
+                        
+                        
+                    }
                     EditorGUI.LabelField(valueRect, "nan");
                 }
-                EditorGUI.PropertyField(objectRect, property, GUIContent.none);
 
                 EditorGUI.indentLevel = indent;
             }
