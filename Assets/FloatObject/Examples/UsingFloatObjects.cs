@@ -5,12 +5,14 @@ using SteffenTools.FloatObject;
 
 public class UsingFloatObjects : MonoBehaviour
 {
-    public FloatObject printDelay;
-    public FloatObject printDelay2;
+    public float myFloat;
+    public FloatObject myFloatObject;
+    public FloatObject myFloatObject1;
+    public FloatObject myFloatObject2;
 
     private void Update()
     {
-        if(Time.time > printDelay)
-        Debug.Log("hello");
+        if(Time.time > myFloatObject)
+        Debug.Log(myFloatObject + myFloatObject1);
     }
 }

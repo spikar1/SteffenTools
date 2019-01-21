@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 342844062}
   - component: {fileID: 342844061}
+  - component: {fileID: 342844063}
   m_Layer: 0
   m_Name: Delays
   m_TagString: Untagged
@@ -141,8 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13e63e9abed697e47a5242102bbd686c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  printDelay: {fileID: 11400000, guid: cba4d797d498c4b4993ef8cdc100d672, type: 2}
-  printDelay2: {fileID: 0}
+  myFloat: 0
+  myFloatObject: {fileID: 11400000, guid: cba4d797d498c4b4993ef8cdc100d672, type: 2}
+  myFloatObject1: {fileID: 11400000, guid: d91aad71f7b3eef4bb0f195df1af3aab, type: 2}
+  myFloatObject2: {fileID: 11400000, guid: c2a75356fb07cb74783ef76254a8493c, type: 2}
 --- !u!4 &342844062
 Transform:
   m_ObjectHideFlags: 0
@@ -157,6 +160,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342844063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342844060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a977993f57ed7241bd8738358f3699d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: {fileID: 11400000, guid: c2a75356fb07cb74783ef76254a8493c, type: 2}
 --- !u!1 &935529708
 GameObject:
   m_ObjectHideFlags: 0

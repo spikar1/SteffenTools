@@ -77,7 +77,7 @@ namespace TriggerSystem {
                     continue;
                 if (col.GetType() == typeof(BoxCollider)) {
                     BoxCollider bc = col as BoxCollider;
-                    Gizmos.DrawCube(transform.position + bc.center, Vector3.Scale(transform.localScale, bc.size));
+                    Gizmos.DrawCube(transform.position + bc.center.Multiply(transform.localScale), Vector3.Scale(transform.localScale, bc.size));
                 }
                 else if (col.GetType() == typeof(SphereCollider)) {
                     SphereCollider sc = col as SphereCollider;

@@ -41,6 +41,7 @@ namespace TriggerSystem {
             SO.ApplyModifiedProperties();
 
             trigger.gizmosColor = EditorGUILayout.ColorField("Gizmos Color", trigger.gizmosColor);
+            SceneView.RepaintAll();
 
         }
     } 
