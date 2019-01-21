@@ -138,8 +138,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26899270}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.22, z: 1.73}
-  m_LocalScale: {x: 2.1903, y: 0.38131, z: 3.3386312}
+  m_LocalPosition: {x: 0, y: 0.22, z: 1.64}
+  m_LocalScale: {x: 2.0271444, y: 0.38131, z: 3.3386312}
   m_Children: []
   m_Father: {fileID: 613570927}
   m_RootOrder: 0
@@ -215,7 +215,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  gizmosColor: {r: 0, g: 1, b: 0, a: 0.3}
+  gizmosColor: {r: 0, g: 1, b: 0, a: 0.7411765}
   onTriggerEnter: 0
   onTriggerExit: 0
   onTriggerStay: 0
@@ -720,7 +720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 699768075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.86, z: -2}
+  m_LocalPosition: {x: 0, y: 0.86, z: -2.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -805,7 +805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980772591}
   m_LocalRotation: {x: 0.8282508, y: 0.371729, z: 0.090596035, w: 0.40940267}
-  m_LocalPosition: {x: -2.012577, y: 2.4844275, z: 0.43536997}
+  m_LocalPosition: {x: -6.13, y: 2.4844275, z: 0.43536997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
