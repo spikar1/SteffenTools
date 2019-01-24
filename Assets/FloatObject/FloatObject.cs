@@ -10,6 +10,8 @@ namespace SteffenTools.FloatObject
         [SerializeField]
         private float myFloat = 2;
 
+        public float GetVal => myFloat;
+
         public static implicit operator float(FloatObject FO)
         {
             if (FO == null)

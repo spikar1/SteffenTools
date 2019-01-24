@@ -9,10 +9,11 @@ public class UsingFloatObjects : MonoBehaviour
     public FloatObject myFloatObject;
     public FloatObject myFloatObject1;
     public FloatObject myFloatObject2;
+    public float myNormieFloat = 2;
 
     private void Update()
     {
         if(Time.time > myFloatObject)
-        Debug.Log(myFloatObject + myFloatObject1);
+        Debug.Log(myFloatObject + 1);
     }
 }
