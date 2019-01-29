@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SteffenTools.Extensions;
@@ -25,9 +25,9 @@ public class SteffensTestScript : MonoBehaviour
             }
         }
 
-        DebugDrawers.DrawCircle(Vector3.up, 2, tDir, Color.red, 0, 20);
+        DebugDrawers.DrawCircle(transform.position, 2, transform.forward, Color.red, 0, 20);
 
-        DebugDrawers.DrawCircle(transform.position, 4, AxisPlane.Y);
+        DebugDrawers.DrawCircle(transform.position, 4, axisPlane);
 
         Debug.DrawRay(Vector3.zero, dir);
 

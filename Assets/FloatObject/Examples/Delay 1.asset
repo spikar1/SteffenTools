@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d809b820932e1074ea7802bdace92005, type: 3}
   m_Name: Delay 1
   m_EditorClassIdentifier: 
-  myFloat: 14.19
+  myFloat: 18

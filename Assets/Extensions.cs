@@ -30,7 +30,7 @@ namespace SteffenTools.Extensions
                     //Vector3 pos = Vector3.Lerp(pos1, pos2, (float)i / divisions);
                     //float height = Mathf.Sin(((float)i / divisions) * Mathf.PI) * Vector3.Distance(pos1, pos2) * heightScale;
                     //pos = new Vector3(pos.x, pos.y + height, pos.z);
-                    Vector3 pos = Vector3Extensions.getPointAlongArc(pos1, pos2, Mathf.Repeat((float)i / divisions, divisions), heightScale);
+                    Vector3 pos = Vector3Extensions.GetPointAlongArc(pos1, pos2, Mathf.Repeat((float)i / divisions, divisions), heightScale);
 
                     Gizmos.DrawLine(prevPos, pos);
                     //Gizmos.color = new Color(c.r, c.g, c.b, c.a * (Mathf.Sin(((float)i / divisions) * Mathf.PI)) + .1f);
@@ -41,7 +41,6 @@ namespace SteffenTools.Extensions
             Gizmos.color = c;
         }
     }
-
     public enum AxisPlane { X, Y, Z}
     public static class DebugDrawers
     {
@@ -80,7 +79,7 @@ namespace SteffenTools.Extensions
 
                 pos = new Vector3(Mathf.Sin(f), Mathf.Cos(f), 0) * radius;
 
-                //I need to understand this sometimes....
+                //I need to understand this sometime....
                 Matrix4x4 m = Matrix4x4.Rotate(Quaternion.LookRotation(dir));
                 //End of not understanding
 
@@ -93,7 +92,6 @@ namespace SteffenTools.Extensions
             }
         }
     }
-
     public static class Vector3Extensions
     {
         /// <summary>
@@ -104,13 +102,13 @@ namespace SteffenTools.Extensions
         /// <param name="t">0 = start, 1 = end</param>
         /// <param name="maxHeight">the apex of the arc</param>
         /// <returns></returns>
-        public static Vector3 getPointAlongArc(Vector3 a, Vector3 b, float t, float maxHeight = 1)
+        public static Vector3 GetPointAlongArc(Vector3 a, Vector3 b, float t, float maxHeight = 1)
         {
             //Vector3 dir = (a - b).normalized;
             Vector3 pos = Vector3.Lerp(a, b, t);
             float height = Mathf.Sin((t * Mathf.PI)) * maxHeight;
             pos = new Vector3(pos.x, pos.y + height, pos.z);
-
+            
             return pos;
         }
 
