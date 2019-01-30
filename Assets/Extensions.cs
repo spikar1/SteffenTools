@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace SteffenTools.Extensions
 {
@@ -41,26 +42,46 @@ namespace SteffenTools.Extensions
             Gizmos.color = c;
         }
     }
-    public enum AxisPlane { X, Y, Z}
+    public enum Axis { X, Y, Z}
+    public static class AxisPlaneExtensions
+    {
+        /// <summary>
+        /// Convert the axis to corresponding direction
+        /// </summary>
+        /// <param name="axisPlane"></param>
+        /// <returns></returns>
+        public static Vector3 ToDir (this Axis axisPlane)
+        {
+            switch (axisPlane)
+            {
+                case Axis.X:
+                    return new Vector3(1, 0, 0);
+                case Axis.Y:
+                    return new Vector3(0, 1, 0);
+                case Axis.Z:
+                    return new Vector3(0, 0, 1);
+                default:
+                    throw new System.Exception($"{axisPlane.ToString()} has no direction defined.");
+            }
+        }
+    }
     public static class DebugDrawers
     {
-        
-        public static void DrawCircle(Vector3 center, float radius, AxisPlane axisPlane)
+        public static void DrawCircle(Vector3 center, float radius, Axis axis)
         {
-            DrawCircle(center, radius, axisPlane, Color.white, 0);
+            DrawCircle(center, radius, axis, Color.white, 0);
         }
-
-        public static void DrawCircle(Vector3 center, float radius, AxisPlane axisPlane, Color color, float duration, float resolution = 16)
+        public static void DrawCircle(Vector3 center, float radius, Axis axis, Color color, float duration, float resolution = 16)
         {
-                switch (axisPlane)
+                switch (axis)
                 {
-                    case AxisPlane.X:
+                    case Axis.X:
                         DrawCircle(center, radius, Vector3.right, color, duration, resolution);
                         break;
-                    case AxisPlane.Y:
+                    case Axis.Y:
                         DrawCircle(center, radius, Vector3.up, color, duration, resolution);
                         break;
-                    case AxisPlane.Z:
+                    case Axis.Z:
                         DrawCircle(center, radius, Vector3.forward, color, duration, resolution);
                         break;
                     default:
@@ -68,7 +89,6 @@ namespace SteffenTools.Extensions
                 }
 
         }
-
         public static void DrawCircle(Vector3 center, float radius, Vector3 dir, Color color, float duration, float resolution = 16)
         {
             Vector3 lastPos = Vector3.zero;
@@ -154,6 +174,40 @@ namespace SteffenTools.Extensions
         public static Vector3 RotateAround(this Vector3 vector, float x, float y, float z)
         {
             return RotateAround(vector, new Vector3(x, y, z));
+        }
+
+        public static Vector3[] RotateAround (this Vector3[] points, Axis axis, float degrees)
+        {
+            return points.ToList().RotateAround(axis, degrees).ToArray();
+        }
+        public static List<Vector3> RotateAround (this List<Vector3> points, Axis axis, float degrees)
+        {
+            List<Vector3> v = new List<Vector3>(points);
+            for (int i = 0; i < v.Count; i++)
+            {
+                v[i] = Quaternion.Euler(axis.ToDir() * degrees) * v[i];
+            }
+            return v;
+        }
+
+        /// <summary>
+        /// Round eaxh axis to nearest int
+        /// </summary>
+        /// <param name="vector"></param>
+        /// <returns></returns>
+        public static Vector3 RoundToNearest (this Vector3 vector)
+        {
+            return new Vector3(Mathf.RoundToInt(vector.x), Mathf.RoundToInt(vector.y), Mathf.RoundToInt(vector.z));
+        }
+
+        /// <summary>
+        /// Ceil the individual axis
+        /// </summary>
+        /// <param name="vector"></param>
+        /// <returns></returns>
+        public static Vector3 Ceil (this Vector3 vector)
+        {
+            return new Vector3(Mathf.Ceil(vector.x), Mathf.Ceil(vector.y), Mathf.Ceil(vector.z));
         }
     }
 }

@@ -292,8 +292,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9083ecd919083dc43a612a3410e2979d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: {x: 1, y: 0, z: 0}
-  points: []
+  dir: {x: 0, y: 0, z: 1}
+  points:
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 2}
+  - {x: 1, y: 0, z: 2}
+  - {x: 2, y: 0, z: 2}
+  - {x: 2, y: 0, z: 3}
   axisPlane: 0
   tDir: {x: 0, y: 0, z: 0}
   transformed: {x: 0, y: 0, z: 0}

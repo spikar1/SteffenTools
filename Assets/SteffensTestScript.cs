@@ -5,29 +5,45 @@ using SteffenTools.Extensions;
 
 public class SteffensTestScript : MonoBehaviour
 {
-    public Vector3 dir = Vector3.right;
+    public Vector3 dir = Vector3.forward;
 
-    public List<Vector3> points;
+    public List<Vector3> points = new List<Vector3>
+    {
+        new Vector3(0,0,1),
+        new Vector3(0,0, 2)
+    };
 
-    public AxisPlane axisPlane = AxisPlane.X;
+    public Axis axisPlane = Axis.X;
 
     public Vector3 tDir;
     public Vector3 transformed;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.D))
         {
+            points = points.RotateAround(Axis.Y, 90);
             dir = Quaternion.Euler(0, 90, 0) * dir;
-            for (int i = 0; i < points.Count; i++)
-            {
-                points[i] = points[i].RotateAround(0, 90, 0);
-            }
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            points = points.RotateAround(Axis.Y, -90);
+            dir = Quaternion.Euler(0, -90, 0) * dir;
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            points = points.RotateAround(Axis.X, 90);
+            dir = Quaternion.Euler(90, 0, 0) * dir;
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            points = points.RotateAround(Axis.X, -90);
+            dir = Quaternion.Euler(-90, 0, 0) * dir;
         }
 
         DebugDrawers.DrawCircle(transform.position, 2, transform.forward, Color.red, 0, 20);
 
-        DebugDrawers.DrawCircle(transform.position, 4, axisPlane);
+        DebugDrawers.DrawCircle(transform.position, 4, axisPlane, Color.blue, 0, 32);
 
         Debug.DrawRay(Vector3.zero, dir);
 
