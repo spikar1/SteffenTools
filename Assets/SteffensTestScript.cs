@@ -7,7 +7,7 @@ using SteffenTools.NodeSystem;
 public class SteffensTestScript : MonoBehaviour {
     public Node[] nodes;
     
-    void Update() {
+    void LateUpdate() {
 
         if (Input.GetKeyDown(KeyCode.A)) {
             foreach (var n in nodes) {
@@ -20,7 +20,9 @@ public class SteffensTestScript : MonoBehaviour {
             }
         }
 
-        nodes.Visualize();
+        nodes.Visualize(Color.yellow * .5f, .4f);
+        nodes.Visualize(Color.red, .35f);
+
         
 
         DebugDrawers.DrawArc(transform.position, Vector3.zero, Color.yellow, 1);

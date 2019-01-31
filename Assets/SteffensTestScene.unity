@@ -309,10 +309,10 @@ MonoBehaviour:
   - x: 3
     y: 4
   loops: 1
-  resolution: 6
+  resolution: 4
   height: 0
-  radius: 2
-  rotate: 30
+  radius: 1
+  rotate: 0
   fadeColor: 0
   curve:
     serializedVersion: 2
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459910028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26ad82a789b5fc24f84969bb3d1a76d4, type: 3}
   m_Name: 

@@ -35,19 +35,19 @@ namespace SteffenTools.NodeSystem
             return n;
         }
 
-        public static void Visualize(this Node n, Color color, int xOffset = 0, int yOffset = 0)
+        public static void Visualize(this Node n, Color color, float radius, int xOffset = 0, int yOffset = 0)
         {
-            DebugDrawers.DrawCircle(new Vector2(n.x + xOffset, n.y + yOffset), .4f, Axis.Z, color, 0);
+            DebugDrawers.DrawCircle(new Vector2(n.x + xOffset, n.y + yOffset), radius, Axis.Z, color, 0);
         }
 
         public static void Visualize(this Node n)
         {
-            Visualize(n, Color.white);
+            Visualize(n, Color.white, .4f);
         }
 
         public static void Visualize(this Node n, Color color, Vector2 offset)
         {
-            Visualize(n, color, (int)offset.x, (int)offset.y);
+            Visualize(n, color, .4f, (int)offset.x, (int)offset.y);
         }
 
         public static void Visualize(this Node[] nodes)
@@ -58,6 +58,17 @@ namespace SteffenTools.NodeSystem
                 n.Visualize();
                 if (i < nodes.Length - 1)
                     Debug.DrawLine(n.ToVector2(), nodes[i + 1].ToVector2());
+            }
+        }
+
+        public static void Visualize(this Node[] nodes, Color color, float radius)
+        {
+            for (int i = 0; i < nodes.Length; i++)
+            {
+                var n = nodes[i];
+                n.Visualize(color, radius);
+                if (i < nodes.Length - 1)
+                    Debug.DrawLine(n.ToVector2(), nodes[i + 1].ToVector2(), color);
             }
         }
 
