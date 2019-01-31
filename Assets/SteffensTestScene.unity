@@ -309,10 +309,10 @@ MonoBehaviour:
   - x: 3
     y: 4
   loops: 1
-  resolution: 4
+  resolution: 6
   height: 0
-  radius: 1.03
-  rotate: 45
+  radius: 2
+  rotate: 30
   fadeColor: 0
   curve:
     serializedVersion: 2
