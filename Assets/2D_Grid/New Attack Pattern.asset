@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 483d06168599e6141b65badd252f93c9, type: 3}
   m_Name: New Attack Pattern
   m_EditorClassIdentifier: 
-  sizeX: 1
-  sizeY: 2
+  sizeX: 4
+  sizeY: 12

@@ -20,7 +20,11 @@ public class SteffensTestScript : MonoBehaviour {
         }
 
         nodes.Visualize();
+
+        
     }
+
+
 }
 
 
