@@ -310,7 +310,7 @@ MonoBehaviour:
     y: 4
   loops: 1
   resolution: 4
-  height: 0
+  height: 2
   radius: 1
   rotate: 0
   fadeColor: 0

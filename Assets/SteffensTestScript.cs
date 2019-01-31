@@ -27,8 +27,15 @@ public class SteffensTestScript : MonoBehaviour {
 
         DebugDrawers.DrawArc(transform.position, Vector3.zero, Color.yellow, 1);
 
-        rotate = Time.time * 180;
+        //rotate = Time.time * 180;
     }
+
+    private void OnDrawGizmos()
+    {
+        //DrawCoil(transform.position);
+        //DrawCoil(Vector3.zero);
+    }
+    /*#region Coil
     [Header("Coil")]
     public float loops = 2;
     public float Loops {
@@ -42,12 +49,6 @@ public class SteffensTestScript : MonoBehaviour {
     public float rotate = 0f;
     public bool fadeColor = true;
     public AnimationCurve curve = AnimationCurve.Constant(0, 1, 1);
-    private void OnDrawGizmos()
-    {
-        DrawCoil(transform.position);
-        //DrawCoil(Vector3.zero);
-    }
-
     void DrawCoil(Vector3 offset)
     {
         Gizmos.color = Color.white;
@@ -81,6 +82,7 @@ public class SteffensTestScript : MonoBehaviour {
         }
 
     }
+    #endregion*/
 }
 
 
