@@ -13,31 +13,25 @@ namespace SteffenTools.Extensions
         /// <param name="pos1"></param>
         /// <param name="pos2"></param>
         /// <param name="heightScale">how tall the apex of the arc should be</param>
-        public static void DrawArc(Vector3 pos1, Vector3 pos2, float heightScale = .7f)
+        public static void DrawArc(Vector3 pos1, Vector3 pos2, float heightScale = 1)
         {
 
             Color c = Gizmos.color;
 
             int divisions = 15;
-            for (int ii = 0; ii < 3; ii++)
+
+            Gizmos.color = new Color(c.r, c.g, c.b, .1f);
+            Vector3 prevPos = pos1;
+
+            for (int i = 0; i <= divisions; i++)
             {
-
-                Gizmos.color = new Color(c.r, c.g, c.b, .1f);
-                Vector3 prevPos = pos1;
-
-                for (int i = 0; i < divisions; i++)
-                {
-                    //Vector3 dir = (pos2 - pos1).normalized;
-                    //Vector3 pos = Vector3.Lerp(pos1, pos2, (float)i / divisions);
-                    //float height = Mathf.Sin(((float)i / divisions) * Mathf.PI) * Vector3.Distance(pos1, pos2) * heightScale;
-                    //pos = new Vector3(pos.x, pos.y + height, pos.z);
-                    Vector3 pos = Vector3Extensions.GetPointAlongArc(pos1, pos2, Mathf.Repeat((float)i / divisions, divisions), heightScale);
-
-                    Gizmos.DrawLine(prevPos, pos);
-                    //Gizmos.color = new Color(c.r, c.g, c.b, c.a * (Mathf.Sin(((float)i / divisions) * Mathf.PI)) + .1f);
-                    prevPos = pos;
-                }
-                heightScale += .003f;
+                Vector3 pos = Vector3Extensions.GetPointAlongArc(
+                    pos1,
+                    pos2,
+                    Mathf.Repeat((float)i / divisions, divisions),
+                    heightScale);
+                Gizmos.DrawLine(prevPos, pos);
+                prevPos = pos;
             }
             Gizmos.color = c;
         }
@@ -67,28 +61,45 @@ namespace SteffenTools.Extensions
     }
     public static class DebugDrawers
     {
-        public static void DrawCircle(Vector3 center, float radius, Axis axis)
+        /// <summary>
+        /// Draw an arc from pos1 to pos2.
+        /// </summary>
+        /// <param name="pos1"></param>
+        /// <param name="pos2"></param>
+        /// <param name="color"></param>
+        /// <param name="heightScale">The apex of the arc</param>
+        /// <param name="duration"></param>
+        public static void DrawArc(Vector3 pos1, Vector3 pos2, Color color, float heightScale = 1, float duration = 0)
         {
-            DrawCircle(center, radius, axis, Color.white, 0);
-        }
-        public static void DrawCircle(Vector3 center, float radius, Axis axis, Color color, float duration, float resolution = 16)
-        {
-                switch (axis)
-                {
-                    case Axis.X:
-                        DrawCircle(center, radius, Vector3.right, color, duration, resolution);
-                        break;
-                    case Axis.Y:
-                        DrawCircle(center, radius, Vector3.up, color, duration, resolution);
-                        break;
-                    case Axis.Z:
-                        DrawCircle(center, radius, Vector3.forward, color, duration, resolution);
-                        break;
-                    default:
-                        break;
-                }
+            int divisions = 15;
 
+            Vector3 prevPos = pos1;
+
+            for (int j = 0; j <= divisions; j++)
+            {
+                Vector3 pos = Vector3Extensions.GetPointAlongArc(
+                    pos1,
+                    pos2,
+                    Mathf.Repeat((float)j / divisions, divisions),
+                    heightScale);
+                Debug.DrawLine(prevPos, pos, color, duration);
+                prevPos = pos;
+            }
         }
+        public static void DrawArc(Vector3 pos1, Vector3 pos2)
+        {
+            DrawArc(pos1, pos2, Color.white);
+        }
+
+        /// <summary>
+        /// Draw a debug circle around dir.
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="radius"></param>
+        /// <param name="dir">Define the axis plane to draw the circle</param>
+        /// <param name="color"></param>
+        /// <param name="duration"></param>
+        /// <param name="resolution"></param>
         public static void DrawCircle(Vector3 center, float radius, Vector3 dir, Color color, float duration, float resolution = 16)
         {
             Vector3 lastPos = Vector3.zero;
@@ -110,6 +121,37 @@ namespace SteffenTools.Extensions
                     Debug.DrawLine(lastPos + center, pos + center, color, duration);
                 lastPos = pos;
             }
+        }
+        /// <summary>
+        /// Draw a debug circle around axis
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="radius"></param>
+        /// <param name="axis"></param>
+        /// <param name="color"></param>
+        /// <param name="duration"></param>
+        /// <param name="resolution"></param>
+        public static void DrawCircle(Vector3 center, float radius, Axis axis, Color color, float duration, float resolution = 16)
+        {
+                switch (axis)
+                {
+                    case Axis.X:
+                        DrawCircle(center, radius, Vector3.right, color, duration, resolution);
+                        break;
+                    case Axis.Y:
+                        DrawCircle(center, radius, Vector3.up, color, duration, resolution);
+                        break;
+                    case Axis.Z:
+                        DrawCircle(center, radius, Vector3.forward, color, duration, resolution);
+                        break;
+                    default:
+                        break;
+                }
+
+        }
+        public static void DrawCircle(Vector3 center, float radius, Axis axis)
+        {
+            DrawCircle(center, radius, axis, Color.white, 0);
         }
     }
     public static class Vector3Extensions

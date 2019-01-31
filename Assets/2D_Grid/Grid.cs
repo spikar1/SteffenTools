@@ -3,29 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using SteffenTools.Extensions;
 
-public class Grid : MonoBehaviour
-{
-    private int ySize = 6;
-    private int xSize = 6;
-    Node[,] nodes = new Node[0,0];
-
-    private void Start()
+namespace SteffenTools.NodeSystem {
+    public class Grid : MonoBehaviour
     {
-        nodes = new Node[xSize, ySize];
-        for (int y = 0; y < ySize; y++)
+        private int ySize = 6;
+        private int xSize = 6;
+        Node[,] nodes = new Node[0, 0];
+
+        private void Start()
         {
-            for (int x = 0; x < xSize; x++)
+            nodes = new Node[xSize, ySize];
+            for (int y = 0; y < ySize; y++)
             {
-                nodes[x, y] = new Node(x, y);
+                for (int x = 0; x < xSize; x++)
+                {
+                    nodes[x, y] = new Node(x, y);
+                }
             }
         }
-    }
 
-    private void Update()
-    {
-        foreach (var n in nodes)
+        private void Update()
         {
-            n.Visualize();
+            foreach (var n in nodes)
+            {
+                n.Visualize();
+            }
         }
     }
 }

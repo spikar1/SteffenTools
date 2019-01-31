@@ -2,23 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu()]
-public class AttackPattern : ScriptableObject
-{
-    public int sizeX = 2, sizeY = 2;
-    private bool[][] pattern;
-    public bool[][] Pattern {
-        get {
-            if (pattern == null || pattern.Length < 1) { 
-                pattern = new bool[sizeX][];
-                for (int i = 0; i < sizeX; i++) {
-                    pattern[i] = new bool[sizeY];
+namespace SteffenTools.NodeSystem {
+    [CreateAssetMenu()]
+    public class AttackPattern : ScriptableObject
+    {
+        public int sizeX = 2, sizeY = 2;
+        private bool[][] pattern;
+        public bool[][] Pattern {
+            get {
+                if (pattern == null || pattern.Length < 1)
+                {
+                    pattern = new bool[sizeX][];
+                    for (int i = 0; i < sizeX; i++)
+                    {
+                        pattern[i] = new bool[sizeY];
+                    }
                 }
+                return pattern;
             }
-            return pattern;
-        }
-        set {
-            pattern = value;
+            set {
+                pattern = value;
+            }
         }
     }
 }
