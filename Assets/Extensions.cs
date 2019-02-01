@@ -37,7 +37,7 @@ namespace SteffenTools.Extensions
         }
     }
     public enum Axis { X, Y, Z}
-    public static class AxisPlaneExtensions
+    public static class AxisExtensions
     {
         /// <summary>
         /// Convert the axis to corresponding direction
