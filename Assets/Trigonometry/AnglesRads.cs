@@ -13,7 +13,7 @@ public class AnglesRads: MonoBehaviour
 {
     [Header("Visualize Triangle")]
     public bool fromDegrees = true;
-    [Range(0, 360)]
+    [Range(0, 359.9f)]
     public float degrees = 0;
     [Range(0, M.PI*2)]
     public float radians = 0;
@@ -25,6 +25,7 @@ public class AnglesRads: MonoBehaviour
     public bool showAnims = false;
     public bool useTime = false;
 
+    public float maxDeg = 60;
 
     private void OnDrawGizmos()
     {
@@ -115,8 +116,15 @@ public class AnglesRads: MonoBehaviour
         if (!showAnims)
             return;
         G.color = C.white;
-        G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(radians) + V3.up * -.25f, new V3(1, .5f, 0));
-        G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(radians * 2) + V3.up * -.25f, new V3(1, .5f, 0));
-        G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(radians * 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(radians * M.PI) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(radians * M.PI / 2) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(radians * M.PI / 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
+
+        //Draw Pendulum
+        float deg = sine * maxDeg;
+        float rad = M.Deg2Rad * deg;
+        V3 pundulumPos = new V3(M.Sin(rad) ,-M.Cos(rad) , 0);
+        G.DrawWireSphere(pundulumPos+ V3.left * 3, .2f);
+        G.DrawLine(V3.zero + V3.left * 3, pundulumPos + V3.left * 3);
     }
 }

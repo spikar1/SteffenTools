@@ -223,15 +223,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ce599689ea618469e7afecf79d6ddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fromDegrees: 0
-  degrees: 0
-  radians: 0
-  sine: 0
-  cosine: 1
-  tangent: 0
+  fromDegrees: 1
+  degrees: 150.78711
+  radians: 2.6317186
+  sine: 0.4880673
+  cosine: -0.872806
+  tangent: -0.5591933
   showTan: 0
   showAnims: 1
-  useTime: 0
+  useTime: 1
+  maxDeg: 45
 --- !u!4 &1143554156
 Transform:
   m_ObjectHideFlags: 0
