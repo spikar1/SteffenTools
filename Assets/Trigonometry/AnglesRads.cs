@@ -26,22 +26,32 @@ public class AnglesRads: MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        
         if (fromDegrees)
             radians = (degrees * M.PI) / 180;
         else
             degrees = (radians * 180) / M.PI;
 
+        //If allowed, use time as input.
+        float t = (float)EditorApplication.timeSinceStartup;
         if (useTime)
         {
-            radians = M.Repeat((float)EditorApplication.timeSinceStartup, 2*M.PI);
-            degrees = M.Repeat(degrees = (radians * 180) / M.PI, 360);
+            radians = t;
+            degrees = degrees = (radians * 180) / M.PI;
         }
 
+        //Clamp the values to a readable range
+        radians = M.Repeat(radians, 2 * M.PI);
+        degrees = M.Repeat(degrees, 360);
+
+        //local variables for simplicity
         sine = M.Sin(radians);
         cosine = M.Cos(radians);
         tangent = M.Tan(radians);
 
+        //Draw Radius
         DebugDrawers.DrawCircle(V3.zero, 1, Axis.Z, C.white, 0, 64);
+        //Construct a triangle
         G.color = C.green;
         G.DrawLine(V3.zero, new V3(cosine, sine));
         G.color = C.blue;
@@ -49,10 +59,22 @@ public class AnglesRads: MonoBehaviour
         G.color = C.red;
         G.DrawRay(V3.zero + V3.right * cosine, V3.up * sine);
 
-
-        G.color = C.red;
-        //Draw Sine
+        
+        //Draw Graph of the curves
+        G.color = C.white;
         V3 offset = V3.down * 2 + V3.right * -1;
+        G.DrawRay(offset + V3.up * .5f, V3.down * 1);
+        G.DrawRay(offset + V3.down * .5f, V3.right * 2);
+
+        G.color = C.gray;
+        G.DrawRay(offset + V3.up * .5f, V3.right * 2);
+        G.DrawRay(offset, V3.right * 2);
+
+        G.DrawRay(offset + V3.up * .5f + V3.right * M.Repeat(radians / M.PI, 2), V3.down * 1);
+
+        //Draw Sine
+        G.color = C.red;
+        offset = V3.down * 2 + V3.right * -1;
         V3 last = new V3(0, 0, 0) + offset;
         for (int i = 1; i <= 360; i++)
         {
@@ -86,18 +108,13 @@ public class AnglesRads: MonoBehaviour
                 last = point;
             }
         }
-        
-
-        G.color = C.white;
-        G.DrawRay(offset + V3.up * .5f, V3.down * 1);
-        G.DrawRay(offset + V3.down * .5f, V3.right * 2);
-
-        G.DrawRay(offset + V3.up * .5f + V3.right * M.Repeat(radians / M.PI, 2), V3.down * 1);
 
 
         if (!showAnims)
             return;
         G.color = C.white;
-        G.DrawWireCube(V3.right * 2 + V3.up * sine + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(t) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(t * 2) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(t * 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
     }
 }

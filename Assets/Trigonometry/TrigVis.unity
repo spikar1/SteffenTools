@@ -224,14 +224,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fromDegrees: 1
-  degrees: 48.5
-  radians: 0.8464847
-  sine: 0.7489557
-  cosine: 0.66262
-  tangent: 1.1302944
+  degrees: 115.125
+  radians: 2.0096078
+  sine: 0.9052573
+  cosine: -0.42486385
+  tangent: -2.1306996
   showTan: 0
   showAnims: 1
-  useTime: 0
+  useTime: 1
 --- !u!4 &1143554156
 Transform:
   m_ObjectHideFlags: 0
