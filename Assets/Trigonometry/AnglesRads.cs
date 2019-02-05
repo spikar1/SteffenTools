@@ -113,6 +113,8 @@ public class AnglesRads: MonoBehaviour
         }
 
 
+
+
         if (!showAnims)
             return;
         G.color = C.white;
@@ -126,5 +128,8 @@ public class AnglesRads: MonoBehaviour
         V3 pundulumPos = new V3(M.Sin(rad) ,-M.Cos(rad) , 0);
         G.DrawWireSphere(pundulumPos+ V3.left * 3, .2f);
         G.DrawLine(V3.zero + V3.left * 3, pundulumPos + V3.left * 3);
+
+        offset = new V3(0, 2, 0);
+        G.DrawWireCube(offset, new V3(1 - M.Cos(t * 4) * .04f, 1 + M.Sin(t * 4)*.04f, 0));
     }
 }
