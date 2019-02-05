@@ -13,7 +13,9 @@ public class AnglesRads: MonoBehaviour
 {
     [Header("Visualize Triangle")]
     public bool fromDegrees = true;
+    [Range(0, 360)]
     public float degrees = 0;
+    [Range(0, M.PI*2)]
     public float radians = 0;
     [Header("Parameters")]
     public float sine;
@@ -113,8 +115,8 @@ public class AnglesRads: MonoBehaviour
         if (!showAnims)
             return;
         G.color = C.white;
-        G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(t) + V3.up * -.25f, new V3(1, .5f, 0));
-        G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(t * 2) + V3.up * -.25f, new V3(1, .5f, 0));
-        G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(t * 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(radians) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(radians * 2) + V3.up * -.25f, new V3(1, .5f, 0));
+        G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(radians * 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
     }
 }
