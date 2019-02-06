@@ -252,4 +252,17 @@ namespace SteffenTools.Extensions
             return new Vector3(Mathf.Ceil(vector.x), Mathf.Ceil(vector.y), Mathf.Ceil(vector.z));
         }
     }
+
+    public static class Vector2Extensions
+    {
+        public static Vector2 Clamp(this Vector2 v2, Vector2 clampMin, Vector2 clampMax)
+        {
+            return new Vector2(Mathf.Clamp(v2.x, clampMin.x, clampMax.x), Mathf.Clamp(v2.y, clampMin.y, clampMax.y));
+        }
+
+        public static Vector2 Clamp(this Vector2 v2, float min, float max)
+        {
+            return Clamp(v2, new Vector2(min, min), new Vector2(max, max));
+        }
+    }
 }

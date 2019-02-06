@@ -224,15 +224,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fromDegrees: 1
-  degrees: 68.265625
-  radians: 1.191462
-  sine: 0.9289113
-  cosine: 0.37030217
-  tangent: 2.5085227
+  degrees: 0
+  radians: 0
+  sine: 0
+  cosine: 1
+  tangent: 0
   showTan: 0
   showAnims: 1
-  useTime: 1
-  maxDeg: 20
+  useTime: 0
+  maxDeg: 60
+  timeScale: 1
+  axialOffset: {x: -0.05, y: 2.21}
+  input: {x: 0.8881644, y: 0.65332055}
+  angle: 160.5078
 --- !u!4 &1143554156
 Transform:
   m_ObjectHideFlags: 0

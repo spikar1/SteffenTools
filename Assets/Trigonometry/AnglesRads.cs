@@ -8,9 +8,13 @@ using G = UnityEngine.Gizmos;
 using C = UnityEngine.Color;
 using V3 = UnityEngine.Vector3;
 using M = UnityEngine.Mathf;
+using System;
 
 public class AnglesRads: MonoBehaviour
 {
+    float t;
+    V3 offset;
+
     [Header("Visualize Triangle")]
     public bool fromDegrees = true;
     [Range(0, 359.9f)]
@@ -24,19 +28,35 @@ public class AnglesRads: MonoBehaviour
     [Header("Animate")]
     public bool showAnims = false;
     public bool useTime = false;
-
+    [Header("Pendulum")]
     public float maxDeg = 60;
+    public float timeScale = 2;
+    [Header("Axial Input")]
+    public Vector2 axialOffset = Vector2.up;
+    public Vector2 input;
+    public float angle;
+
 
     private void OnDrawGizmos()
     {
-        
+        GenerateBaseValues();
+        DrawBaseCircle();
+        DrawGraph();
+        DrawPlatforms();
+        DrawPendulum();
+        AxialInput();
+    }
+
+
+    private void GenerateBaseValues()
+    {
         if (fromDegrees)
             radians = (degrees * M.PI) / 180;
         else
             degrees = (radians * 180) / M.PI;
 
         //If allowed, use time as input.
-        float t = (float)EditorApplication.timeSinceStartup;
+        t = (float)EditorApplication.timeSinceStartup;
         if (useTime)
         {
             radians = t;
@@ -51,18 +71,21 @@ public class AnglesRads: MonoBehaviour
         sine = M.Sin(radians);
         cosine = M.Cos(radians);
         tangent = M.Tan(radians);
-
+    }
+    private void DrawBaseCircle()
+    {
         //Draw Radius
         DebugDrawers.DrawCircle(V3.zero, 1, Axis.Z, C.white, 0, 64);
         //Construct a triangle
-        G.color = C.green;
-        G.DrawLine(V3.zero, new V3(cosine, sine));
         G.color = C.blue;
-        G.DrawLine(V3.zero, V3.right * cosine);
+        G.DrawLine(V3.zero, new V3(cosine, sine));
         G.color = C.red;
+        G.DrawLine(V3.zero, V3.right * cosine);
+        G.color = C.green;
         G.DrawRay(V3.zero + V3.right * cosine, V3.up * sine);
-
-        
+    }
+    private void DrawGraph()
+    {
         //Draw Graph of the curves
         G.color = C.white;
         V3 offset = V3.down * 2 + V3.right * -1;
@@ -111,25 +134,48 @@ public class AnglesRads: MonoBehaviour
                 last = point;
             }
         }
-
-
-
-
+    }
+    private void DrawPlatforms()
+    {
         if (!showAnims)
             return;
         G.color = C.white;
         G.DrawWireCube(V3.right * 2 + V3.up * M.Sin(radians * M.PI) + V3.up * -.25f, new V3(1, .5f, 0));
         G.DrawWireCube(V3.right * 3 + V3.up * M.Sin(radians * M.PI / 2) + V3.up * -.25f, new V3(1, .5f, 0));
         G.DrawWireCube(V3.right * 4 + V3.up * M.Sin(radians * M.PI / 2) * .5f + V3.up * -.25f, new V3(1, .5f, 0));
-
+    }
+    private void DrawPendulum()
+    {
         //Draw Pendulum
         float deg = sine * maxDeg;
         float rad = M.Deg2Rad * deg;
-        V3 pundulumPos = new V3(M.Sin(rad) ,-M.Cos(rad) , 0);
-        G.DrawWireSphere(pundulumPos+ V3.left * 3, .2f);
+        V3 pundulumPos = new V3(M.Sin(rad * timeScale), -M.Cos(rad * timeScale), 0);
+        G.DrawWireSphere(pundulumPos + V3.left * 3, .2f);
         G.DrawLine(V3.zero + V3.left * 3, pundulumPos + V3.left * 3);
+    }
+    private void AxialInput()
+    {
+        offset = axialOffset;
 
-        offset = new V3(0, 2, 0);
-        G.DrawWireCube(offset, new V3(1 - M.Cos(t * 4) * .04f, 1 + M.Sin(t * 4)*.04f, 0));
+        if(M.Abs(Input.GetAxis("Horizontal")) > 0 || M.Abs(Input.GetAxis("Vertical")) > 0)
+        {
+            input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        }
+
+        G.DrawWireCube(offset, new V3(2, 2, 0));
+        G.color = C.magenta;
+        G.DrawLine(offset, (Vector3)input + offset);
+
+        var x = input.x;
+        var y = input.y;
+        G.color = C.red;
+        G.DrawLine(offset, offset + V3.right * x);
+        G.color = C.green;
+        G.DrawLine(offset, offset + V3.up * y);
+        G.color = C.black * .5f;
+        G.DrawRay(offset, new V3(x, y).normalized);
+
+        print(Vector2.SignedAngle(Vector2.right, input));
+
     }
 }
