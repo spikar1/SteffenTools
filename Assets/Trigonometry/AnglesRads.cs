@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using SteffenTools.Extensions;
 using UnityEditor;
+using System;
 
 using G = UnityEngine.Gizmos;
 using C = UnityEngine.Color;
 using V3 = UnityEngine.Vector3;
 using M = UnityEngine.Mathf;
-using System;
 
 public class AnglesRads: MonoBehaviour
 {
     float t;
     V3 offset;
-
+    #region Params
     [Header("Visualize Triangle")]
     public bool fromDegrees = true;
-    [Range(0, 359.9f)]
+    [Range (0, 359.9f)]
     public float degrees = 0;
-    [Range(0, M.PI*2)]
+    [Range (0, M.PI*2)]
     public float radians = 0;
     [Header("Parameters")]
     public float sine;
@@ -35,7 +35,7 @@ public class AnglesRads: MonoBehaviour
     public Vector2 axialOffset = Vector2.up;
     public Vector2 input;
     public float angle;
-
+    #endregion
 
     private void OnDrawGizmos()
     {
@@ -174,8 +174,7 @@ public class AnglesRads: MonoBehaviour
         G.DrawLine(offset, offset + V3.up * y);
         G.color = C.black * .5f;
         G.DrawRay(offset, new V3(x, y).normalized);
-
-        print(Vector2.SignedAngle(Vector2.right, input));
+        
 
     }
 }
