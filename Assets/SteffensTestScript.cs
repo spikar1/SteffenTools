@@ -17,6 +17,12 @@ public class SteffensTestScript : MonoBehaviour {
 
     void LateUpdate() {
 
+        //
+        if(Input.GetKey(KeyCode.L))
+            loops += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.K))
+            resolution ++;
+        //
         if (Input.GetKeyDown(KeyCode.A)) {
             foreach (var n in nodes) {
                 n.RotateCCW();
@@ -52,16 +58,16 @@ public class SteffensTestScript : MonoBehaviour {
             angle = Vector3.Angle(seeker.forward, target.position - seeker.position);
 
             angle = Vector3.SignedAngle(seeker.forward, target.position - seeker.position, Vector3.up);
-            int a = (int)Mathf.Round(angle);
+            var a = angle;
 
-            if (a < 45 && a > -45)
+            if (a > -45 && a < 45)
                 state = State.Forward;
             else if (a > 45 && a < 135)
                 state = State.Right;
-            else if (a > 45 && a < 135)
-                state = State.Right;
-            else if (a > 45 && a < 135)
-                state = State.Right;
+            else if (a > -135 && a < -45)
+                state = State.Left;
+            else if (a > 135 || a < -135)
+                state = State.Back;
             else
                 state = State.Nothing;
         }
@@ -79,10 +85,10 @@ public class SteffensTestScript : MonoBehaviour {
 
 
 
-        //DrawCoil(transform.position);
+        DrawCoil(transform.position);
         //DrawCoil(Vector3.zero);
     }
-    /*#region Coil
+    #region Coil
     [Header("Coil")]
     public float loops = 2;
     public float Loops {
@@ -105,9 +111,12 @@ public class SteffensTestScript : MonoBehaviour {
         
         for (int i = 0; i <= resolution * Loops; i++)
         {
+            if (loops <= 0)
+                break;
             float f = ((float)(i) / resolution) * Mathf.PI * 2;
             float radian = f + rotate * (Mathf.PI * 2) / 360;
             float c = f / (Mathf.PI * 2) / loops;
+
 
             float r = radius * curve.Evaluate(c);
 
@@ -129,7 +138,7 @@ public class SteffensTestScript : MonoBehaviour {
         }
 
     }
-    #endregion*/
+    #endregion
 }
 
 
