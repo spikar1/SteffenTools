@@ -98,17 +98,32 @@ public class SteffensTestScript : MonoBehaviour {
     }
     public int resolution = 16;
     public float height = 1;
+    public bool animateHeight = false;
     public float radius = 1;
     public float rotate = 0f;
     public bool fadeColor = true;
     public AnimationCurve curve = AnimationCurve.Constant(0, 1, 1);
+
+    private LineRenderer lr;
+    private List<Vector3> lrPos = new List<Vector3>();
+    private void Start()
+    {
+        lr = GetComponent<LineRenderer>();
+    }
     void DrawCoil(Vector3 offset)
     {
+        var tempHeight = height;
+        if (animateHeight)
+            tempHeight = Mathf.Sin((float)UnityEditor.EditorApplication.timeSinceStartup) * height * .5f + height * .5f;
+
         Gizmos.color = Color.white;
 
         Vector3 pos;
         Vector3 lastPos = pos = Vector3.zero;
-        
+        //LineRender
+        lrPos.Clear();
+        if (lr)
+            lr.positionCount = (int)(resolution * loops);
         for (int i = 0; i <= resolution * Loops; i++)
         {
             if (loops <= 0)
@@ -122,7 +137,7 @@ public class SteffensTestScript : MonoBehaviour {
 
             pos = new Vector3(
                 Mathf.Cos(radian) * r, 
-                f * height / Loops / (Mathf.PI*2), 
+                f * tempHeight / Loops / (Mathf.PI*2), 
                 Mathf.Sin(radian) * r
                 ) + offset;
             if (fadeColor)
@@ -135,8 +150,12 @@ public class SteffensTestScript : MonoBehaviour {
             }
             Gizmos.DrawLine(lastPos, pos);
             lastPos = pos;
+            lrPos.Add(pos);
+            //LineRender
         }
-
+        lrPos.Add(lastPos);
+        if (lr)
+            lr.SetPositions(lrPos.ToArray());
     }
     #endregion
 }
