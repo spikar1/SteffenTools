@@ -1,0 +1,2606 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a084ed634418f47a1944690e9a7e91, type: 3}
+  m_Name: New JSON Stuff
+  m_EditorClassIdentifier: 
+  myClass:
+    a: 0
+    b: 0
+    c: 0
+    strArr: []
+    arrClass: []
+  articles:
+  - title: A Heterogeneous System for Real-Time Detection with AdaBoost
+    id: 001eef4f-1d00-4ae6-8b4f-7e66344bbc6e
+    authors:
+    - Zheng Xu
+    - Runbin Shi
+    - Zhihao Sun
+    - Yaqi Li
+    - Yuanjia Zhao
+    - Chenjian Wu
+    venue: high performance computing and communications
+    year: 2016
+    n_citation: 0
+    references:
+    - 0a11984c-ab6e-4b75-9291-e1b700c98d52
+    - 1f4152a3-481f-4adf-a29a-2193a3d4303c
+    - 3c2ddf0a-237b-4d17-8083-c90df5f3514b
+    - 522ce553-29ea-4e0b-9ad3-0ed4eb9de065
+    - 579e5f24-5b13-4e92-b255-0c46d066e306
+    - 5d0b987d-eed9-42ce-9bf3-734d98824f1b
+    - 80656b4d-b24c-4d92-8753-bdb965bcd50a
+    - d6e37fb1-5f7e-448e-847b-7d1f1271c574
+    Abstract: 
+  - title: A novel conformal jigsaw EBG structure design
+    id: 002e0b7e-d62f-4140-b015-1fe29a9acbaa
+    authors:
+    - Yufei Liang
+    - Yan Zhang
+    - Tao Dong
+    - Shan-wei Lu
+    venue: international conference on conceptual structures
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A source-seeking strategy for an autonomous underwater vehicle via on-line
+      field estimation
+    id: 00352759-f0a7-4678-82ae-fed68c700da6
+    authors:
+    - Xiaodong Ai
+    - Keyou You
+    - Shiji Song
+    venue: international conference on control, automation, robotics and vision
+    year: 2016
+    n_citation: 0
+    references:
+    - 1862a08a-08c6-4ab1-a214-8932bbd0d2d9
+    - 7bcea2f7-6006-4a4d-8529-3593fa56d2dc
+    - c1959b6f-8bab-49a2-ae2f-066c43cfc9c9
+    - d65d26b4-a0e0-4112-ae22-2f3a4b51d7b3
+    - e66104e4-31fd-43d6-a056-f52bf8ae7eee
+    Abstract: 
+  - title: Social and ethical behavior in the internet of things
+    id: 00f77fa9-ae49-4935-9166-2f5f9cdb3d6b
+    authors:
+    - Francine Berman
+    - Vinton G. Cerf
+    venue: Communications of The ACM
+    year: 2017
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Prediction of consensus binding mode geometries for related chemical series
+      of positive allosteric modulators of adenosine and muscarinic acetylcholine
+      receptors
+    id: 013ea675-bb58-42f8-a423-f5534546b2b1
+    authors:
+    - Leon A. Sakkal
+    - Kyle Z. Rajkowski
+    - Roger S. Armen
+    venue: Journal of Computational Chemistry
+    year: 2017
+    n_citation: 50
+    references:
+    - 4f4f200c-0764-4fef-9718-b8bccf303dba
+    - aa699fbf-fabe-40e4-bd68-46eaf333f7b1
+    Abstract: 
+  - title: Data-Driven Relevance Judgments for Ranking Evaluation.
+    id: 01413023-7ed6-4964-b7c8-19259f84a1db
+    authors:
+    - Nuno Moniz
+    - "Lu\xEDs Torgo"
+    - "Jo\xE3o Vinagre"
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Studying Linguistic Changes over 200 Years of Newspapers through Resilient
+      Words Analysis
+    id: 01522369-3b88-4256-99d4-4e0c1de9f1ba
+    authors:
+    - Vincent Buntinx
+    - Cyril Bornet
+    - "Fr\xE9d\xE9ric Kaplan"
+    venue: Frontiers in Digital Humanities
+    year: 2017
+    n_citation: 0
+    references:
+    - 426b57a8-2e7d-498d-9a57-c09983ae0699
+    - 6499d572-7819-47bf-9087-bd201c31cea1
+    - db81cd6e-3a7a-4088-b254-92f924a4e379
+    Abstract: 
+  - title: Small secret exponent attacks on RSA with unbalanced prime factors
+    id: 01537b60-9ae2-4684-a1fa-e688e7757e6f
+    authors:
+    - Atsushi Takayasu
+    - Noboru Kunihiro
+    venue: international symposium on information theory and its applications
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Automatic Container Code Recognition via Spatial Transformer Networks and
+      Connected Component Region Proposals
+    id: 017440d5-6ba8-422a-bd7a-d59e3b9a4e77
+    authors:
+    - Ankit Verma
+    - Monika Sharma
+    - Ramya Hebbalaguppe
+    - Ehtesham Hassan
+    - Lovekesh Vig
+    venue: international conference on machine learning and applications
+    year: 2016
+    n_citation: 0
+    references:
+    - 3e3a4245-eb62-4769-bc84-1001479df701
+    - 42f6b977-ec16-48be-a8f2-af53b8522be1
+    - 46aeba51-c989-4cf8-927e-928dadcef872
+    - 5647dca2-7978-40a9-bc7b-376d232a068a
+    - 70d88ef5-1fe3-4df8-a9af-becc2bb17a75
+    - 742181ff-4a0a-46ca-b32c-aab50dd7c3c7
+    - 786b4b62-32d5-4be0-b7e3-aa5c3647d376
+    - 9b2aa4f0-a196-46e3-8ab1-c7fd6788d9a4
+    - a9f2c948-4bb2-4f19-9484-3a01cc4249fc
+    - afa0804e-da05-48f0-ade9-47996e4df4d2
+    - d19e9c93-9bb8-4936-9275-c7fbff937079
+    - e8f80f7b-0406-4c69-b64d-fed6ef59ecc7
+    - e9743240-779d-4ff8-bb78-b778fa701713
+    Abstract: 
+  - title: Effective solution for a medical tourism aggregative system using the data
+      mining approach
+    id: 01dcc2e7-fda1-483d-9a5c-10e9cf985951
+    authors:
+    - Elaine Vedrasco
+    - Chidchanok Lursinsap
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 472b9486-b98a-4972-8252-b1eacbaf52a7
+    - 572457cf-fcf7-40ff-a72c-6776b00c6ef7
+    - 76ce1455-926e-457b-8754-1b38d770ca08
+    - 86623ef4-060b-421e-bb7f-d36a5e268d43
+    - 866a428a-b24b-409d-af75-b31721572760
+    - 97549697-2cbf-4ae0-92d5-38fa7fa25b58
+    - 976b29e2-47bd-4a66-a36a-37f3e077fb95
+    - bf5b864a-08cc-4b32-a9da-dff8acd97f00
+    - e3f27652-688a-457b-ad96-07a7e3c05543
+    Abstract: 
+  - title: Modeling Physical Structure as Additional Constraints for Stereoscopic
+      Optical See-Through Head-Mounted Display Calibration
+    id: 01f02fae-97df-4207-a386-a1bc8ec0853b
+    authors:
+    - Long Qian
+    - Alexander Winkler
+    - Bernhard Fuerst
+    - Peter Kazanzides
+    - Nassir Navab
+    venue: international symposium on mixed and augmented reality
+    year: 2016
+    n_citation: 50
+    references:
+    - 076bca9b-b30c-4c2c-8148-3b9b5d9aa939
+    - 6b5cf401-1b90-4d68-b44e-2fe6cc54c93f
+    - 82db7f4a-3c8e-42c3-b852-41f751248251
+    - 9a5f6827-098c-46ed-a4c7-ae0590dd2342
+    - fb5bde78-2255-469d-a735-adb8409a2715
+    Abstract: 
+  - title: Delay analysis of completely irrepressible sequences for mobile ad hoc
+      networks
+    id: 029bb71a-6b91-43a5-8a83-ce56b544204b
+    authors:
+    - Aijie Zou
+    - Yuxuan Fang
+    - Fengyu Guan
+    - Yijin Zhang
+    - Chang-Hong Fu
+    - Hongyuan Chen
+    - Feng Shu
+    venue: international conference on conceptual structures
+    year: 2016
+    n_citation: 0
+    references:
+    - 0b92c76b-86f0-4b8b-a0ff-138cbae8340f
+    - 0d11abd8-c2f8-489f-bf87-234bd0dab697
+    - 115b2803-a506-42f3-8b2c-f91f7e599dee
+    - 2de3834f-ebc5-41b8-aba7-748a3e013a2e
+    - 2fdfb2a1-59ec-4aeb-97fc-40fc9fbe90ec
+    - 4f183e41-3270-4345-9234-3070ea2e4406
+    - 7decfb83-998e-4bad-a36d-09380ca810ff
+    - d0b8fa14-ad90-4625-8829-df4c4aeca28a
+    - d10f36a0-8604-4b03-a290-a31c5f4e5cd1
+    - d3e031ae-0189-4c87-8600-dea5d98f3224
+    - dfb5d5e2-5e2b-40bc-8e3d-7321220a044e
+    - f51e9623-aa6c-4878-858d-8de7cf43eec9
+    - fda171de-9fe9-4e7e-88b1-05f4b9ba1a2a
+    Abstract: 
+  - title: 'Use of Digital Tools by Preschool Children: Preliminary Results.'
+    id: 02a643f8-93f3-469f-8c24-2ffc5c9b7129
+    authors:
+    - Ioanna Ersi Pervolaraki
+    - Emmanouel Garoufallou
+    - Rania Siatri
+    - Georgia Zafeiriou
+    - Sirje Virkus
+    - Stavroula Antonopoulou
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 2151fe5c-ec30-40d5-bf75-a428b1be8250
+    - e719a43c-1a1c-4c2f-83b0-66227fab2012
+    Abstract: 
+  - title: MR Imaging Method for Measurement of Local Dynamics in Human Tissues.
+    id: 02e81c9e-f2ae-4335-b2e2-416eb95df3ac
+    authors:
+    - Kazuhiro Homma
+    - Kiyoyuki Chinzei
+    - Koji Hyodo
+    venue: 
+    year: 1994
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A high-performance portable abstract interface for explicit SIMD vectorization
+    id: 0361b05e-9bca-42d1-af6c-49905e5eb7cb
+    authors:
+    - "P. Karpi\u0144ski"
+    - John McDonald
+    venue: 
+    year: 2017
+    n_citation: 0
+    references:
+    - 65cbef5a-007f-436f-9044-ffc09b1d2df1
+    - aac1e6b2-a2c2-45c1-8935-bcc96680cd23
+    - cafafa28-f85a-4331-917c-8851ea044826
+    - e0f45975-a3d5-4b84-b106-93ce2e198e6b
+    Abstract: 
+  - title: Index Appearance Record for Transforming Rabin Automata into Parity Automata.
+    id: 037d2e92-a3b1-406e-a344-a9fbd8c57bc5
+    authors:
+    - "Jan K\u0159et\xEDnsk\xFD"
+    - Tobias Meggendorfer
+    - Clara Waldmann
+    - Maximilian Weininger
+    venue: tools and algorithms for construction and analysis of systems
+    year: 2017
+    n_citation: 0
+    references:
+    - 0c781683-b162-45b5-8a0a-5188238ef1c6
+    - 3ebf499b-c870-4256-9721-12d53f86c4ed
+    - 5fc26abc-4325-415e-9ded-fb84cee2cfc8
+    - 5fffd378-7385-425c-a445-f17380db02c9
+    - 737eb6ec-5c86-4e63-baca-fadaf07d4046
+    - 74e3fd8b-f955-4fde-aad8-0a705f05e27e
+    - 83fa4cb3-9d63-4045-bfc2-06bfa8eec305
+    - 98f75cd7-a8d9-4aa2-aedf-17854c31b90a
+    - a35929d4-2cf6-443b-935b-98150de57b56
+    - a683136e-1411-431b-8257-507891fff09a
+    - b7143e77-0b05-4448-9bfe-02a6323532b2
+    - d566771b-688d-46c1-9588-7f611deb4238
+    - df8ed6f9-a3b0-4d26-83a1-6eb1e025f870
+    - ecc7c034-f91e-4a75-9b6b-630e93503a1a
+    - f2d7e368-8a58-4e5c-826d-fa714cc000f8
+    - fd9ddd9d-583f-4eb6-8cbe-90722c8587a1
+    Abstract: 
+  - title: One-Page Multimedia Interactive Map
+    id: 0391f5e3-13f4-4984-afbc-82ebd59c5936
+    authors:
+    - Nicola Maiellaro
+    - Antonietta Varasano
+    venue: 
+    year: 2017
+    n_citation: 0
+    references:
+    - 49365bcd-f1aa-4f6e-9ab2-597d0fcfc28f
+    - 5baa4a60-4a82-49c8-84b4-34031203df26
+    Abstract: 
+  - title: Standardised Framework to Study the Influence of Left Atrial RF Catheter
+      Ablation Parameters on Permanent Lesion Formation
+    id: 03c06fcc-017a-4138-81f4-86f7237cabfd
+    authors:
+    - "Marta Nu\xF1ez-Garcia"
+    - David Andreu
+    - Marta Male
+    - "F.J. Alarc\xF3n"
+    - Lluis Mont
+    - Constantine Butakoff
+    - Oscar Camara
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 456717b7-c5f9-4d65-a2e6-83ce70378c5f
+    - 7ea2c02c-c3cf-4a1e-8281-09f1f38599f7
+    - a5378aed-4361-47ee-8ae7-584b8c3b669d
+    - d66a68b3-c72b-4d4b-b406-57f3a6547bb1
+    Abstract: 
+  - title: Topology Experimentation in a Zigbee Wireless Sensor Network
+    id: 03d34ab5-a275-444e-a85b-c46f09c357f0
+    authors:
+    - Maria Dimou
+    - Theofilos Kossyvakis
+    - Costas Chaikalis
+    - Konstantinos P. Tsoukatos
+    - Charalampos Liolios
+    - Vasileios Vlachos
+    venue: panhellenic conference on informatics
+    year: 2016
+    n_citation: 0
+    references:
+    - 35fc2508-4727-4ae9-a00c-8c00e70a9a80
+    - b2ccb628-0c27-48cf-8b5e-291ab25b9117
+    - d44dd4fe-ca1d-4fde-855a-1548de68b836
+    - dfc9f1b0-a952-42e2-bc5e-c5d78c053d2d
+    - f93520e8-c84e-4c9e-b6ad-bd8892ae5bd0
+    Abstract: 
+  - title: Tools & Techniques for Malware Analysis and Classification
+    id: 03f1c773-c072-4011-9455-1f34c64e929d
+    authors:
+    - Ekta Gandotra
+    - Divya Bansal
+    - Sanjeev Sofat
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: On Leveraging Executable Language Engineering for Domain-Specific Transformation
+      Languages.
+    id: 0458b983-901d-49c1-85f8-8aa1eacc8a8b
+    authors:
+    - Erwan Bousse
+    - Manuel Wimmer
+    - Wieland Schwinger
+    - Elisabeth Kapsammer
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Heterogeneous Information Network Embedding for Meta Path based Proximity
+    id: 04cd6546-ed71-4fec-899e-9e411b75975f
+    authors:
+    - Zhipeng Huang
+    - Nikos Mamoulis
+    venue: 'arXiv: Artificial Intelligence'
+    year: 2017
+    n_citation: 0
+    references:
+    - 0613c93b-e309-4247-844c-15b8e651f7d6
+    - 087f5698-5bf0-4a04-baa3-c13547b9e9f1
+    - 12f40b38-cd99-4801-8074-d765a29a2101
+    - 28994c1f-f220-4156-a6da-17cff4a55a61
+    - 29dec249-248e-405e-95ad-25212dbca08f
+    - 2e5c3b78-91b8-43d6-b2bb-bb2c861c564c
+    - 51cfdd10-1566-4380-adae-3889630ebaf4
+    - 5a7ff0d4-5f7e-4dfa-87ba-79044a7096e0
+    - 5fbfc090-9a2c-43c5-a5c8-1deea2e4d30c
+    - 71b62008-1731-4491-b34c-9f223bae846f
+    - 72836b7e-edd1-4fb1-ac42-2306b646599c
+    - 7f6f7910-fa04-4993-9fa7-eface233f45a
+    - 8e5a5082-4516-4d61-9511-7b5a08011441
+    - 914ab6f3-868b-45dd-baa8-7c160b687f54
+    - 9bd3b8dd-728e-4476-a3b8-f7b08f51bb78
+    - 9cad8f91-f755-49ee-8521-69cf39240b0f
+    - a5fc8aed-b007-4ed1-92ee-81fad0dc67d2
+    - c074b2bd-e180-4a80-8ae3-109ebff35e8f
+    - c186e8f6-42e1-4bb8-8fe3-039e0cd02532
+    - c5c591ef-2cb9-4eb9-9c06-f2b7b8725a73
+    - cbff2ff2-6b8f-425d-a5ef-aff0de9be3e5
+    - ccc91c53-bb9c-4b35-a09c-4407e34dfd35
+    - e20ac065-c949-4f62-81ce-8c9c9db36a8d
+    - f3756ece-68c5-4626-aa4f-35fe6f015c6c
+    - f6e6c928-7f9c-45e4-871a-8b428369f97c
+    - f9b6cdb9-cc7b-4981-a93d-b0b08a96285b
+    - fef6ba5f-dcc5-4355-a09f-140aba3637fe
+    Abstract: 
+  - title: 'Metaheuristic Design Pattern: Visitor for Genetic Operators'
+    id: 04d72bcc-7998-4a8d-8fe9-8ff3dab793a4
+    authors:
+    - Giovani Guizzo
+    - Silvia Regina Vergilio
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 16bc6bb0-748a-4272-ae22-32b5b1538321
+    - 1d111ef9-6b14-4af7-b49b-f1a1a5c0f11a
+    - 43cb5f98-9813-42ff-845b-0171a67943b0
+    - 45913319-0e7c-42e4-8a25-ac2124c373f5
+    - 72508eaa-e394-4e9c-8324-63ffb5a9cd7b
+    - 7480f0fe-f18c-4ae9-b47a-0dc4340f927f
+    - 7decfecd-eed2-4add-8b5d-726e9c50c244
+    - a74f9944-5d5f-4e70-ae6b-ad90c10b6502
+    - c4eb7c15-5002-4f0e-969a-56511496e88d
+    - cd42f327-6765-4767-969e-abfa55d58763
+    - d326127b-32ca-42f8-8194-856fb5b66fdb
+    - da25b6b0-9637-4422-9ad7-f766597785dc
+    - dca57849-52b1-495b-b142-33d1974c90f3
+    - f273d116-f7c4-486e-ba3c-bbefa620513d
+    - f7637c3e-5153-4d81-bb9c-dd4f2c8d4118
+    Abstract: 
+  - title: 'Information Literacy Programs in the Field of Law: Case Study of Two Law
+      Faculties in Croatia'
+    id: 04e7b47e-af0b-40e6-8632-f5c79d494719
+    authors:
+    - Dejana Golenko
+    - Kornelija Petr Balog
+    - Ljiljana Siber
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 314357ce-ecbe-45ed-8c06-c55aa20afa4c
+    Abstract: 
+  - title: State of Practice of Non-self-aware Virtual Machine Management in Cloud
+      Data Centers
+    id: 054ee4ba-df31-4662-8869-cd842d0a3c1e
+    authors:
+    - Lydia Y. Chen
+    - Robert Birke
+    - Evgenia Smirni
+    venue: 
+    year: 2017
+    n_citation: 0
+    references:
+    - 4176c232-fa9d-4540-a778-d2fe285cd2ae
+    - 84e25c01-d8a6-4408-8987-6e9ff310fc80
+    - 9225b3b0-3151-460c-ab8d-0e697aecb896
+    - bf551944-acd9-4885-973c-d643810b543f
+    - cd4058f9-c324-4b8c-bdc0-db940cfbcdd7
+    - cd46bb67-0755-4fb4-ba84-086227c4f529
+    Abstract: 
+  - title: On the Computation of Centrality Metrics for Network Security in Mesh Networks
+    id: 055c731d-eead-439a-bec4-f2028968cc31
+    authors:
+    - Leonardo Maccari
+    - Quynh Nguyen
+    - Renato Lo Cigno
+    venue: global communications conference
+    year: 2016
+    n_citation: 0
+    references:
+    - 03a2eb6c-8a96-468e-b79f-282d069a4824
+    - 063390a2-f032-473b-9806-db49733becdd
+    - 1dc91e45-5985-4fd5-b62c-2b2df7c22b30
+    - 22ea44eb-8d96-4bfc-aea4-94362672b98f
+    - 28d2789b-7924-470a-9ec7-34363e00c975
+    - 2c8e7e31-db3c-4207-8b28-ee8e2910dd87
+    - 2ea644c7-5598-40fb-8afa-043ab2bfd529
+    - 46adcb49-cb4d-4370-b0d2-50ec87f27cc9
+    - 555fc5aa-69a3-473f-b7a3-2a2e69deb835
+    - 631fa5b4-ccd0-4f8d-81dd-5b27fb10052b
+    - 7b2e7ba1-1bb4-4d21-8120-fa84a27b6e84
+    - 84d108d4-c2a5-4531-9dcf-39ede987bccf
+    - a2f6bc97-abdd-4f23-b2d1-7f57fab1429c
+    - b233c983-a938-4aeb-a375-d2900d101d24
+    - bb0cf3d2-3c83-465e-81df-c7f1bf7c7bd8
+    - befe08a2-967a-4846-a16a-db0f74d190c5
+    - c574452b-32e8-41e6-9c62-a9d3b05a5e6b
+    - c97e6efd-0469-4fcd-af6e-d9093fbb598f
+    - d49d8c12-a22d-41cb-bbed-3c03afd255eb
+    - ddcbdf0b-7da1-4ec0-80dd-be302a5fa8c3
+    Abstract: 
+  - title: 'The difference-of-datasets framework: A statistical method to discover
+      insight'
+    id: 05944f08-b0df-47b8-bb44-23a63cf6a9a8
+    authors:
+    - Paul Raff
+    - Ze Jin
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 1f35f20b-a760-47b6-8877-4ed53b69f6a1
+    - 30db7a2d-e7c0-4bf0-87d5-253e13ccac96
+    - 3875b02b-0333-4433-8d97-c3105394c36d
+    - 48e1100d-588d-4716-a728-4e7062a13e79
+    - 657d6ff2-9d0b-4558-8eeb-e6991120ddf5
+    - 7e374bc3-54f4-4a05-a467-f0e7dd3ec059
+    - 92ccbc72-cbaf-4258-b839-ba34c61205d7
+    - cc7b3b77-fef5-48f5-863a-3bdaed3f43f3
+    - d740fce7-beef-407b-9160-9bf0f1d8baf4
+    - dec1020f-eb37-4f1d-80fc-b745138549c8
+    - ebc3e1a7-dc06-4a76-95a9-d721f2fbef05
+    - f55ba15e-33c9-463e-b403-100a8dd0a476
+    Abstract: 
+  - title: Work in progress - Vertically integrated teams to inspire student interest
+      in computing.
+    id: 05c04c97-a735-4f63-ac35-18a2f88d8cb4
+    authors:
+    - Gregory W. Hislop
+    - Massood Towhidnejad
+    - William M. Marcy
+    venue: 
+    year: 2011
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Using network calculus on worst-case latency analysis for TTEthernet in
+      preemption transmission mode
+    id: 05de0628-5f0d-4c54-a8df-986c135d0a7e
+    authors:
+    - Xuan Zhou
+    - Feng He
+    - Tong Wang
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 03a8b814-c726-4430-9422-6e5cb121c739
+    - 03b061cb-7a35-4636-9c99-509e20484747
+    - 13c5e77b-b809-47c5-a5f8-b555a25dbd24
+    - 3ee36ffd-3eb1-470c-8e96-ea173b0794cf
+    - 56c0195f-6267-464b-b3c0-824aa08e374f
+    - 57d658af-322f-4f0e-a513-233d18d4a0c6
+    - 63679ba2-2da9-4ccb-9303-7f2a37a316ea
+    - 6f82b075-1db0-4f45-8dc5-2493b9d7840a
+    - 8bd55ba5-dda7-45a4-8982-f1f45d56a2eb
+    - ba392c68-9663-49e5-85b0-2e1e2c84300d
+    - bf369f96-eb45-4b95-8355-f35a8a8012c6
+    - edcc5acc-91bf-4b59-96b5-eda6be35843a
+    - fdec83b0-ebd2-4605-869b-9862b666a157
+    Abstract: 
+  - title: Secret Key Agreement under Discussion Rate Constraints
+    id: 0600c67e-71a1-4ed2-913f-e9db02370de4
+    authors:
+    - Chung Chan
+    - Manuj Mukherjee
+    - Navin Kashyap
+    - Qiaoqiao Zhou
+    venue: 'arXiv: Information Theory'
+    year: 2017
+    n_citation: 50
+    references:
+    - 19eb4d23-c01f-484a-ad86-0f1061622295
+    - 205c230b-da88-43fb-b5ad-d1dbd89f9eed
+    - 3f5b52ce-03c4-44f0-bc93-02af2d30ca9b
+    - 5743fa09-b4a5-4005-97bf-6f6d60d7f53d
+    - 773140de-2995-4e3e-8ed2-120bbd93c9e8
+    - 7ae6cf1c-5599-4f00-a0d1-995e88b15948
+    - 898d8fd3-f3df-4c60-b03d-49e40072f666
+    - a319b177-7776-4143-8e88-b548ddda5b8a
+    - ba835661-2272-444d-be20-e56862698536
+    - c5b4b17a-c74d-40ef-986b-40facda637ab
+    - c5c9633f-2313-4fe8-bb3d-f9df63423d3d
+    - f07a6e52-c17b-4254-99af-00dd1e3dc7a9
+    - fa7c6cca-fd3f-4764-9e1a-21f3fecc8b30
+    Abstract: 
+  - title: Investigation and performance analysis of OpenVX optimizations on computer
+      vision applications
+    id: 06a4064e-54f7-4092-a7e0-a1bdddb00bc0
+    authors:
+    - Djamila Dekkiche
+    - Bastien Vincke
+    - Alain Merigot
+    venue: international conference on control, automation, robotics and vision
+    year: 2016
+    n_citation: 0
+    references:
+    - 08082d24-4cf9-41d2-98f7-3ae85df297a8
+    - 28323bfc-f269-4778-9927-60a5931e0bc1
+    - 488a6295-0665-4039-9842-da199231e5e0
+    - 56dedd88-8542-4ebe-9d96-05517a559593
+    - 62d3ed95-18d5-4c3d-af89-b65b8eb35d36
+    - b1f52e8e-84c0-4d62-af2e-9bb392d711a7
+    - b3849367-0a36-4a57-8440-434a7c0fdcbb
+    - e14f07cb-6644-4e95-8c39-aab3c7038878
+    Abstract: 
+  - title: A distributed forest fire fighting simulation system based on HLA
+    id: 06a987df-b067-413f-9555-405885651245
+    authors:
+    - Chongcheng Chen
+    - Liyu Tang
+    - Xiaogang Feng
+    - Kaihui Lin
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: GNC of the SphereX Robot for Extreme Environment Exploration on Mars
+    id: 071e1103-1b06-4671-8324-a9beb3e90d18
+    authors:
+    - Himangshu Kalita
+    - Ravi Teja Nallapu
+    - Andrew Warren
+    - Jekan Thangavelautham
+    venue: 'arXiv: Robotics'
+    year: 2017
+    n_citation: 0
+    references:
+    - 2ac527fa-fc6e-4414-be65-de025e7ee625
+    - 30932642-fd17-4ae9-9a5b-90e67adcfe41
+    - 53971141-d73b-470a-b322-e56b2f9f8714
+    - 5bb2ad40-2470-423f-932e-6ea5f14919c6
+    - 5c509353-74f0-409d-9889-372efb833ec9
+    - 935c5f12-cb46-4e4d-b5e5-6e79169fb5d9
+    - 9ace4e03-15e4-47b3-a2e0-99f32000e19e
+    - fab7171e-e625-4e69-924a-797d53cca541
+    Abstract: 
+  - title: Unsupervised learning of verb argument structures
+    id: 0764585b-fec1-4086-9751-643ef3902d52
+    authors:
+    - Thiago Alexandre Salgueiro Pardo
+    - Daniel Marcu
+    - Maria Das Volpe Nunes
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Battery Lifetime-Aware Base Station Sleeping Control with M2M/H2H Coexistence
+    id: 0794014e-c320-4aa7-99f8-bb1d34f86277
+    authors:
+    - Amin Azari
+    - Guowang Miao
+    venue: global communications conference
+    year: 2016
+    n_citation: 0
+    references:
+    - 2eed0e90-d04b-4868-ae90-4dba91794542
+    - 4d302826-cf75-4415-beb7-0b7f69bfe2a6
+    - 75ff8e1a-4f62-4df7-8190-4b68cda69416
+    - 7cdf9036-41b3-496e-a7fe-ca9f7858f6b9
+    - 8c69d90c-4b18-4037-b17d-03c5672c2ed5
+    - 99bb5ecc-47bd-4708-ab7c-5acd79291168
+    - aba4e267-b349-42f0-8e12-66734e4a0996
+    Abstract: 
+  - title: A distributed algorithm for economic dispatch in a large-scale power system
+    id: 07a98052-2a9d-4787-8eac-0c167cac65be
+    authors:
+    - Fanghong Guo
+    - Changyun Wen
+    - Lantao Xing
+    venue: international conference on control, automation, robotics and vision
+    year: 2016
+    n_citation: 0
+    references:
+    - 15cdd1a5-b2f3-45c7-b6fa-332322aee56d
+    - 2f3b5b57-18f9-4638-af40-be99c7d97f5a
+    - 8e67f4af-bef4-408a-9cc8-65e9b4c407d9
+    - 91b443c2-7d3e-457d-9c0e-a540be3a6aaf
+    - af9ac400-c5e0-4906-bccb-8ba67d05bc6b
+    - c2ac8dc5-eeda-4126-8bcd-428530c34502
+    - fd9ccab5-f1ff-479f-b10d-b974e670675c
+    Abstract: 
+  - title: Angular Domain Data-Assisted Channel Estimation for Pilot Decontamination
+      in Massive MIMO
+    id: 08005b30-d0de-4578-84a3-dafa9b34c787
+    authors:
+    - Yihenew Dagne Beyene
+    - Kalle Ruttik
+    - "Riku J\xE4ntti"
+    venue: Mobile Information Systems
+    year: 2017
+    n_citation: 0
+    references:
+    - 397d220e-8154-4729-b2e4-10af297c6da4
+    - 99d4c119-b99d-4931-a343-dc048cd562ca
+    - a4f35f32-3bec-43f9-9570-81f6d8aedfeb
+    - ad93a8cf-7157-4e38-8028-6acf2850e67a
+    Abstract: 
+  - title: Semi-Automatic Service Provision Based on Interaction of Data Warehouses
+      for Evaluation of Water Resources
+    id: 0820fe4c-099f-41ba-8b8c-9d633cbd783c
+    authors:
+    - "Dal\u0117 Dzemydien\u0117"
+    - "Saulius Maskeli\u016Bnas"
+    - "Giedr\u0117 Dzemydait\u0117"
+    - "Ar\u016Bnas Miliauskas"
+    venue: Informatica (lithuanian Academy of Sciences)
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Performance evaluation of depth map generation algorithm for stereo endoscopic
+      camera
+    id: 08bec57f-c415-4614-b49d-a01db2f9e84a
+    authors:
+    - Jiho Chang
+    - Jae-chan Jeong
+    - Ho-chul Shin
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 1f520d1a-5870-477d-85d7-0f50be690ea7
+    - 3685b3bf-1b66-4cbf-ae23-3ade0eabd832
+    - 555ad45d-a882-4a07-a5a6-41ddb65d3fc8
+    - b0b1fe69-89a7-4d70-ad62-15ddcbd767c2
+    - b1357d01-99b5-4abd-8fbb-6fc478b7b4a4
+    - db848f26-fa82-4824-bb6e-825c4fee6437
+    Abstract: 
+  - title: Synchronization and state estimation for stochastic complex networks with
+      uncertain inner coupling
+    id: 08ed3a9e-75a9-4f91-b318-c24cf56eb6e7
+    authors:
+    - R. Sakthivel
+    - M. Sathishkumar
+    - B. Kaviarasan
+    - S. Marshal Anthoni
+    venue: Neurocomputing
+    year: 2017
+    n_citation: 50
+    references:
+    - 13a1ecb2-e3c6-40f0-b7a7-a1fe8390e0a3
+    - 1454d5fa-84de-4e14-9c6e-23f61edfa1d9
+    - 20f9b218-a4c7-4878-bdf2-3d52bb353601
+    - 2bbe830e-a318-4fdc-9292-4d85738db32c
+    - 37626e69-e0b2-4cf4-a309-86ac416dcd9b
+    - 6c8bb875-2f98-47ce-a705-9a5bd852caa4
+    - 787e74c3-d94e-4929-b501-9ed9fd1b6f6f
+    - 7b2c56da-ca0b-4951-9069-129b7792b62b
+    - 82e47334-1059-4a9e-a7b5-e7bcfd322dc4
+    - 9554cc4d-4d60-474b-a391-9ebcf63fa0c0
+    - b744d133-6e6e-4400-afed-a425975fa49b
+    - be056407-55df-4e8f-9941-98216ac8cd25
+    - cc7bcdc5-d631-498b-955e-f2d4683b4a61
+    - e80bbbe8-829f-4ad1-ac81-dd1e913eba8c
+    Abstract: 
+  - title: Multi-objective branch and bound
+    id: 093e387e-9041-420d-8ed6-612e7bc6e916
+    authors:
+    - Anthony Przybylski
+    - Xavier Gandibleux
+    venue: European Journal of Operational Research
+    year: 2017
+    n_citation: 0
+    references:
+    - 003b2880-b83c-44bf-bee1-7ebfe5efb498
+    - 01d9e9da-3620-4b9a-ab71-76863356f115
+    - 05607e8c-4518-47f4-a1f4-008b54f042e5
+    - 0a75eddd-3a89-4ddc-adb9-32d3aa7f8b75
+    - 0dd3aa6c-e22a-4757-a2aa-fabd23d36122
+    - 1255b075-5b88-4895-90c1-eff2e058a104
+    - 2181e319-f2d3-4117-b34f-3ea8957456b9
+    - 24099c98-dae2-4404-a179-4092389037cb
+    - 2f138454-874f-4cee-ae9f-b4329d14a5cb
+    - 2f5fb9e2-94c4-4ba2-92d9-1c157ac7f98b
+    - 3319b470-e3db-45f8-a067-824b0a6c308c
+    - 5183a1dd-e591-4b22-985e-f5afe3387ca8
+    - 602db22b-43ea-403c-81c7-514dffe0c1d6
+    - 62acba83-9873-469d-96e5-5115cb8655d3
+    - 6603ea38-9912-4b0f-8b25-0004f4229a23
+    - 66eed1ac-0868-499c-b03c-f5ea17fe8eb6
+    - 8007f0be-098f-489a-904b-87654998e137
+    - 84c0f524-644c-4eaf-a130-59af33868c80
+    - 8c307463-9eae-43df-ae00-8a416aa26dbc
+    - 9c40f7c7-752e-476c-acc1-2f0a0ccb3b46
+    - b3da1ad1-6b7c-47e8-b804-e98b74c78b03
+    - b7cd90c7-7eba-4b87-a9d9-d1f21ad96aa6
+    - bb1945f6-6e79-4e44-9ffa-15e709b7382d
+    - c06710ea-4061-4dc4-913f-130db1ea8f2a
+    - c50336e1-6fd9-4182-a747-6b686bbf4bb2
+    - c771b0d7-ae7a-4429-8ddc-48db730634e1
+    - c80550f5-5801-48b1-a6e3-161bf584b145
+    - e3178375-38b3-43c9-95b9-322f4a9ec01f
+    - f07ffef1-d0fa-4c85-87cf-8c74f5c30941
+    - f7d1c4ea-71e2-47ff-af13-e4e14ce7e0b6
+    Abstract: 
+  - title: Path planning of modular robots on various terrains using Q-learning versus
+      optimization algorithms
+    id: 0977ddfd-d01a-46cd-93e4-a101757dd1e0
+    authors:
+    - Sajad Haghzad Klidbary
+    - Saeed Bagheri Shouraki
+    - Soroush Sheikhpour Kourabbaslou
+    venue: Intelligent Service Robotics
+    year: 2017
+    n_citation: 0
+    references:
+    - 070f917c-d01e-435f-9466-bf8eaa002def
+    - 288106a6-f48d-44c2-98fb-bd4c257d6ff5
+    - 293971a9-15e0-4a32-9c76-8a9704e304c2
+    - 30932642-fd17-4ae9-9a5b-90e67adcfe41
+    - 388470d9-49db-42ce-97c8-f863fcc5f989
+    - 42a65ef2-922f-44d4-b8a7-963b3a35b4cf
+    - 5d491211-2de2-4b7a-8f9a-94b718e51e0d
+    - 64166868-cc56-4d33-aba9-1168b22131a1
+    - 76eddd5c-8eab-49e5-8925-b526bc9d2c65
+    - 7cd8c97b-ae4f-45e2-b87f-5e2a5f4b1c6d
+    - 842dc017-aaf8-45e5-9dc3-62cf2dedcc7f
+    - 8a70ef11-bd1a-4de7-87c8-4b40831b70d7
+    - 99c52db0-e715-49a6-bf57-9b18aeb2240c
+    - 9a2ad1c6-9e8e-4b4d-8143-303ab5b52970
+    - a0beec2b-ec67-4a11-b778-c6a0146c05d0
+    - b08b7edd-e1d0-4662-844e-2b68c4554730
+    - b50f8b0f-53d9-4883-a00c-53dd85ecafbf
+    - bd5ca86e-a109-4943-900d-ef51205292bf
+    - c18519d5-7c06-4328-b720-b9865e1874a1
+    - cd544da7-c66a-4369-ad4b-d0bb0e386ab1
+    - cfa66079-4432-46e3-bf49-8c7275236f4f
+    - d162ceec-58d3-43a2-b3e7-712ce57fa684
+    - d1b9e902-d3a5-4914-b1c2-2e7351d81205
+    - e0f3a738-4ab2-40d1-ba44-506d81c1d230
+    - ef951512-07f8-4ff4-8716-65e4e087c784
+    - f2ac32ce-68c4-4e57-b7ec-2ff91e46bc24
+    - fdfa51dd-5732-4297-aeba-9991aa9bd2c7
+    Abstract: 
+  - title: "Optimal control, an introduction: Arturo Locatelli, Birkh\xE4user, London,
+      Basel, 2000, ISBN 3-7643-6408-4."
+    id: 09a53601-06e4-4f7e-bf98-06ed1ae0b35e
+    authors:
+    - Fabrizio Dabbene
+    venue: Automatica
+    year: 2004
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A tracking error control approach for model predictive position control
+      of a quadrotor with time varying reference
+    id: 09e659aa-7446-43f4-bc1b-576d601aa402
+    authors:
+    - Jan Eric Dentler
+    - Somasundar Kannan
+    - Miguel Angel Olivares Mendez
+    - Holger Voos
+    venue: robotics and biomimetics
+    year: 2016
+    n_citation: 0
+    references:
+    - 02e5b03a-5388-4faf-ab4e-b3523ad39081
+    - 09d5c2b5-78bc-4381-a157-f80c69312f05
+    - 17ff45ca-2373-4d3b-b487-a975d02cfbf9
+    - 45cb1359-df7f-40bf-b698-98d1f0e2d7f4
+    - c2497cff-5b9f-4a9f-937d-20f92c2fef09
+    Abstract: 
+  - title: New requirements prioritization based on customer historical profiles
+    id: 09faae8b-699a-45d6-b6a2-02d7c3f4fbad
+    authors:
+    - Sara De Federico
+    - Silvio Gonnet
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Welcome to the IDT 2016
+    id: 0a06cb96-5255-486e-9e4b-3059b04e3aa2
+    authors:
+    - Mohamed Abid
+    - Yervant Zorian
+    venue: Intelligent Decision Technologies
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: 'Eunomia: Scaling Concurrent Search Trees under Contention Using HTM'
+    id: 0a070f4c-5077-4610-adb8-6be5538617c5
+    authors:
+    - Xin Wang
+    - Weihua Zhang
+    - Zhaoguo Wang
+    - Ziyun Wei
+    - Haibo Chen
+    - Wenyun Zhao
+    venue: acm sigplan symposium on principles and practice of parallel programming
+    year: 2017
+    n_citation: 0
+    references:
+    - 0131c113-559f-42da-94e3-f5fc60ddb16e
+    - 014e3b46-0c40-4d59-afe3-602b7e08ed22
+    - 0f065892-4430-4628-b5c6-aec574869be1
+    - 16e9c2b2-5978-41d1-86f0-3f91ea2095fe
+    - 20c1a651-ec20-44cc-bd6d-b5982a0f3e55
+    - 234cc65d-a11c-40c3-b61e-1d4697c69e61
+    - 2a25de10-ea33-410c-8f32-69feae4030ab
+    - 3028bf0f-26d5-4275-9f03-038683080f39
+    - 3c9affe5-a987-43bd-89a9-68eb9762659b
+    - 4799a163-054c-4575-85fe-2a513b0cbfc9
+    - 482b77a6-2d75-419b-9805-5dfc1e5b6e10
+    - 495bc3eb-10d7-4e1a-96c1-8c247b3d6e74
+    - 590d20e9-d235-4939-b1c8-b8ccc345d45b
+    - 6158ba15-c196-4163-a899-872f1ce0e9fc
+    - 646ddcd4-0547-427b-9451-f84400bd18b2
+    - 690e99b1-52db-44cd-b6ce-38008d4dc761
+    - 699fd50e-7da0-4d25-a3e2-1ec6275d630f
+    - 6e6f92d1-ae41-4680-b9fb-ed284d7f3ca0
+    - 85e460ac-801d-465d-b71d-145de98060cf
+    - 86994343-85ab-4a6e-9636-0a485ed49af7
+    - 8f662192-4b14-47e6-bcf1-24d6ea9703f6
+    - 984f547c-d135-4cf8-b85e-7315f571b4aa
+    - 99ecce31-28e7-4d23-aa5b-23b72db095ac
+    - 9b23dcb1-20f3-419e-bae4-56c5b73bf27f
+    - bea81637-19be-47c8-a328-1484dbc7a033
+    - c177b850-1275-4b3b-953d-5d7791bfea5b
+    - cc76cc26-3128-44a3-8c50-d692b9031790
+    Abstract: 
+  - title: Adaptive Spatial Modulation Using Huffman Coding
+    id: 0a13520f-b058-43ff-ad3b-5e292422887e
+    authors:
+    - Wei Wang
+    - Wei Zhang
+    venue: global communications conference
+    year: 2016
+    n_citation: 0
+    references:
+    - 19392837-7972-4aa7-a860-d6c90458f7b8
+    - 4f48b371-d692-4a79-ad46-a9159dfdd672
+    - 748a2ab3-8b5f-4d0a-9e2d-af685089843a
+    - 870d11c0-8636-4f9a-b265-1016474bebff
+    - b4022bac-a157-4a3a-9cab-050b7c5a49c3
+    - c9c5a9c0-f1b7-4286-8538-13476ae32e60
+    Abstract: 
+  - title: Learning Multi-level Region Consistency with Dense Multi-label Networks
+      for Semantic Segmentation
+    id: 0a2562d0-f2af-47e1-a783-02aac8607c7b
+    authors:
+    - Tong Shen
+    - Guosheng Lin
+    - Chunhua Shen
+    - Ian D. Reid 0001
+    venue: 'arXiv: Computer Vision and Pattern Recognition'
+    year: 2017
+    n_citation: 50
+    references:
+    - 031bbeb0-4dc1-46f9-9984-109c3b3eefae
+    - 153c5014-dc7a-44a8-a93f-5cd27f1193df
+    - 176a7436-78ea-4c2a-82e6-7930ab023bd1
+    - 19d46c45-9aae-4fb4-8faa-1c4aab897468
+    - 1ee6c6af-f18f-4b88-8d66-db763bc6f864
+    - 23cddb94-a0fd-4711-b5c7-3c12e44545fe
+    - 28d47fcd-4f94-4de9-b57b-99ba4545b867
+    - 42efaf01-c82e-4d9f-a09a-bcc7a89e9593
+    - 5e5f0f16-9885-46cb-9c54-8c92803f3874
+    - 62de2ab7-adfd-4b2f-b7c9-3d91ebb1f0ee
+    - 7091292e-20a5-44ae-bd53-b423c30f08cb
+    - 72640ec0-e5e8-4b68-9508-f8a7edfcc343
+    - 7d479bda-f8ab-4c55-8a7a-fd44b439e9e3
+    - 83c737b8-e084-4766-ba6e-131e6a1c017c
+    - 95c111f4-55d0-455e-884a-4485ff03b494
+    - ec26a04b-fff3-41c3-a52b-cebdaca61243
+    - f96b05ce-e0b1-4c26-929e-1fe675c4b4e3
+    Abstract: 
+  - title: Space-Time Graph Modeling of Ride Requests Based on Real-World Data
+    id: 0a94673d-9653-4c2a-bfee-e7f7bd41cb46
+    authors:
+    - Abhinav Jauhri
+    - Brian Foo
+    - Jerome Berclaz
+    - Chih Chi Hu
+    - Radek Grzeszczuk
+    - Vasu Parameswaran
+    - John Paul Shen
+    venue: 'arXiv: Artificial Intelligence'
+    year: 2017
+    n_citation: 0
+    references:
+    - 1079e0ff-5b82-466a-8a4d-888070e0fbd2
+    - 24861225-3105-4832-addb-a546909650b0
+    - 58600378-8e31-4103-8feb-69f2d3f97606
+    - 68faab18-b537-4f62-85cf-ddc9ef352362
+    - 713ca1b9-71b6-48e9-bcf3-156b6dcae8f4
+    - e7f6b8b1-4fdc-48df-876f-67859ed4d5cf
+    - f75e49b7-bd64-41a1-bba4-b744c67ba062
+    Abstract: 
+  - title: Low-Complexity Puncturing and Shortening of Polar Codes
+    id: 0aa44d12-30f7-450e-bc29-28a8799ee804
+    authors:
+    - Valerio Bioglio
+    - Frederic Gabry
+    - Ingmar Land
+    venue: wireless communications and networking conference
+    year: 2017
+    n_citation: 0
+    references:
+    - 063aa38b-815f-420d-a1d5-c3b8077d35d1
+    - 0a212991-fd54-4e5e-a5be-39e89a5d1a9f
+    - 1c1956a8-7c88-494f-ab0b-b957848671dd
+    - 74c3a1c3-902c-4eda-a7a5-f9407a36cdfd
+    - 82af5ba0-738f-48bb-9dba-0b59dc51f403
+    - 87287098-3723-49be-b605-15d22b3fda43
+    - 8a63e93f-6382-4f27-8f1d-65b46e688945
+    - a99b8dbf-eadf-47b1-b0ef-aab14556e80b
+    - b74034d6-c5ca-4c6c-b96b-3cb3d6769602
+    - fba0133c-8d49-44c4-acd1-b59fc5f02426
+    Abstract: 
+  - title: Modeling metaphor perception with distributional semantics vector space
+      models.
+    id: 0aca9da2-99d9-4349-8d7e-ed02103f728a
+    authors:
+    - Kat Agres
+    - Stephen McGregor
+    - Karolina Rataj
+    - Matthew Purver
+    - Geraint A. Wiggins
+    venue: 
+    year: 2016
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: Software Architectures for Self-protection in IaaS Clouds
+    id: 0b19e3e2-6a3a-4427-b00e-03e3c14c0e96
+    authors:
+    - K. R. Jayaram
+    - Aleksandar Milenkoski
+    - Samuel Kounev
+    venue: 
+    year: 2017
+    n_citation: 0
+    references:
+    - 3184d624-b3b4-4ac3-9230-4f1ac122f3fd
+    - 49853b10-b217-4d19-9a9b-61244ce873ba
+    - 52def73e-c3d8-4419-af73-de1601388aa3
+    - e428d749-c2f1-41da-a00e-ef44850bf4c3
+    Abstract: 
+  - title: 'Advances in Automotive Radar: A framework on computationally efficient
+      high-resolution frequency estimation'
+    id: 0b32a5d2-c71c-4573-ba77-590c1fd2f40a
+    authors:
+    - Florian Engels
+    - Philipp Heidenreich
+    - Abdelhak M. Zoubir
+    - Friedrich K. Jondral
+    - Markus Wintermantel
+    venue: IEEE Signal Processing Magazine
+    year: 2017
+    n_citation: 0
+    references:
+    - 644017f5-5562-46d1-ac8d-ed6127e0cf5f
+    - 7f2658e0-3392-4df6-af09-732f501cf5be
+    - 878f0093-675a-4aa8-928d-6d053dbea592
+    - 8dd428d1-201e-4b26-8473-ae5470b3c19c
+    - 96a6e273-0c66-49e9-8716-c951823ed208
+    - 9cf05d04-12eb-4109-a1b6-4e06a2519144
+    - a1e81cdb-033a-43bc-9920-0e279ef44f56
+    - b3cf97ae-3ccc-4d6f-9722-00899afd5a49
+    - c5a90983-ccd7-4cb9-9c17-9d1bd157097a
+    - cc9562a6-cb23-47e2-80de-669e9966eff9
+    - cee46718-dff1-4424-ae15-5018e90e7597
+    - d599e372-9891-4e7c-90cd-c1e8e51e771d
+    - d802af15-51a0-48e0-8839-aa17298de620
+    - deee8ed7-e261-47aa-823f-6b9b194f91be
+    - e597ec43-ff7b-4beb-a967-fdd027ce307a
+    Abstract: 
+  - title: On-off Analog Beamforming for Massive MIMO
+    id: 0b65cc36-16e3-4c8b-9e86-c49cb982e4bf
+    authors:
+    - Shengli Zhang
+    - Chongtao Guo
+    - Taotao Wang
+    - Wei Zhang
+    venue: 'arXiv: Information Theory'
+    year: 2017
+    n_citation: 0
+    references:
+    - 13325197-396a-4b84-9ee4-f3a193af131d
+    - 147cc7ee-cf84-4cf9-b2a0-ab2da2912ac8
+    - 1b934bda-fb88-4f6d-8032-160bdeb680ff
+    - 1c51be67-2491-4df6-95e1-c9403b173a6b
+    - 1edb2abc-4a7e-4578-849b-b055cd65f21f
+    - 277c3c6a-d523-4943-b4d1-93dae21252a1
+    - 369c3d88-a460-49e5-9900-f3df356350e6
+    - 4f1448d5-3f22-4ad2-b0c4-1cb66ddea741
+    - 5db1f8dd-aeb0-42fd-8ce1-d86ccfe51332
+    - 6b4920a9-9dbd-411e-9618-0dd545bc97d7
+    - 6b96ace2-e362-4610-941c-37b19dc90b61
+    - 6de05dcb-2e39-46d2-bf91-d7bd8f59ca21
+    - 8d9b92a6-65ba-41bc-8525-2671ef222ad5
+    - 96c5991e-38e8-4e72-a8e8-cec692040cca
+    - 99d4c119-b99d-4931-a343-dc048cd562ca
+    - a686f64c-5d93-4644-9594-c4f02168179e
+    - aac78168-869e-4d80-950e-5c08e9f66e2e
+    - ab59fc80-35fc-4ed5-a12c-3f0a6f69eadd
+    - ae7acb26-9841-4ca8-89bd-868192245a35
+    - d2b797a2-ddbf-4e65-b545-ceb09b4a6d1e
+    - d863de8c-c7e1-4a4e-9f6b-59b21a10c5e6
+    - ddc5fdfa-2ad9-4801-ae5f-b778ec5fa5f4
+    - e769e232-fb20-4da9-a77a-4bf916c5f756
+    - f17f15fa-73b2-42d9-a95f-59e5fa95918b
+    Abstract: 
+  - title: A fast structured regression for large networks
+    id: 0b6b0cc7-4397-480e-9ec6-5cac94c2aa11
+    authors:
+    - Fang Zhou
+    - Mohamed F. Ghalwash
+    - Zoran Obradovic
+    venue: 
+    year: 2016
+    n_citation: 1
+    references:
+    - 05747537-ec32-4428-bb6a-adc8613e17c3
+    - 05dc4e28-cbb9-4c68-8d30-9143bd80853c
+    - 2b78227d-7cc3-4e64-bedd-195272ba6348
+    - 2c066e28-3565-481b-822a-e13830532f82
+    - 334653df-2fdd-4f99-8061-39525f42d0ba
+    - 414b660e-0e16-4e22-91e9-aa4e54765bc7
+    - 449d9dc9-32df-49ac-9caf-9c904d06dd2a
+    - 6379797c-3b21-4608-8b0a-d76db3869592
+    - 6415d03e-6198-44d4-9ca7-4308cab5ba7f
+    - 6ba6fffd-c329-4cdb-b6b4-feeec99901cf
+    - 72c0be6b-b51a-4aec-9806-a652e6629b3d
+    - 7fea8db4-18fa-4a92-8a62-8be0fb745907
+    - ae829318-5d10-461d-9c99-34a95a3f8732
+    - b323560a-8927-4ddc-be9a-7bfc48625ea7
+    - c0473d19-6897-410b-8b7a-0af42d31cb68
+    - d5c5aa7f-63ef-48a8-920e-7200b1264a8f
+    - d6da9732-c3fc-409b-8d67-291ca3577ff4
+    - dc673d4f-8bbe-426f-8ff0-8ba88bf260c7
+    - dd33e666-8572-492f-a2cf-0d42495e5f3a
+    - f5d9a67a-3768-4a4e-bfab-5d9d21e82d1c
+    Abstract: 
+  - title: 'The QUAIL Framework: Quality Assurance for Information Literacy Projects'
+    id: 0b7aa060-0b27-45d2-a9b4-35e611bedcde
+    authors:
+    - Elli Georgiadou
+    - Claire McGuinness
+    - Kerstin V. Siakas
+    - Manolis Koukourakis
+    - Angela Repanovici
+    - Nawaz Khan
+    - Harjinder Rahanu
+    venue: International Journal of Human Capital and Information Technology Professionals
+    year: 2017
+    n_citation: 0
+    references:
+    - 15b72552-a84d-4c16-92f7-fcaa0bb8d88a
+    - 3bd4cb6c-d953-4853-9e88-9cea8de07680
+    - 44067728-6c12-4a93-bb2e-07143c92832e
+    - b592099d-6269-4c41-b4aa-14a16ff4938b
+    - b5fdaf37-f9be-44d2-a0fa-2d75937db021
+    - cb1d5623-fb23-436a-96cf-9433a1726df9
+    Abstract: 
+  - title: A novel approach to steel rivet detection in poorly illuminated steel structural
+      environments
+    id: 0b9dd80d-0e27-4eb7-874e-4649b7e69e00
+    authors:
+    - Gavin Paul
+    - LiYang Liu
+    - Dikai Liu
+    venue: international conference on control, automation, robotics and vision
+    year: 2016
+    n_citation: 0
+    references:
+    - 47fac844-74f0-4da1-b5cd-642ff32d3800
+    - 499198cd-e10d-4908-9eaf-2ce1c8eac3ea
+    - 69b7bc89-2de1-4b91-ad48-f5f6220449b5
+    - 7faabcc0-9fc1-4c5f-8fb4-72980239b470
+    - bd17f9ba-4222-4cb6-91c0-2df0503a4aab
+    - c5ef8b81-11b9-413d-b502-507f0cf2a7dc
+    - ebfca554-7a3c-4597-954b-07336a2e3030
+    - f24b87a0-7532-4dc7-ae4b-f7bee6e55d0a
+    Abstract: 
+  - title: Faster Evaluation of Labor-Intensive Features.
+    id: 0bfc6df5-b2b2-4213-87cd-5e0ef3cf477f
+    authors:
+    - Michael R. Anderson
+    venue: conference on innovative data systems research
+    year: 2015
+    n_citation: 0
+    references:
+    - 7a192238-d608-4c76-a7b2-2557466121c5
+    - db6706ab-b50e-4d76-8f9e-17bbcba9cbc2
+    - e06fa649-332d-4275-a96f-cdeb6bf8e139
+    Abstract: 
+  - title: An efficient protocol for Peer-to-Peer file sharing with mutual anonymity
+    id: 0c54ebf7-02e0-4099-b018-5777f08d1708
+    authors:
+    - Baoliu Ye
+    - Jingyang Zhou
+    - Yang Zhang
+    - Jiannong Cao
+    - Daoxu Chen
+    venue: Lecture Notes in Computer Science
+    year: 2004
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A homotopy method for solving multilinear systems with M-tensors
+    id: 0c7d039e-336f-4592-b525-7e0e220b838a
+    authors:
+    - Lixing Han
+    venue: Applied Mathematics Letters
+    year: 2017
+    n_citation: 0
+    references:
+    - 3c820eee-c30b-45ab-a801-2e79ad70a69f
+    - 5f291712-9cb5-416d-9a8a-f916d87c840b
+    - 7ff9789a-b6d3-4f8b-bb92-bb5b587badb9
+    - b3b67082-86ea-43f6-bdc1-e1b6e4a0a00e
+    - d42664c8-d70a-41d6-bdd1-5f13e66a1c24
+    - f59313c4-4c7e-47dc-9ba9-a8f28da7977c
+    Abstract: 
+  - title: Experimental investigation of carrierless amplitude-phase transmission
+      for vehicular visible light communication systems
+    id: 0cce9b12-27a9-4aa1-8226-a5d946336eca
+    authors:
+    - Yanfeng Mao
+    - Haifeng Luan
+    - Weijie Liu
+    - Runyao Yang
+    - Meiyu Jin
+    - Xianqing Jin Xianqing Jin
+    - Zhengyuan Xu
+    venue: international conference on conceptual structures
+    year: 2016
+    n_citation: 0
+    references:
+    - 017a9b63-43f9-48e1-931e-6324f92ec675
+    - 2e5b55e1-b603-489f-a3cb-7a6b764ed373
+    - 2e75da5c-4d9c-405c-b279-3dd9c25a287a
+    - 8657f48e-b4d0-4ea7-aeeb-d2040a39a6cf
+    - 89f87621-b25b-4869-8bbc-a96304e74568
+    - 98bd7bf7-7548-4cbd-9700-27eb58f818a1
+    - a8188e21-9712-4056-924f-9e48fa0e127b
+    - d02d3ba0-6702-43d6-b3ca-1b899aa3c300
+    - e32fa82b-c64a-4fa1-b97d-96d266a6c72a
+    Abstract: 
+  - title: Do website features matter in an online gamification context? Focusing
+      on the mediating roles of user experience and attitude
+    id: 0ce8e6fd-3a31-40fa-a95f-e63367fd28ad
+    authors:
+    - Chia-Lin Hsu
+    - Yen-Chun Chen
+    - Tai-Ning Yang
+    - Wei-Ko Lin
+    venue: Telematics and Informatics
+    year: 2017
+    n_citation: 0
+    references:
+    - 2df731d1-37e4-4afb-a9b0-60a5361a79ff
+    - 3b7b755c-b7a6-4bf6-a1de-3eed75e50eff
+    - 460b56a6-d9ff-4e34-960d-0f0805262b88
+    - 54911c29-ab00-46c6-883e-4df97c0df1c1
+    - 659657d9-66a6-4759-bf0e-1235b60758bb
+    - 679148a5-48e3-4daf-9ef6-31d4a08bf330
+    - 6b5c8aae-782f-4ed3-949b-a150486924e5
+    - 74014aad-6165-4500-a9f5-65c7d4516be0
+    - 75c5360b-18ad-4dd6-ab43-229d4b02bb3d
+    - 79afb9f0-5a7b-47b6-952b-4e18bdd1674a
+    - 866c2a31-34a7-444c-bc9b-5d97c085c25a
+    - 95f17033-1fa7-40e2-91a1-20f70140dfc2
+    - 9920dd78-68d6-4a27-8047-84cc96acf70a
+    - ad34ea29-5a2d-47d2-83f4-7e61fe42e5d4
+    - ae0af874-6edb-4345-86f0-bd86c058522b
+    - b584d0f7-d152-47a5-9825-d303afe88742
+    - bbc5067e-2e87-4fe2-9b4d-a0831234e044
+    - bf0a2af5-197c-4585-a63b-14c166417de6
+    - cf4fc727-58ec-40d9-aaa9-5aae209d634c
+    - e4fe8ca2-d490-46d0-8aef-1ccaa3f373fa
+    - e77af969-ba5f-4337-859f-3ee09dee6e51
+    - efdae899-db16-40b8-965d-9aebbd3eab80
+    - f5dd0c95-72d3-4c72-9eeb-f8fbcf3434df
+    - f7b13770-5076-4eb9-9725-ea1465cd4da9
+    Abstract: 
+  - title: A low-power 6-bit MOS CML flash ADC with a novel multi-segment encoder
+      for UWB applications
+    id: 0d16d16b-0457-4b71-a144-180da7ec4d8a
+    authors:
+    - Masumeh Damghanian
+    - Seyed Javad Azhari
+    venue: Integration
+    year: 2017
+    n_citation: 0
+    references:
+    - 1c650542-e4c8-49f6-ae62-65f6a2284500
+    - 22f2f9c1-5061-4cea-9ba9-4abd22b6a8b9
+    - 289b334b-e855-4167-a2c1-74418f5cfa28
+    - 57e7c1b0-7f3c-4db9-8518-5dbb0498c8eb
+    - 5a12aa4b-f26e-4b49-b7bd-5827ce7d0387
+    - 692ad895-6b34-4c1b-8724-e6b4684c23e3
+    - 9e1c58b7-fa80-4fc3-ad07-3253ce9534af
+    - b0855e0b-3150-4874-9573-b592295d4c84
+    - df046816-a3be-4cf3-a57e-5ee14801371c
+    - e0f75c7b-34b1-4839-8b0e-677ebbc9d6a2
+    Abstract: 
+  - title: The fate of retrotransposed processed genes in Arabidopsis thaliana
+    id: 0d2ee367-dca4-4904-8504-1a662891b7f0
+    authors:
+    - Basma T.M. Abdelkarim
+    - Vincent Maranda
+    - Guy Drouin
+    venue: Gene
+    year: 2017
+    n_citation: 0
+    references:
+    - bf7e4268-53e0-43e6-8eea-6a45b124e97b
+    - f131fff4-5225-4af3-af1f-7484ce09c058
+    - fc2d34aa-281a-4bb5-b214-3e2122948f44
+    Abstract: 
+  - title: A review on supply modulators for Envelope-Tracking Power Amplifiers
+    id: 0d8f9eab-3feb-4ad4-aa0b-1e7637cce80a
+    authors:
+    - Huiqiao He
+    - Tong Ge
+    - Joseph Sylvester Chang
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 3177e793-8902-4d6a-b25d-787c69d6e930
+    - 354a3918-4497-4101-b89a-bc81e1258f48
+    - 3e874027-647e-45ef-bbe2-fbfcceb67d2e
+    - 4fa6c5e7-4857-4929-8da2-205b7af448ba
+    - ef797d87-5f47-417c-bee1-f08c69760d61
+    Abstract: 
+  - title: 'Ieee Access Special Section Editorial: Special Section on Big Data for
+      Green Communications and Computing'
+    id: 0da69d26-0fd4-491f-8dc6-e8df929c990e
+    authors:
+    - Jie Li
+    - Jinsong Wu
+    - Periklis Chatzimisios
+    - Majed Haddad
+    - Kun Yang
+    venue: IEEE Access
+    year: 2016
+    n_citation: 0
+    references:
+    - 53694ded-160d-48dd-a4f1-4d958f7cc615
+    - 71c68f2b-286a-4c85-88ce-9ba39a008602
+    Abstract: 
+  - title: Natural language processing in mental health applications using non-clinical
+      texts
+    id: 0dc22c5d-5238-4b52-a844-e378399f7c57
+    authors:
+    - Rafael A. Calvo
+    - David N. Milne
+    - M. Sazzad Hussain
+    - Helen Christensen
+    venue: Natural Language Engineering
+    year: 2017
+    n_citation: 50
+    references:
+    - 0500ddbe-e274-477b-bb6b-54a7269e4577
+    - 19d8e565-399d-47a8-bd30-8ff4fe857892
+    - 1c8ea639-396d-4750-a40e-9a579375f91b
+    - 2b8911c8-d192-4143-b0a9-a2128a85ac98
+    - 309e7b1f-f32d-4884-81ee-b83ba5144f74
+    - 4999d336-49af-41ce-9913-fd57fc25c676
+    - 4adb467d-dacf-4019-b0d5-28ce1f323cf4
+    - 4b5ffc7f-3b79-4e40-ae36-3a54584df9a5
+    - 51196295-52ee-42f2-a94a-3076a739bee2
+    - 948238ee-e7d0-478f-b6f8-49ba7fbe2b1a
+    - a7b0c198-07a3-4474-96b7-3ef8eadaa0f2
+    - b63854f8-7584-428f-95c3-31296028354a
+    - bf9ad201-b2d6-4ac7-9cf6-7a0f71d8e3fd
+    - ca3d3040-0efd-44fd-a4b1-b8baee8f4bfe
+    - da55b14c-6cac-44aa-8620-aa2d1210551b
+    - de571095-d1d5-4fb0-8f02-8b7423d1e0c3
+    - f6c28a96-eebd-4133-84eb-24c42e5feac1
+    - f6c8cd2c-6820-4c34-98ca-1c237b549cbb
+    Abstract: 
+  - title: An overview of fault tree analysis and its application in model based dependability
+      analysis
+    id: 0dde46d3-c56f-4862-8931-793ecb82df64
+    authors:
+    - Sohag Kabir
+    venue: Expert Systems With Applications
+    year: 2017
+    n_citation: 0
+    references:
+    - 0bd78023-c740-4bbe-8807-d87be5b0d088
+    - 1876a396-b10d-48b8-b4a9-ca663794ac4d
+    - 1970c985-e895-45d9-9e45-719fada3df34
+    - 26743eca-3609-4ba5-8df9-7bd41e5cb07f
+    - 28f9433a-902e-43cd-b1ee-44662b83a766
+    - 2d1b3485-4b45-4f2f-882e-6c6239c3ae70
+    - 3177e2ed-fec7-4ec3-a07a-23de5863ff7a
+    - 3ab83a67-730d-409c-88f1-6d7a40b94d62
+    - 3c121483-eb34-4469-8c96-571803e60390
+    - 3dcd5238-aeca-4b56-ac2b-731734266aa8
+    - 47402925-53ea-4dca-a27a-808e38a8b823
+    - 4cc7b4b0-4d9f-45d1-8649-feedeb08f42b
+    - 4d01c0d1-66a4-4dfb-9cfb-c09ca99167e7
+    - 4dab6a2c-ffc1-4d93-99ae-a3e44894977a
+    - 4ec47d0b-663b-46e4-866a-1c671d0d9034
+    - 5131e919-945a-4688-a6dd-0289df9c6ac1
+    - 5f729152-17aa-4451-86b8-7bc6897f10a5
+    - 654ee004-e0c8-4cfa-b9b8-bcee306294e6
+    - 65590785-c4ce-40e4-9819-3a245ec840bc
+    - 6c3710bb-32ec-4ccf-95d8-da077b792801
+    - 6d78a43d-e1c5-4386-b3bf-69f4c8f81455
+    - 70cd3bd2-d2b3-415e-a9b2-3fa5a57f637b
+    - 75a5f397-46d9-4856-bb3b-710272134a00
+    - 76e45cd3-cd9b-4b21-9fe3-950dcbd17488
+    - 7c01ded7-203f-404b-8041-3ae4ab394436
+    - 7f103dc0-c2cd-4b26-a130-ba715091de1b
+    - 871e77b4-2aa5-423f-a9e9-a8d54e81e4ad
+    - 8baf5d66-b012-47d4-adcb-e307c513d409
+    - 8c653dbe-d30f-4165-afd0-f6ed1b370d96
+    - 8d4a30a9-10e2-4ff1-94ee-bc3754d78633
+    - 914207ee-80f8-47bf-a6ab-2f24599d52ca
+    - 924882c4-c899-4d81-b285-c4fd4a561e9b
+    - 9840e14b-dc41-4813-b128-e00829234db7
+    - 98f5968e-56c3-4f6b-a84c-5649e1f76968
+    - 99dc0069-bc35-4cf3-8f91-33f503edbd2e
+    - 9b4344ca-8804-403b-a424-6388b00ae599
+    - 9c83d335-e6c4-4e15-ae49-1dcd2dbc3dc2
+    - 9cc13157-0bc1-457c-abe0-ee9792e522e4
+    - 9cc21dbf-ca3d-4735-ace9-f574a6d6d7ba
+    - a3131c28-098f-45b5-893c-9ee0f67fd41d
+    - a9199216-fb79-45fa-85db-d70082194260
+    - a989b338-adfc-457c-8302-618990da9b7e
+    - ab2bef51-025d-47b7-9ec7-4cb484fe6a6b
+    - ab81efe8-4a6c-4280-aa8d-25e964a74131
+    - b3035117-2e8f-4738-bff1-1ae434873cf5
+    - b3f8a3bd-2ee6-49bd-af31-cf46e3877c15
+    - b47ca9ec-49d0-4797-a417-33f706120572
+    - b4c4b0fd-eb80-444b-a13a-67288f6487af
+    - b744bc5b-8cb0-4d44-abbd-43448ac4d3d8
+    - c44237d3-ca2f-45c8-8e94-6a73f1ae107d
+    - c4b966ab-471f-4e50-8785-a340e6769b18
+    - d04b907c-84d4-4045-be81-3e8f6e61238c
+    - d7b9aeb4-9bd5-4bc9-9d49-78b4bb889698
+    - d7e76294-e7bc-40ef-8f90-4f013506896e
+    - d91ab2bc-cecb-40b9-a82a-73383093ade8
+    - da9d91bb-4e25-4c46-a6a5-4f3a414a43f2
+    - dacbb475-2415-4fbe-9382-011468fd8e0a
+    - dd42f477-8053-4467-a14c-0018c5765b51
+    - df8de5ba-4e92-4ab7-989a-6d844b951cd7
+    - e57672b8-d478-422f-9f9e-266cb441497f
+    - e57bc784-98cc-4137-9052-0f702067a44d
+    - e77dbb25-e545-4602-850d-d1afec2173a9
+    - e904d459-803b-4e69-a373-6ec0cf84a604
+    - ebd2e42e-3388-45ab-be76-19f966b4bbca
+    - ef1a9789-d7c7-47a9-8a8a-3fcc9d423659
+    - ef92d0cf-5704-483b-b8a5-197518bd7f5b
+    - f91e000b-9945-4634-82ce-c6321bc2f01f
+    - f98f00f9-0763-4066-918c-c31ab6487419
+    - f9d26fc5-2df2-4fca-9b43-473cd47b7a72
+    - fb1992a3-7d57-4196-9df3-ab7e074314e2
+    - fc52e1bc-eec2-406f-9618-d9107f8c8754
+    - fc598e8c-c24b-4fba-8019-861f76f55212
+    - fc5d4b1a-8943-42dd-82a7-a4b367e91876
+    Abstract: 
+  - title: A proposal of knowledge base for applications in the scope of HIV/AIDS
+    id: 0de1ea81-5dbf-4fc3-a11e-f5cdd75f5786
+    authors:
+    - Kevin Cardoso de Sa
+    - Felipe Lauermann Vielitz
+    - Fabio Rafael Damasceno
+    - "Cristiano Andr\xE9 da Costa"
+    - "Sandro Jos\xE9 Rigo"
+    - Rodrigo da Rosa Righi
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: 'Neurogenesis-Inspired Dictionary Learning: Online Model Adaption in a
+      Changing World'
+    id: 0e2e0417-1064-471e-85ad-faeace63c084
+    authors:
+    - Sahil Garg
+    - Irina Rish
+    - Guillermo A. Cecchi
+    - Aurelie C. Lozano
+    venue: 'arXiv: Learning'
+    year: 2017
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A new texture representation with multi-scale wavelet feature.
+    id: 0e5ba392-571f-4e50-a0be-6e4b208fdb63
+    authors:
+    - Sheng Yi
+    - Hanqiang Cao
+    - Xutao Li
+    - Miao Liu
+    venue: 
+    year: 2006
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Improving Broadcast Performance of Radio Duty-Cycled Internet-of-Things
+      Devices
+    id: 0e5c48c6-347a-4a57-ab78-ee5cbe021c29
+    authors:
+    - Salih Serdar Guclu
+    - Tanir Ozcelebi
+    - Jj Johan Lukkien
+    venue: global communications conference
+    year: 2016
+    n_citation: 0
+    references:
+    - 1211daf3-eab2-4810-9272-2dd71a809656
+    - 16a43bb9-ad3d-4310-9034-f06427d81af3
+    - d12d111a-c357-4bf0-b357-0ce1009e7e09
+    Abstract: 
+  - title: Degrees of Freedom in Cached MIMO Interference Networks With Asynchronous
+      User Requests
+    id: 0ea4ce88-b366-40e9-9a4b-69366a7d66d5
+    authors:
+    - Wei Han
+    - An Liu
+    - Vincent Kin Nang Lau
+    venue: IEEE Transactions on Wireless Communications
+    year: 2017
+    n_citation: 0
+    references:
+    - 01f6b244-3daa-4c7b-b22f-6d7a8760a936
+    - 021acdc3-869a-400a-ab2a-49f1a7dd17d4
+    - 08ff6957-73f8-4d43-80cd-70a4c0da797c
+    - 0f358b15-7efd-4389-9659-aa0fda4615c9
+    - 1eddb4e0-a074-4189-a370-e53724a96bbd
+    - 7757c456-2228-416d-955d-c7a2eaf65e7a
+    - 8176e505-a125-4c5e-9130-8e270f679688
+    - 916831ac-d859-4450-a18b-40512953061a
+    - ac04bf45-d13c-481e-a6e1-7deeb3094c5a
+    - be56609c-ff16-46db-8c72-499b4a6ff7fe
+    - d9b08a7f-c2e5-46ed-97a5-41b11b5e4968
+    - e574edf2-100b-424b-b81b-1b674783cf82
+    - ece7793c-808e-4849-a3fb-9d5766a545c6
+    Abstract: 
+  - title: Mining Gait Pattern for Clinical Locomotion Diagnosis Based on Clustering
+      Techniques
+    id: 0f2f1974-a986-45ac-a187-25821dbb50b0
+    authors:
+    - G. F. Xu
+    - Yanchun Zhang
+    - Rezaul Begg
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: "Tutoriel sur les matrices al\xE9atoires \u2013 Introduction aux \xE9quivalents
+      d\xE9terministes"
+    id: 0f85b4c8-372b-4ff3-853a-ff6f9a184ae2
+    authors:
+    - "Axel M\xFCller"
+    - Merouane Debbah
+    venue: Traitement Du Signal
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: User detection and channel estimation for SCMA uplink system in dispersive
+      channel
+    id: 0f9c0bcc-989e-4990-9717-ced2a0d98c6b
+    authors:
+    - Yufeng Wang
+    - Xiujun Zhang
+    - Shidong Zhou
+    - Jin Lian
+    - Limin Xiao
+    venue: international conference on conceptual structures
+    year: 2016
+    n_citation: 0
+    references:
+    - 5676a18d-f67f-4846-9dfc-8c0f3828ae7f
+    - 69b9ef96-11d5-49b0-9ae3-492763e02ca8
+    - af6d91d3-3a39-400c-8130-ca744d2b1fe3
+    - cad96854-226b-4f74-9822-f347689973b7
+    - ee4d487c-ae4b-4707-a6c4-c8801d916f41
+    - f068493b-868a-4bbe-a2a5-f291f9869553
+    - f56b877b-4060-4754-b303-e8140968544c
+    - fcf57c11-e485-4ea7-aead-52266a42b5ac
+    Abstract: 
+  - title: Modified Hidden Factor Analysis for Cross-Age Face Recognition
+    id: 0fb039c8-3a84-401d-88d7-a70d9f7580e2
+    authors:
+    - Haoxi Li
+    - Haoshan Zou
+    - Haifeng Hu
+    venue: IEEE Signal Processing Letters
+    year: 2017
+    n_citation: 0
+    references:
+    - 03d100b4-54e1-49dd-ad16-23bf3e25cae0
+    - 14622286-eb4f-46cf-96bc-58672a48cf0c
+    - 166faf75-06e2-46ac-bf00-7c930f220ecf
+    - 1f7ded38-bcda-48db-9f63-a481f0ebab33
+    - 206da0af-53f2-4208-b5a0-04e383080f92
+    - 246052a8-ada0-414a-8d41-f46c06008f91
+    - 261f1779-0600-4a88-af9c-7b2ac764d785
+    - 26bf43b4-61b7-499e-8caf-7b74b6de070d
+    - 33b5d611-f8ab-4fca-8397-65213653fd82
+    - 4d005cf3-06f3-432f-8bc7-2185ad261847
+    - 5781743b-057e-40f8-9514-54434d1fd0b0
+    - 5d21b309-26cd-49ec-9c25-439ffe8d64d4
+    - 68b99920-42dc-496d-9383-2faf2996060f
+    - 767319b3-1d27-402f-b411-7a158ad19ae5
+    - 76dc2876-c10c-4fe4-8312-cf19cea1c06c
+    - 867ad205-8936-491e-a8b9-12081579c8ed
+    - 8a74c4be-6c80-48eb-9d75-6c5ede55364c
+    - 964100e2-dd91-4d2f-bba6-5f3cc5ab87ce
+    - 9918a1a7-8a09-44a3-a713-84d1db44c027
+    - a0805990-8b90-460c-a446-27763979a2ff
+    - ac8042ed-656f-4c80-bce9-8c7209676921
+    - b39e6f1c-c41c-4846-a1ba-864e73c6ce27
+    - bafe7c20-87d1-4bb4-8cbe-356ac54641bc
+    - c96c3534-c528-416d-9853-580903448f82
+    - cee5f6c7-68c8-4bed-b233-5cdb5463ddc7
+    - d32f7355-0da3-4100-9e4e-5555a70b48d6
+    - dd83785a-dd19-41e3-9b25-ebabbd48d336
+    - df25a564-93d6-4d3f-8b84-1bd86fd679db
+    - ee1b00df-44f8-405c-b96c-02080d3105cf
+    - f1d4fbdc-fa80-4452-90dc-d36ca5a13ac3
+    Abstract: 
+  - title: On local connectivity of cognitive radio ad hoc networks with directional
+      antennas
+    id: 0fd1ed08-cbb9-4d3a-a08d-629dab7b0c12
+    authors:
+    - Yuanyuan Wang
+    - Qiu Wang
+    - Hong-Ning Dai
+    - Haibo Wang
+    - Zibin Zheng
+    - Jianqing Li
+    venue: international conference on conceptual structures
+    year: 2016
+    n_citation: 50
+    references:
+    - 02eefe0f-b029-4fbb-b41a-906e8f04639d
+    - 13ac5802-3811-4b08-87e6-0c3edcd92685
+    - 1c94269b-6b47-4936-b0aa-9d31735221e8
+    - 1cc30c72-ce4d-455d-874c-048e4cc779b2
+    - 32591c3e-f867-4910-91ec-ce8d8113767a
+    - 46d469d5-52d9-4942-8cc4-dc0d3298db31
+    - 6acdadd8-d600-432b-a16f-b73178eea9ab
+    - 78ccfb67-cefb-403e-add3-121fa5d343cc
+    - 8a01f6c3-bbb1-4a91-a4a9-c35a666e2f64
+    - 9fc38ada-a1cb-4782-8aae-245382f0291c
+    - a840b0e6-5316-4765-a6a5-8575cae24462
+    - b802ec9a-598f-4a5e-9b04-8d235cd5d1e3
+    - b96a519c-db34-4bd3-82b4-5ffee1a5d906
+    - ec2bb91a-b29c-46fe-85bd-ce00e75244e7
+    - ee566d37-b546-4775-a131-c51c5ffe771f
+    - ef12e54a-5979-48a5-99ec-76efd25b2766
+    - f1ad6ac0-4021-4e86-b7b6-9d824a689eb8
+    Abstract: 
+  - title: Enabling Flexible Network FPGA Clusters in a Heterogeneous Cloud Data Center
+    id: 0fea982c-3e4b-48eb-ae67-9641d3fe266b
+    authors:
+    - Naif Tarafdar
+    - Thomas Lin
+    - Eric Fukuda
+    - Hadi Bannazadeh
+    - Alberto Leon-Garcia
+    - Paul Chow
+    venue: field programmable gate arrays
+    year: 2017
+    n_citation: 0
+    references:
+    - 206329f4-ce86-4dfb-99fe-cf6f6d406761
+    - 5f6fffac-894a-407e-97c0-0dbd64b596a4
+    - 9b2538f1-6445-4916-9055-654c8d1691f3
+    - ba6b59e3-0bc3-4c22-81ee-899a4a1a9552
+    - c21a45c4-2215-48f1-9012-05b154d2e5d2
+    Abstract: 
+  - title: Inferior Frontal Cortex Contributions to the Recognition of Spoken Words
+      and Their Constituent Speech Sounds.
+    id: 1032c089-6dc4-40b7-bfe3-fec28c7d358d
+    authors:
+    - Jack Rogers
+    - Matthew H. Davis
+    venue: Journal of Cognitive Neuroscience
+    year: 2017
+    n_citation: 0
+    references:
+    - 246bc37a-1ac5-415b-9e43-9be781df59db
+    - 2470f8c1-dca7-4801-82c3-76389d07fcb2
+    - 60190ab3-5104-43f3-9fbd-5d8d00ff296c
+    - 89be9d96-002c-4647-a222-28920788d783
+    - 8d30f7b1-6daf-411b-b822-a6e47f7d1628
+    - aa750fe3-9b58-4093-9544-420081028d6b
+    - cbc15180-809e-4372-851d-f0d07b662d7c
+    - d162389a-ecf0-4c86-a4c6-e4abbe7e4537
+    - d9254a09-c2aa-4e31-a066-184171d87833
+    - dffda390-7db2-4a1d-90e9-a1aa59383001
+    - e483f641-f7f8-43dc-a649-ced3e3d67b06
+    Abstract: 
+  - title: Embedded image-coding algorithm using set partitioning in block trees of
+      wavelet coefficients.
+    id: 104e9d1b-6d07-442e-a7c0-71cbcb67dde3
+    authors:
+    - Chang-Mo Yang
+    - Yo-Sung Ho
+    venue: visual communications and image processing
+    year: 2002
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Abstract Specifications for Concurrent Maps
+    id: 10680108-43e9-42e5-9029-1d8f2eea7f7a
+    authors:
+    - Shale Xiong
+    - Pedro da Rocha Pinto
+    - Gian Ntzik
+    - Philippa Gardner
+    venue: european symposium on programming
+    year: 2017
+    n_citation: 0
+    references:
+    - 03141375-fc8f-4c36-b0c6-a15e19eda5e4
+    - 15315beb-6cf9-43c5-9090-41b31ac8b39f
+    - 1c051b8f-b108-4fff-9cb5-803e8c916119
+    - 1ea07761-7e51-44b3-86a9-b820f14d26d4
+    - 22ccf5db-2fb9-4c04-96d3-ab1a4fa39a6f
+    - 5431dd1d-a8ee-4129-a087-9453b13c0c32
+    - 56262a60-f99f-401f-82da-51e8e315b117
+    - 5aa415df-64b6-498a-9a72-d69abac6bdbc
+    - 68949385-139b-4294-a087-e45165561fbc
+    - 6aa6ae65-7537-4ed8-9339-a2abd2ff3c7b
+    - 6c4e8a84-bfb1-4793-99dc-1ae4f4443dbd
+    - 748e7bd6-4d6f-4253-9a1e-ff1f8d01b1e8
+    - 7c0d0439-5f81-4ce9-a962-26930bd4c5d2
+    - 7eafd26d-4072-4bee-8e4b-c12862219012
+    - 86416151-0e16-418c-bd00-750886ef8af3
+    - 8953ad76-dee2-43a8-8c7c-a66dc24d0243
+    - 8ff88e7c-9c68-4b64-abb9-e973e717bb32
+    - 927a57cd-0b9f-4c5f-bf07-11cecb7624b0
+    - 9e9eccfe-69f5-449e-b534-6048ec6ad3e9
+    - aca630e2-0674-40af-b48e-6d62736231ef
+    - b65531c4-e179-4e72-bbef-8d6a8d901ddb
+    - bc2e7029-48bb-48e1-ba35-432fc47c1889
+    - bd2f6141-fda3-498f-9331-fb66034ae7fb
+    - cd263b3d-af90-4677-a706-da1412139647
+    - d057a535-fa3e-4636-b4c8-6a291f96eda9
+    - f42e9a72-7ce6-405f-8515-05960a999108
+    Abstract: 
+  - title: 'GSP: The Cinderella of Mechanism Design'
+    id: 108d3159-2542-4974-95d0-1962972a9fa1
+    authors:
+    - Christopher A. Wilkens
+    - Ruggiero Cavallo
+    - Rad Niazadeh
+    venue: international world wide web conferences
+    year: 2017
+    n_citation: 50
+    references:
+    - 03320467-a15f-43df-bcfc-cfe86c167b50
+    - 21da5d13-8f89-4978-b72c-fdd3492c1d37
+    - 2a277b2c-fbfe-4899-9538-49128a9aef3e
+    - 660cb5c6-16ad-4561-98de-faaef9d345d0
+    - 69fb178b-ab24-4275-9aea-5ffd2f9d2685
+    - 83b8ad8a-ef10-4188-a22d-ae98fecbefb5
+    - 86e6a940-086e-46f2-a839-11777dc593ca
+    - 9853571c-a3ad-4efa-8829-a7b2a8a6ad33
+    - a8a108cc-8c99-4058-acc0-e43267262c4a
+    - c143836d-821f-4fbd-9f24-37ee9afcff33
+    - c29d2651-d755-4588-8062-a3cc2e0027c0
+    - ce709fc5-1384-4724-9e0e-c1fe30ebb14d
+    - dcac9581-b58f-4221-93f5-ffa4d1793eb8
+    Abstract: 
+  - title: Lightweight Key Management for Adaptive Addressing in Next Generation Internet
+    id: 109590c6-b3c4-40ff-9df3-1874c7668801
+    authors:
+    - Vinod V. Kimbahune
+    - Arvind V. Deshpande
+    - Parikshit N. Mahalle
+    venue: International Journal of Ambient Computing and Intelligence
+    year: 2017
+    n_citation: 0
+    references:
+    - 2f5e87db-dd93-4655-a6c7-5808d78cef33
+    - 4abc6eba-0535-46df-94c7-f3a6a7c6f2ed
+    - 8cde5311-3e54-4be3-ab3f-fd943d5aa072
+    - 94420a9b-ff78-4feb-b97c-370390fc083a
+    - a0c7d384-35d3-4a4b-be74-1a0d0adad68e
+    - a9e54656-3a5a-4963-b9fd-fb23f48c69fd
+    - e90264de-2de3-43a3-9172-1168b0824499
+    - f62e5ae7-d996-4057-ba2f-de0d476f3a28
+    - fcf02e6f-904d-422b-899c-ee89232b3a76
+    Abstract: 
+  - title: Generalized Hamming Weights of BCH(3) Revisited
+    id: 10bb4e45-47ae-496b-b635-e8962cd5ee6c
+    authors:
+    - G.B.M. van der Geer
+    - M. van der Vlugt
+    venue: 
+    year: 1994
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Dependency-Aware and Resource-Efficient Scheduling for Heterogeneous Jobs
+      in Clouds
+    id: 11997fa1-0571-413a-bacd-4ae3162353dd
+    authors:
+    - Jinwei Liu
+    - Haiying Shen
+    venue: ieee international conference on cloud computing technology and science
+    year: 2016
+    n_citation: 50
+    references:
+    - 004b7183-1fb5-4e08-b29a-87c679316171
+    - 0150e049-f8af-4658-9234-692f0471eadd
+    - 01c92637-18cc-4d81-8a61-8c53e14ec3ec
+    - 05ec9566-0998-4bba-9caf-c7a003ca1143
+    - 05f80cf9-60af-4ee7-b1a1-7fe27ef6aeb2
+    - 12b33ad1-126b-481e-b3e8-9136975af65b
+    - 1428ce54-e998-4798-9c4e-e7c3261c46e3
+    - 183b304d-3dbd-4f4f-840c-2f2e2f45192b
+    - 1973143d-036f-434b-8570-4acb3308369c
+    - 1df7e734-702f-4adc-9d4b-f24e7ff28506
+    - 1e78f2d9-f6d5-4e0d-9cbc-a2ebfe9bf315
+    - 240293ef-c638-42fc-84f0-adfcb0154303
+    - 33b89c99-821c-450a-9580-948e7bbde37e
+    - 360adff5-5029-4992-8e6b-b921720864e5
+    - 4a68ca5d-9a2f-48f9-a78e-391c832be405
+    - 59af7e25-c0ee-4af5-acea-a58dfe4ccac4
+    - 5be721f1-db7e-4a6f-a4f5-9e58a3779883
+    - 5c6c859b-47d7-4095-80d2-cdd91a65be75
+    - 72b43f43-1284-485a-8b0c-89a167a6ba7a
+    - 7e3704a4-f84d-4a26-bbf4-67afd2981209
+    - 7ebfbf9d-bef3-4e63-b427-b2f628d37a8f
+    - 9558f1d8-969d-41b4-bcff-d1d0faa61595
+    - 95cb467a-4887-4b11-8e8a-4d14a3acefc4
+    - 9d8465b5-c7bb-4080-be81-385d265030cd
+    - 9f5c18e7-6253-444f-b14a-08575dad708c
+    - a264226c-b575-4612-9c16-e898de4a0153
+    - a845e3d3-fd79-47c4-8af4-1d42c3d28390
+    - b2cd814e-38cb-49a5-86bf-012fe8b4ad26
+    - b799e57f-99c8-4d6e-b791-8b146bd68c57
+    - ba73da26-2ff7-4936-9aa8-ae5329ea3c01
+    - bd9d86a7-c62c-48e4-8ead-49f30c6e889d
+    - c386124a-ef27-4d52-a323-4941c0277f2a
+    - c8fa91fc-6264-4fcc-b30f-e1fb1d3bbc00
+    - d8a4e5b7-2ddf-45c8-8b97-9f72c261eba1
+    - db5df514-3619-4205-9bde-91875602d716
+    - f097efb0-b696-4513-82d1-a4dfe881424e
+    - fa9608b8-d238-462a-a2cf-76182ff7014b
+    - fbc9491f-ec77-4472-9faf-f6d2f81fc45e
+    - fcc8fc14-fc6b-46d0-9104-2272f916bddd
+    Abstract: 
+  - title: 'An ontology-based multi-agent virtual enterprise system (OMAVE): part
+      2: partner selection'
+    id: 1295b90f-5caf-4fbc-b119-723d5fb82030
+    authors:
+    - Bahram Lotfi Sadigh
+    - Shahrzad Nikghadam
+    - A. Murat Ozbayoglu
+    - Hakki Ozgur Unver
+    - Erdogan Dogdu
+    - S. Engin Kilic
+    venue: International Journal of Computer Integrated Manufacturing
+    year: 2017
+    n_citation: 0
+    references:
+    - 04b60f8e-b69a-458b-a631-3036b9ed86c8
+    - 187a1aef-9207-4e59-b496-7484d6fb0f21
+    - 52b60d49-ee11-4d4e-95b1-14c1623668aa
+    - 6cfa36c6-210f-4f0a-8f59-847a0345541f
+    - 70c415b8-9d2e-47d8-b1ca-7cd99f0abdb4
+    - 7a7718a3-0bab-497c-9c7f-e044838edd00
+    - 8d2b920e-fd3b-4466-9713-b880af98ca43
+    - 99435a7d-a49b-4948-861c-137f669ae0f5
+    - a0bc80c4-ba0b-4fbc-875e-d13d59a64ebb
+    - a73767b4-06a9-483e-813f-1ceac6d709f7
+    - b6fd968a-4567-4418-98b5-3330cc7450f9
+    - df534516-b89c-403d-9dd9-f93950440602
+    - e183660b-425e-470c-9e34-79d20119fdef
+    - f19a7386-ef0b-445f-b7ba-ef9c12206adf
+    - f4d5fd52-2e17-4a80-871a-b37d29f7de94
+    Abstract: 
+  - title: On the Satisfiability of Quantum Circuits of Small Treewidth
+    id: 129b3a37-e67d-4bd8-9201-f0b91901001a
+    authors:
+    - Mateus de Oliveira Oliveira
+    venue: computer science symposium in russia
+    year: 2015
+    n_citation: 0
+    references:
+    - 36ca6e35-41ee-400c-a310-1794e172dca4
+    - 4c08a0fa-c1a1-45c1-aaf3-6cd5f75cafbd
+    - 7dcd9f62-f2a5-495b-9870-610c19cbdc1a
+    - 8555babf-36a6-4cf1-acae-91632b86b138
+    - c454bdc9-60ad-4127-84fe-abbb45ba3a76
+    - d42bbf34-d141-4024-9553-65b7abd6cc8e
+    Abstract: 
+  - title: 'The accident of flight 447 Rio-Paris: a case study for HCI research'
+    id: 139ad0e7-ae97-4b63-a792-e97c6d794e23
+    authors:
+    - "St\xE9phane Conversy"
+    - "St\xE9phane Chatty"
+    - "H\xE9l\xE8ne Gaspard-Boulinc"
+    - Jean-Luc Vinot
+    venue: international conference on human computer interaction
+    year: 2016
+    n_citation: 0
+    references:
+    - 56020161-51eb-405a-b589-4acbc8ce7ef1
+    - 97f166c6-e61d-4760-8f0d-3044bfe78dbf
+    - c168adf4-0512-43ec-9d3f-7819e639bb28
+    Abstract: 
+  - title: A control model of human tongue movements in speech.
+    id: 13f49d08-4b78-4e32-be11-d0864c236c2a
+    authors:
+    - Vittorio Sanguineti
+    - "Rafael Laboissi\xE8re"
+    - Yohan Payan
+    venue: Formal Aspects of Computing
+    year: 1997
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Low-loss active inductor with independently adjustable self-resonance frequency
+      and quality factor parameters
+    id: 1415168c-3259-43f5-9fcc-8065b9becd5e
+    authors:
+    - Hadi Ghasemzadeh Momen
+    - Metin Yazgi
+    - Ramazan Kopru
+    - Ali Naderi Saatlo
+    venue: Integration
+    year: 2017
+    n_citation: 0
+    references:
+    - 448aedc3-6b48-4846-8739-00caa4a76807
+    - 4c3d135a-0755-4e5f-930d-c58a12eb2997
+    - 5ff5e7c7-b2f3-4967-b8e7-6ae06fc2fce7
+    - f224afc1-b26f-4685-84b1-b17291d0163d
+    Abstract: 
+  - title: Cryptographic Protocol Synthesis and Verification for Multiparty Sessions
+    id: 143470b6-2ee8-42cc-a086-aea36b72ec66
+    authors:
+    - Karthikeyan Bhargavan
+    - Ricardo Corin
+    - "Pierre-Malo Deni\xE9lou"
+    - "C\xE9dric Fournet"
+    - James J. Leifer
+    venue: 
+    year: 2009
+    n_citation: 0
+    references:
+    - 010f6cba-52b9-44b4-afe8-18868db11c1f
+    - 21cbd69d-a926-4aee-989b-7384c3b86715
+    - 3f21b835-6930-4813-9d9b-2b23b302eb74
+    - 4c3af0b8-b358-440e-9e1a-3e169569e951
+    - 61643156-d1d8-479e-b1df-367a3c06ddc2
+    - 86f11112-b375-406d-98b2-c86b7521d69f
+    - 8e6267bd-0dc1-4bc8-9f48-b0a3ddde4d93
+    - 947b7da7-23da-4fd2-821a-e2de424cb559
+    - 967be506-6e53-4e27-aa40-4f91f0486460
+    - a47beac7-91d7-42bb-9b0f-07e581dde1e0
+    - c4a6522a-835c-4f12-adca-fecbb1f2598f
+    - dfdafd84-ce57-4b9c-b503-341729225e72
+    - f220ce86-06f0-4020-9f2c-3d7e4d1c76f9
+    Abstract: 
+  - title: A Ku-band high-isolation SPDT switch in 0.35um SiGe BiCMOS technology
+    id: 144ca465-2ce0-47d5-9588-54df33b83536
+    authors:
+    - Wenju Li
+    - Kaixue Ma
+    - Shouxian Mou
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Situated preferences and preference repositories for personalized database
+      applications
+    id: 146feca7-deba-4472-9f3e-1772ffbcd100
+    authors:
+    - Stefan Holland
+    - W. Kiessling
+    venue: Lecture Notes in Computer Science
+    year: 2004
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Design and verification of analog CMOS circuits using the g m /I D -method
+      with age-dependent degradation effects
+    id: 14af3736-2484-4432-841a-cd8960481b58
+    authors:
+    - Theodor Hillebrand
+    - "Timur Sch\xE4fer"
+    - Nico Hellwege
+    - Marco Erstling
+    - Dagmar Peters-Drolshagen
+    - Steffen Paul
+    venue: power and timing modeling optimization and simulation
+    year: 2016
+    n_citation: 0
+    references:
+    - 0f9955dd-81bb-4b96-a938-b7769a8d12a9
+    - 115715e0-3059-4d05-8970-a175a7ef81a7
+    Abstract: 
+  - title: Position and Force Control of Micromanipulatorwith Six Degrees of Freedom
+      Using Piezoelectric Actuators.
+    id: 14b53bdb-2c05-4af2-a159-7aee0d4e8f8a
+    authors:
+    - Toshio Fukuda
+    - Motohiro Fujiyoshi
+    - Fumihito Arai
+    - Hideo Matsuura
+    venue: 
+    year: 1991
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Probabilistic event structures and domains
+    id: 14c7fdc4-4c54-4424-96fd-bac291f034fd
+    authors:
+    - Daniele Varacca
+    - "Hagen V\xF6lzer"
+    - Glynn Winskel
+    venue: Lecture Notes in Computer Science
+    year: 2004
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: A Modified Azimuth Weighting Method in a Two-Step Process Approach for
+      Sliding Spotlight Data Processing
+    id: 158a44ed-7619-4764-a545-7257f7e96643
+    authors:
+    - Feng Xiao
+    - Zegang Ding
+    - Bin Xiong Bin Xiong
+    - Teng Long
+    venue: Sensors
+    year: 2017
+    n_citation: 0
+    references:
+    - 518a693f-c4ac-4b30-a76b-94ea9a186d34
+    - 5d615d8b-fbfc-495c-8dd5-9396e8bb580d
+    - 6461f523-2e48-4621-a97c-4243f48662dc
+    - 8daaabef-18be-4815-9beb-442a3ecbd162
+    - 8f5a807a-0614-4559-ae7f-3a99bdaef0ff
+    - 9156a841-4e2b-4cd4-ae49-5f8107db8618
+    - 9985cd10-82ff-4236-8cdf-897170c87ce2
+    - cf276c9d-c0a5-4200-b3b7-0e10e4429d96
+    - daf93e32-089a-450b-b2c0-8fc9348e463c
+    - dcc45570-5f72-48ce-9623-2c878da28925
+    Abstract: 
+  - title: Facial feature tracking by robust face segmentation and scalable rotational
+      BMA.
+    id: 15bee46a-e30c-4e70-8250-63a8f562f257
+    authors:
+    - Jung S. Kim
+    - Nam Ik Cho
+    - Seok-Cheol Kee
+    - Sang Uk Lee
+    venue: visual communications and image processing
+    year: 2002
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: A robust and secure RFID-based pedigree system (short paper)
+    id: 16912645-20d3-49c6-8c01-e200dfff1546
+    authors:
+    - Chiu Chiang Tan
+    - Qun Li
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: "Modellbasierte und Modellgetriebene Softwaremodernisierung: Bericht \xFCber
+      den Workshop im Rahmen der Konferenz \"Modellierung 2016\"."
+    id: 16c15f9c-fb9d-4226-b857-685ad9c70873
+    authors:
+    - Stefan Sauer
+    - Marvin Grieger
+    venue: Softwaretechnik-trends
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Disentangling resting-state BOLD variability and PCC functional connectivity
+      in 22q11.2 deletion syndrome
+    id: 16ff1efd-7e6e-41ad-859b-5aa9f21fd460
+    authors:
+    - "Daniela Z\xF6ller"
+    - Marie Schaer
+    - Elisa Scariati
+    - Maria Carmela Padula
+    - Stephan Eliez
+    - Dimitri Van De Ville
+    venue: NeuroImage
+    year: 2017
+    n_citation: 0
+    references:
+    - 02c90b5c-2f56-48d1-9408-350f26574711
+    - 13f4f115-2744-4a21-9448-3781431f2941
+    - 33a73ee3-77dc-464e-9077-96307446a02e
+    - 38a1737d-0760-4212-bf1c-f9d1f017b7b9
+    - 4f1000b6-6349-4c82-8813-db274e6967eb
+    - 50244afc-e739-4c9b-9564-6167fb89328b
+    - 5e906d35-4d61-4c4e-91cc-843ed30adebd
+    - 75e293d5-2a47-4464-8679-2d59e9a8d88f
+    - 8f77edb2-f535-4c07-95ee-009e0c5bf4f3
+    - a2f9a2a4-5a4e-4200-ab2f-ee74d0e8f984
+    - b586fb00-0401-46c9-a4ec-f8efb761a5f2
+    - c4a86c3f-8607-4e5d-90cb-4d4212959197
+    - d4d4bfbd-77d3-4274-9698-c9dd785f625a
+    - da804b8b-7928-43af-ad64-42e37361680f
+    Abstract: 
+  - title: Design, Control and Visual Navigation of the DelftaCopter.
+    id: 17176409-c684-426c-a0db-a99cd1debd9b
+    authors:
+    - Christophe De Wagter
+    - R. Ruijsink
+    - Ewoud J. J. Smeur
+    - Kevin van Hecke
+    - Freek van Tienen
+    - Erik van der Horst
+    - B. D. W. Remes
+    venue: 
+    year: 2017
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Engineering future interoperable and open IoT systems
+    id: 17750b7a-24db-4c3c-8c4a-b2a7a247a94f
+    authors:
+    - Giancarlo Fortino
+    - Giuseppe Di Fatta
+    - Sergio F. Ochoa
+    - Carlos E. Palau
+    venue: Journal of Network and Computer Applications
+    year: 2017
+    n_citation: 0
+    references:
+    - 07be8db9-5986-4fbb-b527-bcc4039a934c
+    - 19a10472-c89b-497d-aef1-7bfc942eaaad
+    - 1f14b8a5-f3c0-43ec-8d55-6ea977f960f6
+    - 28d24b08-b7d4-441f-9e8b-73935fe6046e
+    - 50bfc6bd-f582-4297-82f4-16b64e0ba92f
+    - bf96db9c-324b-4739-af3d-bef7e3bc48cf
+    Abstract: 
+  - title: An interpretation of isabelle/HOL in HOL light
+    id: 17854d98-495d-4a48-a228-3d3335afed3d
+    authors:
+    - Sean McLaughlin
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: 'IoT in Action: Design and Implementation of a Building Evacuation Service'
+    id: 1798c52f-6d7d-4e02-a9f3-a93d4314b433
+    authors:
+    - Selahattin Gokceli
+    - Nikolay Zhmurov
+    - Gunes Karabulut Kurt
+    - Berna Ors
+    venue: 
+    year: 2017
+    n_citation: 0
+    references:
+    - 4879be69-7cd4-4da2-a250-81aa7115e8fe
+    - c645cbb6-daca-417f-a18e-f3da6475f298
+    - ec9b96dd-38ac-4294-83a8-114bd35269b4
+    Abstract: 
+  - title: Discovering Conversational Dependencies between Messages in Dialogs
+    id: 17a551d7-0cfc-472a-a2f9-2bd3df19cd4a
+    authors:
+    - Wenchao Du
+    - Pascal Poupart
+    - Wei Xu
+    venue: national conference on artificial intelligence
+    year: 2016
+    n_citation: 0
+    references:
+    - 3a50b313-5df0-4453-8bc8-5203904ad171
+    - 9f72f417-500f-4e41-b7d2-4f4d47d858a8
+    - 9ff4a38b-e7ec-4452-98b5-a539c06a7ec3
+    - a5e9a97a-d0db-4496-8085-8870a6f5e948
+    Abstract: 
+  - title: Extending Soft Sets towards the Optimality of Decision Based on Multiple
+      Decisions over the Same Data
+    id: 17ca331d-4dca-4c8c-8895-8c0a7c43bf34
+    authors:
+    - Farooq Ahmad
+    - Hamza Ali S. Abujabal
+    - Sher Afzal Khan
+    - Adnan Abid
+    - Muhammad Shoaib Farooq
+    venue: international conference on machine learning and applications
+    year: 2016
+    n_citation: 0
+    references:
+    - 15c8f51a-8c9f-4a33-b9aa-94ebbce302a2
+    - 51e1cbd5-c3d2-47e6-b441-c7766a5fca7f
+    Abstract: 
+  - title: 'Dynamic Mode Decomposition: Data-Driven Modeling of Complex Systems'
+    id: 181c6560-0a6a-4c15-a35a-0eff9ce4b73e
+    authors:
+    - J. Nathan Kutz
+    - Steven L. Brunton
+    - Bingni W. Brunton
+    - Joshua L. Proctor
+    venue: 
+    year: 2016
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: Left-Ventricle Basal Region Constrained Parametric Mapping to Unitary Domain
+    id: 18a07b85-672b-456b-b9ca-b19c52f8e62c
+    authors:
+    - "Antoni Gurgu\xED"
+    - Debora Gil
+    - Vicente Grau
+    - "Enric Mart\xED"
+    venue: 
+    year: 2016
+    n_citation: 0
+    references:
+    - 0552a3f6-a619-4ed9-9acb-ef43ace3e7d2
+    - 0a183372-53a1-41f6-bbee-c400859f3c78
+    - 1965bafc-4d7b-4dd2-9b9a-32c51a7b346f
+    - 456717b7-c5f9-4d65-a2e6-83ce70378c5f
+    - 6c3cb3e6-6b97-4bd6-ae18-52dceb403552
+    - 7d839dfc-d7f8-41c2-899e-5308827752e0
+    - 87e84294-a16d-44cd-98c6-9fae9b0d7e18
+    - b601576d-4d2d-4e20-b5d3-34e66ba50252
+    - ccfb2b47-2b5b-4dd9-929e-166005884e8f
+    - f4607371-fb53-4906-acdd-247a0b9628a6
+    Abstract: 
+  - title: QoS Assurance with Light Virtualization - A Survey
+    id: 18b4b447-6219-44c3-8de9-e698b194a71d
+    authors:
+    - Parisa Heidari
+    - Yves Lemieux
+    - Abdallah Shami
+    venue: ieee international conference on cloud computing technology and science
+    year: 2016
+    n_citation: 0
+    references:
+    - 03cbb7e0-4672-4f5f-9d5f-c53b52f0f2f5
+    - 1449760e-9405-4f35-94f4-174dd7fd16a1
+    - a8ddc1c9-6523-4ee9-af21-6b3f5b8ab477
+    - d870d37d-3c00-4995-b70c-534a23bac0b0
+    - e428d749-c2f1-41da-a00e-ef44850bf4c3
+    Abstract: 
+  - title: Pedestrian Detection and Direction Estimation by Cascade Detector with
+      Multi-classifiers Utilizing Feature Interaction Descriptor
+    id: 1972d433-5dff-4781-a8b4-f84a93bde800
+    authors:
+    - Kunihiro Goto
+    - Kiyosumi Kidono
+    - Yoshikatsu Kimura
+    - Takashi Naito
+    venue: 
+    year: 2011
+    n_citation: 50
+    references:
+    - 4cbd7765-c47a-4004-a5f8-c2da7c7d1c7b
+    - 609597f0-9810-4cd5-95e3-7da6c5ab19dc
+    - 6a399fbf-c243-4621-b099-2a2331884f21
+    - dd83785a-dd19-41e3-9b25-ebabbd48d336
+    - ee289120-5e7f-4cde-98a0-a523e5150994
+    - f2d49150-35de-4fd5-ac46-eb071d1cc73e
+    Abstract: 
+  - title: "Different stakeholders\u2019 perspectives for a surgical case assignment
+      problem: Deterministic and robust approaches"
+    id: 19add6d4-30f2-4af0-8b8e-a711bca3a7e5
+    authors:
+    - "In\xEAs Marques"
+    - "M. Eug\xE9nia V. Captivo"
+    venue: European Journal of Operational Research
+    year: 2017
+    n_citation: 50
+    references:
+    - 1790f9f0-0c40-41e1-9edf-d3eb018c16d2
+    - 17d3e3fc-9448-4585-897e-16f052316fc4
+    - 1967d9e1-edea-416e-8cb6-ce8c9ec390ee
+    - 28f63414-62a0-40d6-96db-8be6ead5c726
+    - 31a2356e-36a8-4ef9-b132-e4dac63bdccf
+    - 35a02a55-39ff-40f2-98a2-b113d3a7cf43
+    - 4cb73b73-17bb-45fa-8b94-90cf9d50b5f9
+    - 5ef5cb7c-2f47-4187-a6ee-e1c2ad8f2648
+    - 7690e2e1-05a6-4b0a-9b7c-de36dbc787fa
+    - 88cbf6aa-4ca9-49f1-badc-a431bd7bf77c
+    - 8a0cc109-318f-418f-9859-aa2139e88d3d
+    - 93eb4c6e-f06e-441e-b871-276515825e9f
+    - a98ad016-18c8-4edb-a080-1b8500f46338
+    - b39b5769-6779-42c3-aaa5-eb37b80f2e41
+    - ea37f530-1e67-4731-9357-63b3a43b11f5
+    Abstract: 
+  - title: Effect of white LED DC-bias on modulation speed for visible light communications
+    id: 1a0cd429-f95c-48a1-b273-2b86abf9946f
+    authors:
+    - Peng Deng
+    - Mohsen Kavehrad
+    venue: 'arXiv: Information Theory'
+    year: 2016
+    n_citation: 0
+    references:
+    - 2fc23522-f6be-4023-8c09-370a3e0720f4
+    Abstract: 
+  - title: Reflections on Computer Science and Information Systems research
+    id: 1a7b825a-fd84-4522-aa2c-ada41e722d21
+    authors:
+    - Salvatore T. March
+    venue: Lecture Notes in Computer Science
+    year: 2000
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Privacy Risk Perceptions and Privacy Protection Strategies.
+    id: 1b184acd-4112-441d-b381-871594fee263
+    authors:
+    - Isabelle Oomen
+    - Ronald Leenes
+    venue: 
+    year: 2007
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: "Impact of Gamification on User\u2019s Knowledge-Sharing Practices: Relationships
+      between Work Motivation, Performance Expectancy and Work Engagement"
+    id: 1c04fa91-12f1-444a-9460-e3cf8b8c8ede
+    authors:
+    - Mario Silic
+    - Andrea Back
+    venue: hawaii international conference on system sciences
+    year: 2017
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Fast and Automated Electromigration Analysis for CMOS RF PA Design
+    id: 1c66e27f-0588-4257-b0bd-539e745bef3a
+    authors:
+    - Junjie Gu
+    - Hai-Peng Fu
+    - Weicong Na
+    - Qi-Jun Zhang
+    - Jianguo Ma
+    venue: Journal of Electronic Testing
+    year: 2017
+    n_citation: 0
+    references:
+    - 1fde92a0-88e1-4882-837e-1ad384c65b97
+    - 55aa6a7f-aa08-4da5-89b7-5b4dbacd9b86
+    - 774cab43-5d90-4a97-b6da-34959f9b7b31
+    - a31234d5-148b-4777-9ddc-fd59a1efaa59
+    - fd211ec3-0ce0-4815-bb18-dd7abffb9863
+    Abstract: 
+  - title: 'Guest editorial: GeoStreaming'
+    id: 1ce16a6b-7e7d-4973-b685-41c6fffe96d1
+    authors:
+    - Mohamed H. Ali
+    - Farnoush Banaei-Kashani
+    - Chengyang Zhang
+    venue: Geoinformatica
+    year: 2017
+    n_citation: 0
+    references:
+    - 0669a815-6e38-47cd-811e-4c4362f7ad0e
+    - 44a388f1-f9d4-4154-a6a8-2f39ef0e2183
+    - a053ad96-9d55-45ae-a930-7cf31eae0a63
+    - a5927b62-ecfd-4814-81ec-465a48efce8e
+    - b1dd86b3-9474-4d3a-91d0-cb50827fcd5a
+    - ca444bac-7750-4e99-987a-33e4e1a2f548
+    - e4a4a12c-098a-4ea7-8123-3c80cf30f7f4
+    Abstract: 
+  - title: 'Mobile Learning in Pre-Kindergarten: Using Student Feedback to Inform
+      Practice'
+    id: 1d1c3751-8f8b-4056-a503-0a29f1eed310
+    authors:
+    - Jennifer Lyn Reeves
+    - Glenda A. Gunter
+    - Candace Lacey
+    venue: Educational Technology & Society
+    year: 2017
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: "Data-driven approximate value iteration with optimality error bound analysis
+      \u2606"
+    id: 1d863a29-bb0f-4273-98fc-f162ec7d999a
+    authors:
+    - Yongqiang Li
+    - Zhongsheng Hou
+    - Yuanjing Feng
+    - Ronghu Chi
+    venue: Automatica
+    year: 2017
+    n_citation: 0
+    references:
+    - 15776c6e-5c11-45cd-9b78-cbcbde360e44
+    - 28552aaf-1d2f-4814-872f-b33d38172a36
+    - 2bbdc187-f624-4f35-957f-5644bb048a4d
+    - 2eda7075-3184-4a80-ad45-ff6376b17248
+    - 35775edc-ea97-4396-a9fc-385a66f0dbfe
+    - 439479de-fea7-43fa-a53b-b249100a098c
+    - 514bc910-30ee-4466-8f4d-74bc3dc3fb40
+    - 51c1a700-a448-4f20-9186-dfabbf064f7a
+    - 634caf62-1023-42dc-baa5-462b8126c034
+    - 856fb18c-75df-4b89-bf8f-a95a31c7eab7
+    - 95f75bdb-e021-4593-8a68-ac82e035a44e
+    - a94a381d-9099-423f-883d-6c5e7f5bc872
+    - caedc27e-1b5d-45a2-9beb-d6b318c5f9f9
+    - d375140d-9af6-4f0b-80ab-fbb82fc107e7
+    - ef615c71-5201-48e8-8bce-6c09f1fe5ab7
+    - fd4e8c45-be77-49de-a6a8-a8ab1acac344
+    Abstract: 
+  - title: 'A study of friending willingness on SNSs: Secondary school teachers''
+      perspectives'
+    id: 1dd5ee9d-e3c7-4588-84a3-2812a84c0971
+    authors:
+    - Fu Wen Kuo
+    - Wen Cheng
+    - Shu Ching Yang
+    venue: Computers in Education
+    year: 2017
+    n_citation: 0
+    references:
+    - 0d3ddc81-b0e9-401a-96ab-cf4bed7db6f5
+    - 264c4bad-d11d-44b6-8cd7-2674fda453fb
+    - 26fa9833-e677-46d1-8f4d-74928c2df350
+    - 2846727b-3793-4ad0-a81b-7efba7ac7b66
+    - 4a823793-2190-433c-bb8f-08ac17cd2a9b
+    - 50c8071a-ada4-4e08-a2a8-41658dba0c4c
+    - 51989f10-e1f1-47a4-af8a-c3e424f8d985
+    - a6528378-95f3-47b9-9b5e-e2d520c65b86
+    - aea38ef1-aee7-449b-b783-26dbae7eef75
+    - b497a01e-1b71-44cb-beea-ba6b13475064
+    - b573b60e-aa27-4170-87c8-20446840dbad
+    - e1ab6840-1eac-4fb8-a936-c9af497560a6
+    - e4a5c41a-005a-441e-ad5c-cd6e26a8757e
+    - ebaefac3-704e-4bf7-ad87-95cc3e5f8dd8
+    - fd26b790-8f08-4164-9cd8-abb5b775a615
+    Abstract: 
+  - title: A model predictive power control method with longer prediction horizon
+      for distributed power generations
+    id: 1e2e4472-13f8-44ba-804f-1a23a538daed
+    authors:
+    - Mahlagha Mahdavi Aghdam
+    - Li Li
+    - Jianguo Zhu
+    venue: international conference on control, automation, robotics and vision
+    year: 2016
+    n_citation: 0
+    references:
+    - 250632b0-f74a-45ff-86fb-db221ec10ced
+    - c092bbd6-b7fd-418b-bc9b-7e8635bd83ac
+    - cc9ce46f-6aa7-4004-aa49-03b44aa00c20
+    - ee8437eb-5c39-428a-a1de-a323c4007dfb
+    Abstract: 
+  - title: A Deviation Index Proposal to Evaluate Group Decision Making Based on Equilibrium
+      Solutions
+    id: 1e670c9b-5636-41a3-becd-8e7eab7e8982
+    authors:
+    - Alexandre Bevilacqua Leoneti
+    - Fernanda de Sessa
+    venue: 
+    year: 2016
+    n_citation: 0
+    references: []
+    Abstract: 
+  - title: Sorting by Reversals and the Theory of 4-Regular Graphs
+    id: 1e860e80-cb6a-469b-a845-bbcbb056a974
+    authors:
+    - Robert Brijder
+    venue: Theoretical Computer Science
+    year: 2017
+    n_citation: 0
+    references:
+    - 044f43eb-5208-4d44-aa93-dc3a9b2d9790
+    - 0b948754-fc18-4df9-9423-b717f1ab6ee7
+    - 1104b636-e0ae-48cc-8023-50ba0a855d2c
+    - 1552a53d-6c82-4d57-ae26-e881e3f96a44
+    - 17d10d56-7e5a-40fd-9e53-16aa91b13313
+    - 317dd61f-e629-4cc6-bd6b-48b11eca828f
+    - 47dc1b7e-16ce-40ea-8ab9-eee5598a01f5
+    - 86b1b26b-eced-43ef-b9f4-38cfb0465645
+    - 89e25ac9-083d-42e0-bbd9-98ec9a4edfd9
+    - 8bfbb4f0-0675-4c73-9fcd-d4e1316f9eef
+    - 8cd24fd5-6b5f-42fd-a8a7-201174df873d
+    - 9b2dd6b3-3530-4e36-b79c-6f6f10a82863
+    - bbb7d6ac-27f8-409f-99b3-53c43a8e7062
+    - cf03edcd-7641-4fc9-8b38-3660f95c0a4d
+    - d2bd3fa0-528c-4efb-ae3f-2422241bc9ea
+    - ece84c2f-bb10-4b12-b898-6392bc4de2f6
+    - fa15b915-8c6c-4425-ba7c-39f16d2235f4
+    Abstract: 
+  - title: 'Utilizing Geometric Mean in Proportional Fair Scheduling: Enhanced Throughput
+      and Fairness in LTE DL'
+    id: 1f83b410-f7dc-4d33-85ca-6a71b0110b2b
+    authors:
+    - Mahir Ayhan
+    - Yanxiang Zhao
+    - Hyeong-Ah Choi
+    venue: global communications conference
+    year: 2016
+    n_citation: 0
+    references:
+    - 024c1b6c-e575-4d83-a891-b6127ce816d5
+    - 1618a544-97d9-4a80-b0e3-22317fafdfa3
+    - 1b37353c-2c8e-421d-a929-e9a95d20ed7e
+    - 4d0f2c57-7f08-416a-9721-eb333c88433e
+    - 514ac74c-babb-4bcd-83a6-495a1171d829
+    - 57b89745-790c-4c68-b723-9c28f1babe07
+    - c731c75a-77dc-475e-b867-6dd431e935a5
+    - dac03509-4ab8-475b-8d29-d84ed613146f
+    - eaab2ee6-3d68-4cdf-8c7a-16843ce44c0b
+    Abstract: 
+  - title: Storing and Querying of XML Documents Without Redundant Path Information
+    id: 1fc47acc-cbc7-4173-80a6-0c76785ea9ed
+    authors:
+    - Byeong-Soo Jeong
+    - Young-Koo Lee
+    venue: Lecture Notes in Computer Science
+    year: 2006
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: Quantitative analysis of information leakage in service-oriented architecture-based
+      Web services
+    id: 201d4d10-ba49-4f27-8e0e-7dde9733fc0a
+    authors:
+    - Kushal Anjaria
+    - Arun Mishra
+    venue: Kybernetes
+    year: 2017
+    n_citation: 0
+    references:
+    - 029f809d-145f-4e38-9990-a8a18ab89f8a
+    - 07f38632-91bd-422f-abb6-cdb8223ba316
+    - 0ec905cf-2eca-4a6e-b96a-aaed5a1e3789
+    - 10c5cbb4-1cd7-4cb4-87e5-428665d6c5ba
+    - 325e2f41-77f4-42b0-aa8d-302957e43f27
+    - 395066d5-ef21-451a-ba4a-387aa5acd884
+    - 44e583ac-b402-432a-9fc6-650ef067fa52
+    - 484728f7-6fcb-410f-8917-563269c2638f
+    - 57435748-f634-4be6-a1df-d81958a7e720
+    - 5a5fbcbe-e628-4a15-bf91-be403c06ecbe
+    - 5f1584c0-e0f5-490e-99a2-27585f42eb5d
+    - 68b6b321-56f5-4587-8514-7c65bc2f0864
+    - 68eb3d4a-ecb1-4309-89f8-d1a3b45a7dae
+    - 6e319d19-1775-4aa3-b8b8-9ffd6fd0dc85
+    - 6f4feb66-7a12-4768-81ec-46e98afe0ddd
+    - 725e033f-c688-4018-a525-4e0b6cef28b8
+    - 73a4be73-c9e3-410b-8d1b-4fc1c4444b60
+    - 8796e17e-931f-4f2b-880c-0aef8e3171cc
+    - 8a1dac43-5b10-42ec-a1bc-6bafc4737b80
+    - 924a5849-f815-4b7d-9ae4-59d0ffc813dc
+    - 92f57fdb-9548-4e3f-8c1a-41b674f9e62b
+    - 97fb12cf-8c9f-4268-b990-d6e876000e6e
+    - 9917ebf6-c1df-4eed-9240-41f90c635a8c
+    - 9c34e24d-63df-42a2-ba36-186e8e8d30f7
+    - 9ecc2bf7-e62f-4421-b556-27044821e883
+    - ad072764-c0e4-4a1d-a5b0-3a71475295c2
+    - bb493df2-1d7d-46bf-9260-36ba8e9a1111
+    - ca0f31fa-81e5-41e8-bcb4-648d84814246
+    - d52422eb-8573-4624-a0c5-ec4b52675c80
+    - e52378a2-7d65-46a2-b272-515bc077be2e
+    - ecd29bd4-6893-422e-966b-af8c8e3a5d11
+    - fcfae7b3-bfce-425c-b50c-5077f9bd11f1
+    - fe9d2177-5770-40ec-acd2-2fc1ce394947
+    Abstract: 
+  - title: Asymptotic and Bootstrap Tests for the Dimension of the Non-Gaussian Subspace
+    id: 207284c7-4acd-4370-8770-745b21d6d29b
+    authors:
+    - Klaus Nordhausen
+    - Hannu Oja
+    - David E. Tyler
+    - Joni Virta
+    venue: IEEE Signal Processing Letters
+    year: 2017
+    n_citation: 0
+    references:
+    - 1eca3783-c2ca-4126-8f25-dc3130ea613e
+    - 40cdc9d4-763b-4fae-909a-4b41c538ac41
+    - 974bda89-0933-4534-92c8-7b0c6ebff219
+    - a96e4a51-393a-4f5e-aac2-05dbe3f24439
+    Abstract: 
+  - title: QoS Enabled WiFi MAC Layer Processing as an Example of a NFV Service
+    id: 2095d76f-6217-4eec-9eaa-de0a4ecdf499
+    authors:
+    - Jonathan Vestin
+    - Andreas Kassler
+    venue: 
+    year: 2015
+    n_citation: 50
+    references: []
+    Abstract: 
+  - title: Finite deformation guided nonlinear filtering for multiframe cardiac motion
+      analysis
+    id: 20abc9cd-3312-46fb-a8a2-21b496a6a1c7
+    authors:
+    - Clk Wong
+    - Pengcheng Shi
+    venue: Lecture Notes in Computer Science
+    year: 2004
+    n_citation: 0
+    references: []
+    Abstract: 
