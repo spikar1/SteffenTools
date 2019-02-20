@@ -35,6 +35,64 @@ namespace SteffenTools.Extensions
             }
             Gizmos.color = c;
         }
+
+        /// <summary>
+        /// Draw a debug circle around dir.
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="radius"></param>
+        /// <param name="dir">Define the axis plane to draw the circle</param>
+        /// <param name="color"></param>
+        /// <param name="duration"></param>
+        /// <param name="resolution"></param>
+        public static void DrawCircle(Vector3 center, float radius, Vector3 dir, Color color, float resolution = 16) {
+            Vector3 lastPos = Vector3.zero;
+            Vector3 pos = lastPos;
+            Gizmos.color = color;
+            for (int i = 0; i <= resolution; i++) {
+                float f = (float)i / resolution * Mathf.PI * 2;
+
+                pos = new Vector3(Mathf.Sin(f), Mathf.Cos(f), 0) * radius;
+
+                //I need to understand this sometime....
+                Matrix4x4 m = Matrix4x4.Rotate(Quaternion.LookRotation(dir));
+                //End of not understanding
+
+                pos = m.MultiplyPoint3x4(pos);
+
+
+                if (i != 0)
+                    Gizmos.DrawLine(lastPos + center, pos + center);
+                lastPos = pos;
+            }
+        }
+        /// <summary>
+        /// Draw a debug circle around axis
+        /// </summary>
+        /// <param name="center"></param>
+        /// <param name="radius"></param>
+        /// <param name="axis"></param>
+        /// <param name="color"></param>
+        /// <param name="resolution"></param>
+        public static void DrawCircle(Vector3 center, float radius, Axis axis, Color color, float resolution = 16) {
+            switch (axis) {
+                case Axis.X:
+                    DrawCircle(center, radius, Vector3.right, color, resolution);
+                    break;
+                case Axis.Y:
+                    DrawCircle(center, radius, Vector3.up, color, resolution);
+                    break;
+                case Axis.Z:
+                    DrawCircle(center, radius, Vector3.forward, color, resolution);
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        public static void DrawCircle(Vector3 center, float radius, Axis axis) {
+            DrawCircle(center, radius, axis, Color.white, 0);
+        }
     }
     public enum Axis { X, Y, Z}
     public static class AxisExtensions
