@@ -322,5 +322,15 @@ namespace SteffenTools.Extensions
         {
             return Clamp(v2, new Vector2(min, min), new Vector2(max, max));
         }
+        
+        /// <summary>
+        /// Multiply each axis, Convolution
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="b"></param>
+        /// <returns></returns>
+        public static Vector2 Multiply(this Vector2 a, Vector2 b) {
+            return new Vector2(a.x * b.x, a.y * b.y);
+        }
     }
 }
