@@ -59,7 +59,7 @@ public class SteffensTestScript : MonoBehaviour {
 
             angle = Vector3.SignedAngle(seeker.forward, target.position - seeker.position, Vector3.up);
             var a = angle;
-
+            print(state);
             if (a > -45 && a < 45)
                 state = State.Forward;
             else if (a > 45 && a < 135)
