@@ -102,7 +102,7 @@ namespace SteffenTools.Extensions
         /// </summary>
         /// <param name="axisPlane"></param>
         /// <returns></returns>
-        public static Vector3 ToDir (this Axis axisPlane)
+        public static Vector3 Direction (this Axis axisPlane)
         {
             switch (axisPlane)
             {
@@ -285,7 +285,7 @@ namespace SteffenTools.Extensions
             List<Vector3> v = new List<Vector3>(points);
             for (int i = 0; i < v.Count; i++)
             {
-                v[i] = Quaternion.Euler(axis.ToDir() * degrees) * v[i];
+                v[i] = Quaternion.Euler(axis.Direction() * degrees) * v[i];
             }
             return v;
         }
@@ -309,20 +309,26 @@ namespace SteffenTools.Extensions
         {
             return new Vector3(Mathf.Ceil(vector.x), Mathf.Ceil(vector.y), Mathf.Ceil(vector.z));
         }
+        /// <summary>
+        /// Floor the individual axis
+        /// </summary>
+        /// <param name="vector"></param>
+        /// <returns></returns>
+        public static Vector3 Floor (this Vector3 vector)
+        {
+            return new Vector3(Mathf.Floor(vector.x), Mathf.Floor(vector.y), Mathf.Floor(vector.z));
+        }
     }
-
     public static class Vector2Extensions
     {
         public static Vector2 Clamp(this Vector2 v2, Vector2 clampMin, Vector2 clampMax)
         {
             return new Vector2(Mathf.Clamp(v2.x, clampMin.x, clampMax.x), Mathf.Clamp(v2.y, clampMin.y, clampMax.y));
         }
-
         public static Vector2 Clamp(this Vector2 v2, float min, float max)
         {
             return Clamp(v2, new Vector2(min, min), new Vector2(max, max));
-        }
-        
+        }        
         /// <summary>
         /// Multiply each axis, Convolution
         /// </summary>
