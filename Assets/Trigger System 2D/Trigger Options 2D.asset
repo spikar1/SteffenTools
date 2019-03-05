@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13a7b625011c9b347af122773c837fc1, type: 3}
   m_Name: Trigger Options 2D
   m_EditorClassIdentifier: 
-  myInt: -35
+  myInt: 11
+  connectorGravity: {x: 0, y: -0.51}
