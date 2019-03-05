@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5355efbaff5e1a240b0e3854b6cf605f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - triggerOptions2D: {fileID: 11400000, guid: 05231737f79b20241a7730877e170f2a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
