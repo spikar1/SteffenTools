@@ -91,7 +91,7 @@ namespace SteffenTools.Extensions
 
         }
         public static void DrawCircle(Vector3 center, float radius, Axis axis) {
-            DrawCircle(center, radius, axis, Color.white, 0);
+            DrawCircle(center, radius, axis, Gizmos.color);
         }
     }
     public enum Axis { X, Y, Z}
