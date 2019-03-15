@@ -66,10 +66,10 @@ namespace TriggerSystem {
                             AdditionalGizmos.DrawArc(transform.position, t.position);
                             Gizmos.color = orgCol;
                         }
-
                     }
                 }
             }
+
             foreach (var col in GetComponents<Collider>()) {
                 if (!col.isTrigger || !col.enabled)
                     continue;
@@ -88,6 +88,16 @@ namespace TriggerSystem {
                     Vector3 s = transform.localScale;
                     float maxScale = Mathf.Max(s.x, s.y, s.z);
                     Gizmos.DrawSphere(transform.TransformPoint(sc.center), sc.radius * maxScale);
+                }
+                else if (col.GetType() == typeof(MeshCollider))
+                {
+                    var m = Gizmos.matrix;
+                    Gizmos.matrix = transform.localToWorldMatrix;
+
+                    MeshCollider mc = col as MeshCollider;
+                    Gizmos.DrawMesh(mc.sharedMesh);
+
+                    Gizmos.matrix = m;
                 }
             }
         }
