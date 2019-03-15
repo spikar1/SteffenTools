@@ -16,15 +16,13 @@ namespace TriggerSystem {
 
         public Color gizmosColor = new Color(0, 1, 0, .3f);
 
-        public float triggerRadius => GetComponent<SphereCollider>().radius;
-        public Vector3 triggerSize => GetComponent<BoxCollider>().size;
-
         [HideInInspector]
         public bool onTriggerEnter = false;
         [HideInInspector]
         public bool onTriggerExit = false;
         [HideInInspector]
         public bool onTriggerStay = false;
+
         private void OnTriggerEnter(Collider other) {
             eventEnter.Invoke();
         }
@@ -76,21 +74,22 @@ namespace TriggerSystem {
                 if (!col.isTrigger || !col.enabled)
                     continue;
                 if (col.GetType() == typeof(BoxCollider)) {
+
+                    var m = Gizmos.matrix;
+                    Gizmos.matrix = transform.localToWorldMatrix;
+
                     BoxCollider bc = col as BoxCollider;
-                    Gizmos.DrawCube(transform.position + bc.center.Multiply(transform.localScale), Vector3.Scale(transform.localScale, bc.size));
+                    Gizmos.DrawCube(bc.center, bc.size);
+
+                    Gizmos.matrix = m;
                 }
                 else if (col.GetType() == typeof(SphereCollider)) {
                     SphereCollider sc = col as SphereCollider;
                     Vector3 s = transform.localScale;
                     float maxScale = Mathf.Max(s.x, s.y, s.z);
-                    Gizmos.DrawSphere(transform.position + sc.center, sc.radius * maxScale);
+                    Gizmos.DrawSphere(transform.TransformPoint(sc.center), sc.radius * maxScale);
                 }
             }
-
-
         }
-
     }
-
-    
 }
