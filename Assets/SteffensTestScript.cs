@@ -15,6 +15,14 @@ public class SteffensTestScript : MonoBehaviour {
     public enum State { Nothing, Forward, Right, Back, Left}
     public State state = State.Nothing;
 
+    Stack<int> myStack;
+    Queue<int> myQueue;
+
+    private void Update()
+    {
+
+    }
+
     void LateUpdate() {
 
         //
