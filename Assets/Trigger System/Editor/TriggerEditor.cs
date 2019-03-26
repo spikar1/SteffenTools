@@ -8,6 +8,15 @@ namespace TriggerSystem {
     [CustomEditor(typeof(Trigger))]
     public class TriggerEditor : Editor {
 
+        private void OnSceneGUI()
+        {
+            if(Event.current.type == EventType.Repaint)
+            {
+                Handles.color = Color.red;
+                Handles.CubeHandleCap(0, Vector3.zero, Quaternion.identity, 1, EventType.Repaint);
+
+            }
+        }
 
         public override void OnInspectorGUI() {
             //DrawDefaultInspector();

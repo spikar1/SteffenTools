@@ -25,6 +25,9 @@ namespace TriggerSystem2D
 
         void OnGUI()
         {
+
+            //EditorGUILayout.ObjectField(
+
             GUILayout.Label("Base Settings", EditorStyles.boldLabel);
             myString = EditorGUILayout.TextField("Text Field", myString);
             myInt = triggerOptions2D.myInt;

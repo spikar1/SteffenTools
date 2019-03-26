@@ -484,8 +484,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   state: 0
-  loops: 4
-  resolution: 32
+  loops: 16.21
+  resolution: 75
   height: 4
   animateHeight: 1
   radius: 1
@@ -497,20 +497,29 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
+      inSlope: -0.0046530967
+      outSlope: -0.0046530967
+      tangentMode: 0
+      weightedMode: 2
+      inWeight: 0
+      outWeight: 1
+    - serializedVersion: 3
+      time: 0.5
+      value: 0.2
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.0019487265
+      outSlope: -0.0019487265
       tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
+      weightedMode: 1
+      inWeight: 1
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
