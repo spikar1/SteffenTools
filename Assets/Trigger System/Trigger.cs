@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using SteffenTools.Extensions;
 
+public class MyEvent : UnityEvent<int, int, int, int>
+{
+
+}
 
 namespace TriggerSystem {
 
@@ -51,16 +55,16 @@ namespace TriggerSystem {
                         if (t.GetComponent<MeshRenderer>()) {
                             var mr = t.GetComponent<MeshRenderer>();
                             Color orgCol = Gizmos.color;
-                            if (!active)
-                                Gizmos.color = Gizmos.color * .5f;
+                            /*if (!active)
+                                Gizmos.color = Gizmos.color * .5f;*/
                             Gizmos.DrawWireCube(mr.bounds.center, mr.bounds.size + Vector3.one * .1f);
                             AdditionalGizmos.DrawArc(transform.position, mr.bounds.center);
                             Gizmos.color = orgCol;
                         }
                         else {
                             Color orgCol = Gizmos.color;
-                            if (!active)
-                                Gizmos.color = Gizmos.color * .5f;
+                            /*if (!active)
+                                Gizmos.color = Gizmos.color * .5f;*/
                             Gizmos.DrawWireCube(t.position, Vector3.one);
                             //Gizmos.DrawLine(transform.position, t.position);
                             AdditionalGizmos.DrawArc(transform.position, t.position);

@@ -20,7 +20,7 @@ namespace SteffenTools.Extensions
 
             int divisions = 15;
 
-            Gizmos.color = new Color(c.r, c.g, c.b, .1f);
+            //Gizmos.color = new Color(c.r, c.g, c.b, .1f);
             Vector3 prevPos = pos1;
 
             for (int i = 0; i <= divisions; i++)
