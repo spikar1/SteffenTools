@@ -13,8 +13,27 @@ namespace TriggerSystem {
             if(Event.current.type == EventType.Repaint)
             {
                 Handles.color = Color.red;
-                Handles.CubeHandleCap(0, Vector3.zero, Quaternion.identity, 1, EventType.Repaint);
+                Handles.CubeHandleCap(0, Vector3.zero, Quaternion.identity, .1f, EventType.Repaint);
 
+                var t = target as Trigger;
+
+                float size = HandleUtility.GetHandleSize(t.transform.position) * 1f;
+                float snap = 0.5f;
+
+                EditorGUI.BeginChangeCheck();
+
+                float scale = Handles.ScaleSlider(t.f, t.transform.position, -t.transform.right, t.transform.rotation, size, snap);
+                if (EditorGUI.EndChangeCheck())
+                {
+                    Undo.RecordObject(target, "Change Scale Value");
+                    t.f = scale;
+                    
+                }
+
+                /*EditorGUI.BeginChangeCheck();
+                t.f = Handles.ScaleSlider(t.f, t.transform.position, -t.transform.forward, t.transform.rotation, size, snap);
+                
+                EditorGUI.EndChangeCheck();*/
             }
         }
 
@@ -31,6 +50,8 @@ namespace TriggerSystem {
             SerializedProperty propStay = SO.FindProperty("eventStay");
 
             Trigger trigger = target as Trigger;
+
+            trigger.f = EditorGUILayout.FloatField(trigger.f);
 
             bool onTriggerEnter = trigger.onTriggerEnter;
             bool onTriggerExit = trigger.onTriggerExit;

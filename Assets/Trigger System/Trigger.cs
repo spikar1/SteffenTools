@@ -12,6 +12,9 @@ public class MyEvent : UnityEvent<int, int, int, int>
 namespace TriggerSystem {
 
     public class Trigger : MonoBehaviour {
+        public float f = 1;
+
+
         public static bool showGizmos = true;
 
         public UnityEvent eventEnter;
@@ -40,6 +43,7 @@ namespace TriggerSystem {
         private void OnDrawGizmos() {
             if (!showGizmos)
                 return;
+            
             Gizmos.color = gizmosColor;
 
             DrawEvents(eventEnter, onTriggerEnter);
