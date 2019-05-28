@@ -15,11 +15,23 @@ public class Westerdals_Del1 : MonoBehaviour
 
     public float a = 100;
 
+    public Vector[] polyPoints;
+
     private void Update()
     {
-        DrawLine(a, 100, 200, 250, Color.red);
+        DrawLine(0, 100, 200, 250, Color.red);
         DrawLine(0, 0, 10, 10, Color.red);
 
+        DrawPolygon(
+            new Vector(100, 100),
+            new Vector(200, 300),
+            new Vector(300, 100),
+            new Vector(200, 150)
+            );
+
+        polyPoints = RotateVectors(polyPoints, Time.deltaTime);
+        DrawPolygon(polyPoints);
+        
         /*DrawLine(100, 0, 100, 600, Color.red);
         DrawLine(90, 0, 90, 600, Color.red);
         DrawLine(80, 0, 80, 600, Color.red);
@@ -32,6 +44,44 @@ public class Westerdals_Del1 : MonoBehaviour
         DrawRectangle(200, 200, 100, 30, Color.green);*/
 
        // DrawAstroid(new Vector(300, 300), 3);
+    }
+
+    Vector[] RotateVectorsAroundOrigin(Vector[] vectors, Vector origin, float angle)
+    {
+        
+
+        var s = Mathf.Sin(angle);
+        var c = Mathf.Cos(angle);
+        var newVectors = new Vector[vectors.Length];
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            var v = vectors[i];
+            v.x -= origin.x;
+            v.y -= origin.y;
+
+            float newX = v.x * c - v.y * s;
+            float newY = v.x * s + v.y * c;
+
+            v.x = newX + origin.x;
+            v.y = newY + origin.y;
+            newVectors[i] = v;
+        }
+        return newVectors;
+    }
+
+    Vector[] RotateVectors(Vector[] vectors, float angle)
+    {
+        float cx = 0;
+        float cy = 0;
+        for (int i = 0; i < vectors.Length; i++)
+        {
+            cx += vectors[i].x;
+            cy += vectors[i].y;
+        }
+        cx = cx / vectors.Length;
+        cy = cy / vectors.Length;
+
+        return RotateVectorsAroundOrigin(vectors, new Vector(cx, cy), angle);
     }
 
     #region Draw Functions
@@ -52,7 +102,7 @@ public class Westerdals_Del1 : MonoBehaviour
     {
         DrawLine(a.x, a.y, b.x, b.y, color);
     }
-    void DrawTrapezoid(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, Color color)
+    void DrawQuadrilateral(float x1, float y1, float x2, float y2, float x3, float y3, float x4, float y4, Color color)
     {
         DrawLine(x1, y1, x2, y2, color);
         DrawLine(x2, y2, x3, y3, color);
@@ -60,9 +110,29 @@ public class Westerdals_Del1 : MonoBehaviour
         DrawLine(x4, y4, x1, y1, color);
     }
 
+    void DrawPolygon(Color color,params Vector[] vectors)
+    {
+        for (int i = 0; i < vectors.Length-1; i++)
+        {
+            DrawLine(vectors[i], vectors[i + 1], color);
+        }
+        DrawLine(vectors[vectors.Length-1], vectors[0], color);
+    }
+
+    void DrawPolygon(params Vector[] vectors)
+    {
+        if (vectors == null || vectors.Length < 1)
+            return;
+        for (int i = 0; i < vectors.Length - 1; i++)
+        {
+            DrawLine(vectors[i], vectors[i + 1], Color.white);
+        }
+        DrawLine(vectors[vectors.Length-1], vectors[0], Color.white);
+    }
+
     void DrawRectangle(float posX, float posY, float width, float height, Color color)
     {
-        DrawTrapezoid(posX, posY, posX, posY + height, posX + width, posY + height, posX + width, posY, Color.red);
+        DrawQuadrilateral(posX, posY, posX, posY + height, posX + width, posY + height, posX + width, posY, Color.red);
             
     }
 

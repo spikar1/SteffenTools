@@ -435,6 +435,16 @@ MonoBehaviour:
       y: 0
     width: 0
     height: 0
+  a: 100
+  polyPoints:
+  - x: 100
+    y: 100
+  - x: 200
+    y: 100
+  - x: 200
+    y: 200
+  - x: 100
+    y: 200
 --- !u!4 &207541268
 Transform:
   m_ObjectHideFlags: 0
