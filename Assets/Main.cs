@@ -17,11 +17,27 @@ public class Main : MonoBehaviour
         Debug.Log("Hello World!");
     }
 
-
-    float g = -.1f, v = 0, p = 0;
+   
     void Update()
     {
 
+        DrawUnits();
+
+        Debug.DrawLine(new Vector2(0, 0), new Vector2(800, 600));
+        DrawBounds();
+        DrawCircle(new Vector2(100, 100), 60, Color.white, 32);
+        DrawOval(400, 100, 40, 60, Color.white, 32);
+    }
+
+    void DrawBounds()
+    {
+        Debug.DrawLine(new Vector2(0, minY), new Vector2(800, minY), Color.white);
+        Debug.DrawLine(new Vector2(0, maxY), new Vector2(800, maxY), Color.white);
+
+    }
+
+    void DrawUnits()
+    {
         foreach (var unit in units)
         {
             unit.velocity += gravity * Time.deltaTime;
@@ -45,31 +61,28 @@ public class Main : MonoBehaviour
                     unit.velocity = Vector2.zero;
             }
 
-            DrawCircle(new Vector2(-2, 2), 1, 32);
-            DrawOval(new Vector2(2, 0.75f), 2, -.5f, 3);
-            DrawOval(new Vector2(2, 2), .5f, 2, 3);
 
-            Debug.DrawLine(new Vector2(0, 0), new Vector2(800, 600));
 
             DrawSquare(unit.position, unit.width, unit.height, unit.color);
         }
-
-        Debug.DrawLine(new Vector2(-10, minY), new Vector2(10, minY), Color.white);
-        Debug.DrawLine(new Vector2(-10, maxY), new Vector2(10, maxY), Color.white);
-
-        DrawCircle(new Vector2(100, 100), 60, 32);
+        
     }
 
-    void DrawCircle(Vector2 pos, float radius, int segments = 16) {
-        DrawOval(pos, radius, radius, segments);
+    void DrawCircle(Vector2 pos, float radius, Color color, int segments = 16) {
+        DrawOval(pos, radius, radius,color, segments);
     }
 
-    void DrawOval(Vector2 pos, float xRadius, float yRadius, int segments = 16) {
+    void DrawOval(float x, float y, float xRadius, float yRadius, Color color, int segments = 16)
+    {
+        DrawOval(new Vector2(x, y), xRadius, yRadius,color, segments);
+    }
+
+    void DrawOval(Vector2 pos, float xRadius, float yRadius, Color color, int segments = 16) {
         for (int i = 0; i < segments; i++) {
             float a, b;
             a = i / (float)segments * Mathf.PI * 2;
             b = (i + 1) / (float)segments * Mathf.PI * 2;
-            Debug.DrawLine(new Vector2(Mathf.Sin(a) * xRadius, Mathf.Cos(a) * yRadius) + pos, new Vector2(Mathf.Sin(b) * xRadius, Mathf.Cos(b) * yRadius) + pos);
+            Debug.DrawLine(new Vector2(Mathf.Sin(a) * xRadius, Mathf.Cos(a) * yRadius) + pos, new Vector2(Mathf.Sin(b) * xRadius, Mathf.Cos(b) * yRadius) + pos, color);
         }
     }
 
@@ -120,6 +133,7 @@ public class Main : MonoBehaviour
         }
     }
 }
+
 
 [System.Serializable]
 public class Unit
