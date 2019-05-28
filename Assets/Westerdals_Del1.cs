@@ -48,8 +48,6 @@ public class Westerdals_Del1 : MonoBehaviour
 
     Vector[] RotateVectorsAroundOrigin(Vector[] vectors, Vector origin, float angle)
     {
-        
-
         var s = Mathf.Sin(angle);
         var c = Mathf.Cos(angle);
         var newVectors = new Vector[vectors.Length];
