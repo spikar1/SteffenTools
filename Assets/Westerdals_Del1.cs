@@ -15,42 +15,56 @@ public class Westerdals_Del1 : MonoBehaviour
 
     public float a = 100;
 
-    public Vector[] polyPoints;
+    public Point[] polyPoints;
+    [Header("Ship")]
+    public List<Point> shipPoints;
+    public Point shipPosition = new Point(300, 550);
+    public float shipSpeed = 30;
+
+    private void Awake() {
+        shipPoints.Add(new Point(-25, 0));
+        shipPoints.Add(new Point(0, -35));
+        shipPoints.Add(new Point(25, 0));
+        shipPoints.Add(new Point(0, -13));
+    }
 
     private void Update()
     {
+        
         DrawLine(0, 100, 200, 250, Color.red);
         DrawLine(0, 0, 10, 10, Color.red);
 
         DrawPolygon(
-            new Vector(100, 100),
-            new Vector(200, 300),
-            new Vector(300, 100),
-            new Vector(200, 150)
+            new Point(100, 100),
+            new Point(200, 300),
+            new Point(300, 100),
+            new Point(200, 150)
             );
-
-        polyPoints = RotateVectors(polyPoints, Time.deltaTime);
+        polyPoints = RotateVectorsAroundOrigin(polyPoints, new Point(400, 300), Time.deltaTime);
         DrawPolygon(polyPoints);
-        
-        /*DrawLine(100, 0, 100, 600, Color.red);
-        DrawLine(90, 0, 90, 600, Color.red);
-        DrawLine(80, 0, 80, 600, Color.red);
-        DrawLine(70, 0, 70, 600, Color.red);
 
-        DrawLine(new Vector(400, 400), new Vector(450, 450), mainColor);
 
-        DrawTrapezoid(10, 10, 50, 10, 20, 20, 10, 20, Color.white);
+        if (Input.GetKey(KeyCode.A))
+            shipPosition.x -= Time.deltaTime * shipSpeed;
+        if (Input.GetKey(KeyCode.D))
+            shipPosition.x += Time.deltaTime * shipSpeed;
+        if (Input.GetKey(KeyCode.W))
+            shipPosition.y -= Time.deltaTime * shipSpeed;
+        if (Input.GetKey(KeyCode.S))
+            shipPosition.y += Time.deltaTime * shipSpeed;
 
-        DrawRectangle(200, 200, 100, 30, Color.green);*/
+        DrawPolygon(shipPosition, shipPoints.ToArray());
 
-       // DrawAstroid(new Vector(300, 300), 3);
+        //DrawAstroid(new Point(500, 100), 70, 0);
     }
 
-    Vector[] RotateVectorsAroundOrigin(Vector[] vectors, Vector origin, float angle)
+
+
+    Point[] RotateVectorsAroundOrigin(Point[] vectors, Point origin, float angle)
     {
         var s = Mathf.Sin(angle);
         var c = Mathf.Cos(angle);
-        var newVectors = new Vector[vectors.Length];
+        var newVectors = new Point[vectors.Length];
         for (int i = 0; i < vectors.Length; i++)
         {
             var v = vectors[i];
@@ -67,7 +81,7 @@ public class Westerdals_Del1 : MonoBehaviour
         return newVectors;
     }
 
-    Vector[] RotateVectors(Vector[] vectors, float angle)
+    Point[] RotateVectors(Point[] vectors, float angle)
     {
         float cx = 0;
         float cy = 0;
@@ -79,7 +93,7 @@ public class Westerdals_Del1 : MonoBehaviour
         cx = cx / vectors.Length;
         cy = cy / vectors.Length;
 
-        return RotateVectorsAroundOrigin(vectors, new Vector(cx, cy), angle);
+        return RotateVectorsAroundOrigin(vectors, new Point(cx, cy), angle);
     }
 
     #region Draw Functions
@@ -96,7 +110,7 @@ public class Westerdals_Del1 : MonoBehaviour
         Debug.DrawLine(new Vector3(x1, y1), new Vector3(x2, y2), color);
     }
 
-    void DrawLine(Vector a, Vector b, Color color)
+    void DrawLine(Point a, Point b, Color color)
     {
         DrawLine(a.x, a.y, b.x, b.y, color);
     }
@@ -108,7 +122,7 @@ public class Westerdals_Del1 : MonoBehaviour
         DrawLine(x4, y4, x1, y1, color);
     }
 
-    void DrawPolygon(Color color,params Vector[] vectors)
+    void DrawPolygon(Color color,params Point[] vectors)
     {
         for (int i = 0; i < vectors.Length-1; i++)
         {
@@ -116,16 +130,19 @@ public class Westerdals_Del1 : MonoBehaviour
         }
         DrawLine(vectors[vectors.Length-1], vectors[0], color);
     }
+    void DrawPolygon(params Point[] vectors) {
+        DrawPolygon(new Point(0,0), vectors);
+    }
 
-    void DrawPolygon(params Vector[] vectors)
+    void DrawPolygon(Point offset, params Point[] vectors)
     {
         if (vectors == null || vectors.Length < 1)
             return;
         for (int i = 0; i < vectors.Length - 1; i++)
         {
-            DrawLine(vectors[i], vectors[i + 1], Color.white);
+            DrawLine(vectors[i] + offset, vectors[i + 1] + offset, Color.white);
         }
-        DrawLine(vectors[vectors.Length-1], vectors[0], Color.white);
+        DrawLine(vectors[vectors.Length-1] + offset, vectors[0] + offset, Color.white);
     }
 
     void DrawRectangle(float posX, float posY, float width, float height, Color color)
@@ -134,44 +151,48 @@ public class Westerdals_Del1 : MonoBehaviour
             
     }
 
-    void DrawAstroid(Vector pos, float size)
+    void DrawAstroid(Point pos, float size, int seed)
     {
-        for (int i = 0; i < 6; i++)
+        Random.InitState(seed);
+        for (int i = 0; i < 8; i++)
         {
-            float t = ((float)i/6) * Mathf.PI * 2;
-            float t2 = ((float)i + 1 / 6) *Mathf.PI * 2;
-            DrawLine(pos + new Vector(Mathf.Sin(t), Mathf.Cos(t)), pos + new Vector(Mathf.Sin(t), Mathf.Cos(t)), Color.white);
+            float t = (float)i/8 * Mathf.PI * 2;
+            float t2 = (float)(i + 1) / 8 *Mathf.PI * 2;
+            DrawLine(
+                pos + new Point(Mathf.Sin(t), Mathf.Cos(t)) * size * Random.value, 
+                pos + new Point(Mathf.Sin(t2), Mathf.Cos(t2)) * size * Random.value,
+                Color.white);
         }
     }
     #endregion
 }
 
 [System.Serializable]
-public struct Vector
+public struct Point
 {
     public float x, y;
 
-    public Vector(float x, float y)
+    public Point(float x, float y)
     {
         this.x = x;
         this.y = y;
     }
 
-    public static Vector New(float x, float y)
+    public static Point New(float x, float y)
     {
-        Vector v = new Vector();
+        Point v = new Point();
         v.x = x;
         v.y = y;
         return v;
     }
 
-    public static Vector operator +(Vector a, Vector b)
+    public static Point operator +(Point a, Point b)
     {
-        for (int i = 0; i < 1000; i++)
-        {
-            Debug.Log("It works");
-        }
-        return new Vector(a.x + b.x, a.y + b.y);
+        return new Point(a.x + b.x, a.y + b.y);
+    }
+    public static Point operator *(Point a, float f)
+    {
+        return new Point(a.x * f, a.y * f);
     }
 }
 
@@ -179,9 +200,9 @@ public struct Vector
 public static class VectorExtensions
 {
     public static
-        Vector Add(this Vector a, Vector b)
+        Point Add(this Point a, Point b)
     {
-        return new Vector(a.x + b.x, a.y + b.y);
+        return new Point(a.x + b.x, a.y + b.y);
     }
 
 }
@@ -189,6 +210,6 @@ public static class VectorExtensions
 [System.Serializable]
 public class Doodads
 {
-    public Vector position;
+    public Point position;
     public float width, height;
 }

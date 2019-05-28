@@ -445,6 +445,11 @@ MonoBehaviour:
     y: 200
   - x: 100
     y: 200
+  shipPoints: []
+  shipPosition:
+    x: 300
+    y: 550
+  shipSpeed: 150
 --- !u!4 &207541268
 Transform:
   m_ObjectHideFlags: 0

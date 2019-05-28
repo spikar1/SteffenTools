@@ -12,14 +12,6 @@ public class Main : MonoBehaviour
     public float minY = -4;
     public float maxY = 4;
 
-    void Start()
-    {
-        Debug.Log("Hello World!");
-    }
-
-    
-
-   
     void Update()
     {
         DrawUnits();
