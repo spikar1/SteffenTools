@@ -17,10 +17,11 @@ public class Main : MonoBehaviour
         Debug.Log("Hello World!");
     }
 
+    
+
    
     void Update()
     {
-
         DrawUnits();
 
         Debug.DrawLine(new Vector2(0, 0), new Vector2(800, 600));
@@ -38,6 +39,7 @@ public class Main : MonoBehaviour
 
     void DrawUnits()
     {
+        //main loop
         foreach (var unit in units)
         {
             unit.velocity += gravity * Time.deltaTime;
@@ -60,8 +62,6 @@ public class Main : MonoBehaviour
                 if (unit.Overlap(other))
                     unit.velocity = Vector2.zero;
             }
-
-
 
             DrawSquare(unit.position, unit.width, unit.height, unit.color);
         }

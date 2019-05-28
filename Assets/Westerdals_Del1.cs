@@ -13,8 +13,13 @@ public class Westerdals_Del1 : MonoBehaviour
 
     public List<Doodads> doodads = new List<Doodads>();
 
+    public float a = 100;
+
     private void Update()
     {
+        DrawLine(a, 100, 200, 250, Color.red);
+        DrawLine(0, 0, 10, 10, Color.red);
+
         /*DrawLine(100, 0, 100, 600, Color.red);
         DrawLine(90, 0, 90, 600, Color.red);
         DrawLine(80, 0, 80, 600, Color.red);
@@ -26,10 +31,18 @@ public class Westerdals_Del1 : MonoBehaviour
 
         DrawRectangle(200, 200, 100, 30, Color.green);*/
 
-        DrawAstroid(new Vector(300, 300), 3);
+       // DrawAstroid(new Vector(300, 300), 3);
     }
 
     #region Draw Functions
+    /// <summary>
+    /// Draw a line from a to b
+    /// </summary>
+    /// <param name="x1"></param>
+    /// <param name="y1"></param>
+    /// <param name="x2"></param>
+    /// <param name="y2"></param>
+    /// <param name="color"></param>
     void DrawLine(float x1, float y1, float x2, float y2, Color color)
     {
         Debug.DrawLine(new Vector3(x1, y1), new Vector3(x2, y2), color);
@@ -59,7 +72,7 @@ public class Westerdals_Del1 : MonoBehaviour
         {
             float t = ((float)i/6) * Mathf.PI * 2;
             float t2 = ((float)i + 1 / 6) *Mathf.PI * 2;
-            DrawLine(pos.Add(new Vector(Mathf.Sin(t), Mathf.Cos(t))), pos.Add(new Vector(Mathf.Sin(t), Mathf.Cos(t))), Color.white);
+            DrawLine(pos + new Vector(Mathf.Sin(t), Mathf.Cos(t)), pos + new Vector(Mathf.Sin(t), Mathf.Cos(t)), Color.white);
         }
     }
     #endregion
@@ -84,11 +97,21 @@ public struct Vector
         return v;
     }
 
+    public static Vector operator +(Vector a, Vector b)
+    {
+        for (int i = 0; i < 1000; i++)
+        {
+            Debug.Log("It works");
+        }
+        return new Vector(a.x + b.x, a.y + b.y);
+    }
 }
+
 
 public static class VectorExtensions
 {
-    public static Vector Add(this Vector a, Vector b)
+    public static
+        Vector Add(this Vector a, Vector b)
     {
         return new Vector(a.x + b.x, a.y + b.y);
     }
