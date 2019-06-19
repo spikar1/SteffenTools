@@ -93,6 +93,23 @@ namespace SteffenTools.Extensions
         public static void DrawCircle(Vector3 center, float radius, Axis axis) {
             DrawCircle(center, radius, axis, Gizmos.color);
         }
+
+        public static void DrawArrow(Vector3 origin, Vector3 direction, float size = 1)
+        {
+            Gizmos.DrawRay(origin, direction * size);
+            for (int i = 0; i < 40; i++)
+            {
+                var p = origin + direction;
+                var q = Quaternion.LookRotation(Vector3.up);
+                //var arrowSpoke = new Vector3(Mathf.Sin((float)i / 4 * 360 * Mathf.Deg2Rad), Mathf.Cos((float)i / 4 * 360 * Mathf.Deg2Rad), 0);
+
+                var arrowSpoke = origin + Vector3.Cross(direction, Vector3.up).normalized;
+                arrowSpoke = q * arrowSpoke * i;
+                Gizmos.DrawLine(origin, arrowSpoke);
+
+
+            }
+        }
     }
     public enum Axis { X, Y, Z}
     public static class AxisExtensions
