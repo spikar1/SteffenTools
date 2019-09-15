@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Westerdals_Del1 : MonoBehaviour
+public class Westerdals_Test : MonoBehaviour
 {
     //Lære om spillmotorer
     //Enkle "Draw" funksjoner
@@ -30,6 +30,11 @@ public class Westerdals_Del1 : MonoBehaviour
 
     private void Update()
     {
+
+        DrawQuadrilateral(90, 60, 140, 80, 130, 120, 60, 120, Color.white);
+
+
+        /*
         
         DrawLine(0, 100, 200, 250, Color.red);
         DrawLine(0, 0, 10, 10, Color.red);
@@ -55,7 +60,7 @@ public class Westerdals_Del1 : MonoBehaviour
 
         DrawPolygon(shipPosition, shipPoints.ToArray());
 
-        //DrawAstroid(new Point(500, 100), 70, 0);
+        //DrawAstroid(new Point(500, 100), 70, 0);*/
     }
 
 
