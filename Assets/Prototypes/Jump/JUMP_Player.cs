@@ -13,6 +13,7 @@ public class JUMP_Player : MonoBehaviour
     public bool grounded = false;
 
     public AnimationCurve landingCurve;
+    private bool isInSalto;
 
     // Start is called before the first frame update
     void Start()
@@ -31,23 +32,28 @@ public class JUMP_Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             rb.velocity = new Vector2(rb.velocity.x, 6);
-
         }
 
-        Debug.DrawRay(transform.position, rb.velocity*.3f, Color.green);
-        if(Physics2D.Raycast((Vector2)transform.position, rb.velocity * .7f, rb.velocity.magnitude * .7f, playerMask)) 
-        {
+        OldJump();
+        
+    }
+
+    private void OldJump() {
+        Debug.DrawRay(transform.position, rb.velocity * .3f, Color.green);
+        /*if (Physics2D.Raycast((Vector2)transform.position, rb.velocity * .7f, rb.velocity.magnitude * .7f, playerMask)) {
             visTrans.up = Vector3.Lerp(visTrans.up, Vector3.up, 10 * Time.deltaTime);
 
         }
-        else if(rb.velocity.magnitude > .1f && !grounded)
+        else if (rb.velocity.magnitude > .1f && !grounded)
             visTrans.up = Vector3.Lerp(visTrans.up, rb.velocity.normalized, 10 * Time.deltaTime);
-
+            */
+        
+        visTrans.up = Vector3.Lerp(visTrans.up, rb.velocity.normalized, 10 * Time.deltaTime);
         Debug.DrawLine(transform.position + Vector3.left * .5f + Vector3.down * .52f,
             transform.position + Vector3.right * .5f + Vector3.down * .52f, Color.red);
         if (Physics2D.Linecast(transform.position + Vector3.left * .5f + Vector3.down * .52f, transform.position + Vector3.right * .5f + Vector3.down * .52f)) {
-            if (grounded == false)
-                StartCoroutine(Land());
+            /*if (grounded == false)
+                StartCoroutine(Land());*/
             grounded = true;
             visTrans.up = Vector3.up;
         }
@@ -70,7 +76,26 @@ public class JUMP_Player : MonoBehaviour
             rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * 7,0));
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision) {
-        visTrans.up = Vector3.up;//collision.contacts[0].normal;
-    }*/
+    private void OnCollisionEnter2D(Collision2D collision) {
+        //visTrans.up = Vector3.up;//collision.contacts[0].normal;
+        StartCoroutine(Squash(collision.relativeVelocity.y, collision.contacts[0].normal));
+    }
+
+    IEnumerator Squash(float power, Vector3 normal) {
+        print(power);
+        var p = Mathf.Clamp(power, 0, 10);
+        var s = Mathf.InverseLerp(10, 0, p);
+        var d = s;
+        float t = 0;
+        while (t < 1) {
+            //visTrans.localScale = new Vector3(1, landingCurve.Evaluate(t), 1);
+
+            visTrans.localScale = new Vector3(1, d, 1);
+            //visTrans.localScale = normal * d + (Vector3.one - normal);
+            visTrans.localPosition = new Vector3(0,-.5f + d*.5f , 0);
+            d = Mathf.Lerp(s, 1, t);
+            t += Time.deltaTime * 6;
+            yield return null;
+        }
+    }
 }
