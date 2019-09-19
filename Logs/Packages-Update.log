@@ -85,7 +85,11 @@ The following packages were updated:
   com.unity.package-manager-ui from version 2.1.2 to 2.2.0
   com.unity.timeline from version 1.0.0 to 1.1.0
 
+<<<<<<< HEAD
 === Sun Sep 15 17:04:54 2019
+=======
+=== Fri Sep 13 14:04:50 2019
+>>>>>>> ec62b5a110d744f200b82104ac727cb4cd8f29f6
 
 Packages were changed.
 Update Mode: updateDependencies
