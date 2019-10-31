@@ -33,7 +33,7 @@ public class OCT_Tile : MonoBehaviour
             b = true;
         flags = (Flags)((int)flags >> 1);
 
-        if (b) {
+        if (b) {  
             flags |= Flags.ul;
         }
     }
