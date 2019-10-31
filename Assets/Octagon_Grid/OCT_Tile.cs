@@ -14,7 +14,7 @@ public class OCT_Tile : MonoBehaviour
     {
 
         for (int i = 0; i < 8; i++) {
-            if(Random.value >= .5f) {
+            if(Random.value >= .8f) {
                 print((Flags)(1 << i));
                 flags |= (Flags)(1 << i);
             }

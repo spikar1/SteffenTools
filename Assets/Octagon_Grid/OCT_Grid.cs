@@ -75,4 +75,8 @@ public class OCT_Grid : MonoBehaviour
             start = end;
         }
     }
+
+    void FindAll(int x, int y) {
+
+    }
 }
