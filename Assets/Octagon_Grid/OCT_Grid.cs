@@ -16,6 +16,8 @@ public class OCT_Grid : MonoBehaviour
         for (int x = 0; x < sizeX; x++) {
             for (int y = 0; y < sizeY; y++) {
                 var tile = tiles[x, y] = Instantiate(tilePrefab);
+                tile.x = x;
+                tile.y = y;
                 tile.transform.position = new Vector3(x*2, y*2);
                 tile.transform.parent = transform;
             }
@@ -23,13 +25,13 @@ public class OCT_Grid : MonoBehaviour
     }
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             MoveCursor(0,1);
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             MoveCursor(-1,0);
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             MoveCursor(0,-1);
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             MoveCursor(1,0);
 
         if (Input.GetKeyDown(KeyCode.Q)) {
@@ -38,6 +40,11 @@ public class OCT_Grid : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)) {
 
             tiles[x, y].RotateCW();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            searchedTiles.Clear();
+            Flood(tiles[x,y]);
         }
     }
 
@@ -57,11 +64,19 @@ public class OCT_Grid : MonoBehaviour
                 var flags = tile.flags;
                 DrawOctagon(tile.transform.position);
                 foreach (var dir in flags.Dir()) {
-                    Gizmos.DrawRay(tile.transform.position, dir.normalized);
+                    Gizmos.DrawRay(tile.transform.position, dir);
                 }
             }
         Gizmos.color = Color.yellow;
         DrawOctagon(tiles[x, y].transform.position);
+
+        Gizmos.color = Color.green;
+        MarkNeighbors();
+
+        Gizmos.color = Color.cyan;
+        foreach (var item in searchedTiles) {
+            Gizmos.DrawSphere(item.transform.position - Vector3.back, .2f);
+        }
     }
     void DrawOctagon(Vector2 pos) {
         var f = (13f / 16f) * Mathf.PI * 2;
@@ -76,7 +91,37 @@ public class OCT_Grid : MonoBehaviour
         }
     }
 
-    /*List<OCT_Tile> FloodFrom(int x, int y) {
-         
-    }*/
+    void MarkNeighbors() {
+        foreach (var item in GetNeighbors(tiles[x,y])) {
+            Gizmos.DrawSphere(item.transform.position, .3f);
+        }
+    }
+
+    List<OCT_Tile> GetNeighbors(OCT_Tile tile) {
+        List<OCT_Tile> neighbors = new List<OCT_Tile>();
+        foreach (Flags val in Enum.GetValues(typeof(Flags))) {
+            if (tile.flags.HasFlag(val)) {
+                int x = tile.x + (int)val.Dir()[0].x;
+                int y = tile.y + (int)val.Dir()[0].y;
+                if (
+                    x >= 0 && x < sizeX &&
+                    y >= 0 && y < sizeY &&
+                    tiles[x, y].flags.HasFlag(val.GetOpposites())
+                    )
+                    neighbors.Add(tiles[x, y]);
+            }
+        }
+        return neighbors;
+    }
+
+    List<OCT_Tile> searchedTiles = new List<OCT_Tile>();
+    void Flood(OCT_Tile tile) {
+        searchedTiles.Add(tile);
+        foreach (var item in GetNeighbors(tile)) {
+            
+            if (!searchedTiles.Contains(item)) {
+                Flood(item);
+            }
+        }
+    }
 }
