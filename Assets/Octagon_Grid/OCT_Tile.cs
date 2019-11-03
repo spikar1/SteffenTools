@@ -12,9 +12,7 @@ public class OCT_Tile : MonoBehaviour
 
     public int x, y;
 
-    void Start()
-    {
-
+    void Start() {
         /*for (int i = 0; i < 8; i++) {
             if(UnityEngine.Random.value >= .8f) {
                 print((Flags)(1 << i));
@@ -22,14 +20,18 @@ public class OCT_Tile : MonoBehaviour
             }
         }*/
 
-        for (int i = 0; i < UnityEngine.Random.Range(2,5); i++) {
-            Debug.Log(flags);   
+        //InitializeTile();
+
+    }
+
+    private void InitializeTile() {
+        for (int i = 0; i < UnityEngine.Random.Range(2, 5); i++) {
+            Debug.Log(flags);
             var j = UnityEngine.Random.Range(0, 8);
             var v = (1 << j);
             Debug.Log("j = " + j + " - v = " + v + " - flag = " + (Flags)v);
             flags |= (Flags)(v);
         }
-
     }
 
     private void Update() {
@@ -115,6 +117,49 @@ public static class FlagExtensions
                 break;
         }
         return opposites;
+    }
+
+    public static Flags RotateCCW(this Flags flags) {
+        var b = false;
+        if (flags.HasFlag(Flags.u))
+            b = true;
+        flags = (Flags)((int)flags >> 1);
+
+        if (b) {
+            flags |= Flags.ul;
+        }
+        return flags;
+    }
+    
+    public static Flags RotateCW(this Flags flags) {
+        flags = (Flags)((int)flags << 1);
+        if ((int)flags > 255) {
+            flags = (Flags)((int)flags - 256);
+            flags |= (Flags)1;
+        }
+        return flags;
+    }
+
+    public static Flags FromDirection(this Vector3 dir) {
+        if (dir.x == 0 && dir.y == 1)
+            return Flags.u;
+        if (dir.x == 1 && dir.y == 1)
+            return Flags.ur;
+        if (dir.x == 1 && dir.y == 0)
+            return Flags.r;
+        if (dir.x == 1 && dir.y == -1)
+            return Flags.dr;
+
+        if (dir.x == 0 && dir.y == -1)
+            return Flags.d;
+        if (dir.x == -1 && dir.y == -1)
+            return Flags.dl;
+        if (dir.x == -1 && dir.y == 0)
+            return Flags.l;
+        if (dir.x == -1 && dir.y == 1)
+            return Flags.ul;
+
+        return 0;
     }
 }
 
