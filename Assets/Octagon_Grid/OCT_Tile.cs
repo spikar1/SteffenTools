@@ -12,18 +12,6 @@ public class OCT_Tile : MonoBehaviour
 
     public int x, y;
 
-    void Start() {
-        /*for (int i = 0; i < 8; i++) {
-            if(UnityEngine.Random.value >= .8f) {
-                print((Flags)(1 << i));
-                flags |= (Flags)(1 << i);
-            }
-        }*/
-
-        //InitializeTile();
-
-    }
-
     private void InitializeTile() {
         for (int i = 0; i < UnityEngine.Random.Range(2, 5); i++) {
             Debug.Log(flags);
@@ -88,6 +76,7 @@ public static class FlagExtensions
         return dir;
     }
 
+    //TODO: Could this be done more streamlined?
     public static Flags GetOpposites(this Flags flags) {
         Flags opposites = new Flags();
         switch (flags) {
@@ -140,6 +129,7 @@ public static class FlagExtensions
         return flags;
     }
 
+    // TODO: Highly unsafe code, should be proximated!
     public static Flags FromDirection(this Vector3 dir) {
         if (dir.x == 0 && dir.y == 1)
             return Flags.u;

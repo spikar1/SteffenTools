@@ -206,6 +206,9 @@ public class OCT_Grid : MonoBehaviour
             return null;
     }
     
+    
+    // TODO: Clean up this code (And optimalize)
+    // TODO: make normal void function
     List<OCT_Tile> checkedTiles = new List<OCT_Tile>();
     IEnumerator MakePath(OCT_Tile fromTile) {
         List<OCT_Tile> tilesToCheck = new List<OCT_Tile>();
@@ -249,7 +252,7 @@ public class OCT_Grid : MonoBehaviour
             yield return null;
             var newTile = tilesToCheck[UnityEngine.Random.Range(0, tilesToCheck.Count - 1)];
 
-            //int randSeed = 0;
+            // TODO: This is messy....
             int failsafe = 0;
             while (!GetAdjacent(newTile).Contains(tile) && failsafe < 1000) {
                 //UnityEngine.Random.InitState(randSeed);
