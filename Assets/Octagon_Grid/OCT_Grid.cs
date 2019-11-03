@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class OCT_Grid : MonoBehaviour
 {
+    internal static bool isTurning = false;
+
+
     public OCT_Tile[,] tiles;
     public int sizeX, sizeY;
     public OCT_Tile tilePrefab;
@@ -28,6 +31,8 @@ public class OCT_Grid : MonoBehaviour
     }
 
     private void Update() {
+        if (isTurning)
+            return;
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             MoveCursor(0,1);
         if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
@@ -57,7 +62,7 @@ public class OCT_Grid : MonoBehaviour
             RandomizeAll();
         }
         if (Input.GetKeyDown(KeyCode.X)) {
-            AddRandomSprockets(50);
+            AddRandomSprockets(10);
         }
 
     }
@@ -77,6 +82,7 @@ public class OCT_Grid : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
+        Gizmos.DrawWireCube(new Vector3(sizeX / 2 - .5f, sizeY / 2 - .5f, 0), new Vector3(sizeX, sizeY, 0));
         if (tiles == null)
             return;
         Gizmos.color = Color.white;
@@ -97,6 +103,7 @@ public class OCT_Grid : MonoBehaviour
         foreach (var item in searchedTiles) {
             Gizmos.DrawSphere(item.transform.position - Vector3.back, .13f);
         }
+
 
         //Debug
         Gizmos.color = Color.red;
@@ -210,6 +217,7 @@ public class OCT_Grid : MonoBehaviour
     // TODO: Clean up this code (And optimalize)
     // TODO: make normal void function
     List<OCT_Tile> checkedTiles = new List<OCT_Tile>();
+
     IEnumerator MakePath(OCT_Tile fromTile) {
         List<OCT_Tile> tilesToCheck = new List<OCT_Tile>();
         checkedTiles.Clear();

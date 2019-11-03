@@ -11,6 +11,7 @@ public class OCT_Tile : MonoBehaviour
     public Flags flags = new Flags();
 
     public int x, y;
+    private float speed = 10;
 
     private void InitializeTile() {
         for (int i = 0; i < UnityEngine.Random.Range(2, 5); i++) {
@@ -22,31 +23,97 @@ public class OCT_Tile : MonoBehaviour
         }
     }
 
-    private void Update() {
-        
+    public MeshRenderer[] sprockets;
+    private void LateUpdate() {
+        if (OCT_Grid.isTurning)
+            return;
+
+        UpdateLooks();
+
+    }
+    
+
+    void UpdateLooks() {
+        foreach (var item in sprockets) {
+            item.enabled = false;
+        }
+
+        if (flags.HasFlag(Flags.u))
+            sprockets[0].enabled = true;
+        if (flags.HasFlag(Flags.ur))
+            sprockets[1].enabled = true;
+        if (flags.HasFlag(Flags.r))
+            sprockets[2].enabled = true;
+        if (flags.HasFlag(Flags.dr))
+            sprockets[3].enabled = true;
+        if (flags.HasFlag(Flags.d))
+            sprockets[4].enabled = true;
+        if (flags.HasFlag(Flags.dl))
+            sprockets[5].enabled = true;
+        if (flags.HasFlag(Flags.l))
+            sprockets[6].enabled = true;
+        if (flags.HasFlag(Flags.ul))
+            sprockets[7].enabled = true;
     }
 
     [ContextMenu("Rotate CCW")]
     public void RotateCCW() {
+        OCT_Grid.isTurning = true;
+        StartCoroutine(RotateCCWCoroutine());
+    }
+    IEnumerator RotateCCWCoroutine() {
+        float t  = 0;
+        transform.rotation = Quaternion.identity;
+        var startRot = transform.rotation;
+        var endRot = Quaternion.AngleAxis(45, Vector3.forward);
+        while (t < 1) {
+            yield return null;
+            transform.rotation = Quaternion.Slerp(startRot, endRot, t);
+            t += Time.deltaTime * speed;
+        }
+        transform.rotation = endRot;
         var b = false;
         if (flags.HasFlag(Flags.u))
             b = true;
         flags = (Flags)((int)flags >> 1);
 
-        if (b) {  
+        if (b) {
             flags |= Flags.ul;
         }
+
+        transform.rotation = Quaternion.identity;
+        UpdateLooks();
+        OCT_Grid.isTurning = false;
     }
+
     [ContextMenu("Rotate CW")]
     public void RotateCW() {
+        StartCoroutine(RotateCWCoroutine());
+
+    }
+    IEnumerator RotateCWCoroutine() {
+        float t = 0;
+        transform.rotation = Quaternion.identity;
+        var startRot = transform.rotation;
+        var endRot = Quaternion.AngleAxis(-45, Vector3.forward);
+        while (t <= 1) {
+            yield return null;
+            transform.rotation = Quaternion.Lerp(startRot, endRot, t);
+            t += Time.deltaTime * speed;
+        }
+        transform.rotation = endRot;
         flags = (Flags)((int)flags << 1);
-        if((int)flags > 255) {
+        if ((int)flags > 255) {
             flags = (Flags)((int)flags - 256);
             flags |= (Flags)1;
         }
 
+
+        transform.rotation = Quaternion.identity;
+        UpdateLooks();
+        OCT_Grid.isTurning = false;
     }
-    
+
 
 }
 
