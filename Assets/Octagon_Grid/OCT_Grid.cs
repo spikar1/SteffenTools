@@ -28,6 +28,7 @@ public class OCT_Grid : MonoBehaviour
                 tile.transform.parent = transform;
             }
         }
+
     }
 
     private void Update() {
@@ -101,7 +102,7 @@ public class OCT_Grid : MonoBehaviour
 
         Gizmos.color = Color.cyan * .5f;
         foreach (var item in searchedTiles) {
-            Gizmos.DrawSphere(item.transform.position - Vector3.back, .13f);
+            Gizmos.DrawSphere(item.transform.position + Vector3.back * .2f, .13f);
         }
 
 
