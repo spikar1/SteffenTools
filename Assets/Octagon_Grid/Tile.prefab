@@ -505,6 +505,8 @@ MonoBehaviour:
   flags: 0
   x: 0
   y: 0
+  turnable: 1
+  backgroundRenderer: {fileID: 352140170800138189}
   sprockets:
   - {fileID: 5972199951991910755}
   - {fileID: 8966443523923044129}

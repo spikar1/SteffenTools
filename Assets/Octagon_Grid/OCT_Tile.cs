@@ -13,6 +13,10 @@ public class OCT_Tile : MonoBehaviour
     public int x, y;
     private float speed = 10;
 
+    public bool turnable = true;
+
+    public SpriteRenderer backgroundRenderer;
+
     private void InitializeTile() {
         for (int i = 0; i < UnityEngine.Random.Range(2, 5); i++) {
             Debug.Log(flags);
@@ -54,10 +58,17 @@ public class OCT_Tile : MonoBehaviour
             sprockets[6].enabled = true;
         if (flags.HasFlag(Flags.ul))
             sprockets[7].enabled = true;
+
+        if (turnable)
+            backgroundRenderer.color = new Color(54f/255f, 87f/255f, 94f/255f);
+        else
+            backgroundRenderer.color = new Color(.7f, .7f, .7f);
     }
 
     [ContextMenu("Rotate CCW")]
     public void RotateCCW() {
+        if (!turnable)
+            return;
         OCT_Grid.isTurning = true;
         StartCoroutine(RotateCCWCoroutine());
     }
@@ -88,6 +99,9 @@ public class OCT_Tile : MonoBehaviour
 
     [ContextMenu("Rotate CW")]
     public void RotateCW() {
+        if (!turnable)
+            return;
+        OCT_Grid.isTurning = true;
         StartCoroutine(RotateCWCoroutine());
 
     }

@@ -26,6 +26,7 @@ public class OCT_Grid : MonoBehaviour
                 tile.y = y;
                 tile.transform.position = new Vector3(x, y);
                 tile.transform.parent = transform;
+                tile.turnable = UnityEngine.Random.value > .35f ? true : false;
             }
         }
 
@@ -70,7 +71,9 @@ public class OCT_Grid : MonoBehaviour
 
     private void AddRandomSprockets(int count) {
         for (int i = 0; i < count; i++) {
-            tiles[UnityEngine.Random.Range(0, sizeX), UnityEngine.Random.Range(0, sizeY)].flags |= (Flags)(1 << UnityEngine.Random.Range(0, 8));
+            var tile = tiles[UnityEngine.Random.Range(0, sizeX), UnityEngine.Random.Range(0, sizeY)];
+            if(tile.turnable)
+                tile.flags |= (Flags)(1 << UnityEngine.Random.Range(0, 8));
         }
     }
 
@@ -292,12 +295,14 @@ public class OCT_Grid : MonoBehaviour
     }
 
     void RandomizeAll() {
-        foreach (var item in tiles) {
-            RandomizeTile(item);
+        foreach (var tile in tiles) {
+            RandomizeTile(tile);
         }
     }
 
     void RandomizeTile(OCT_Tile tile) {
+        if (!tile.turnable)
+            return;
         for (int i = 0; i < UnityEngine.Random.Range(0, 8); i++) {
 
             tile.flags = tile.flags.RotateCW();
