@@ -26,20 +26,20 @@ public class TimelineBattleTest : MonoBehaviour
         {
             for (int i = 0; i < timelineObjects.Count; i++)
             {
-                var to = timelineObjects[i];
-                if (currentTime > to.start + to.length)
+                var timelineObject = timelineObjects[i];
+                if (currentTime > timelineObject.start + timelineObject.length)
                 {
-                    to.avatar.busy = false;
-                    timelineObjects.Remove(to);
+                    timelineObject.avatar.hasQueuedAction = false;
+                    timelineObjects.Remove(timelineObject);
                 }
             }
             for (int i = 0; i < avatars.Count; i++)
             {
                 var avatar = avatars[i];
 
-                if (!avatar.busy)
+                if (!avatar.hasQueuedAction)
                 {
-                    avatar.busy = true;
+                    avatar.hasQueuedAction = true;
                     yield return StartCoroutine(SelectAction(avatar));
                 }
             }
@@ -67,10 +67,10 @@ public class TimelineBattleTest : MonoBehaviour
         for (int i = 0; i < timelineObjects.Count; i++)
         {
             var to = timelineObjects[i];
-            var pos = new Vector2(to.start + to.length / 2, i - Height / 2 + .5f);
+            var ChargePos = new Vector2(to.start + to.length / 2, i - Height / 2 + .5f);
             var size = new Vector2(to.length, 1);
             G.color = to.avatar.color * .8f;
-            G.DrawCube(pos, size);
+            G.DrawCube(ChargePos, size);
             
         }
 

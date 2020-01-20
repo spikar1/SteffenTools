@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimelineAvatar : MonoBehaviour
 {
-    public bool busy;
+    public bool hasQueuedAction;
     public List<Action> actions = new List<Action>() { new Action("Attack", 1) };
     public Color color;
 }
@@ -14,6 +14,7 @@ public class Action
 {
     public string name;
     public float length;
+    public float charge;
 
     public Action(string name, float length)
     {
