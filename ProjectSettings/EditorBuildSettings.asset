@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Octagon_Grid/Octagon.unity
+    guid: d53f79f900780cb4cbeb7f1c7a399c8c
   m_configObjects: {}
