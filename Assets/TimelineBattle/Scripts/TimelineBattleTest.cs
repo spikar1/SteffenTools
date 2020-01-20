@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using TO = TimelineObject;
-using C = UnityEngine.Color;
-using G = UnityEngine.Gizmos;
-using TA = TimelineAvatar;
+
 
 
 public class TimelineBattleTest : MonoBehaviour
 {
     public ActionSelector actionSelector;
-    public List<TO> timelineObjects = new List<TO>();
+    public List<TimelineObject> timelineObjects = new List<TimelineObject>();
 
-    public List<TA> avatars = new List<TA>();
+    public List<TimelineAvatar> avatars = new List<TimelineAvatar>();
 
     public float width = 10;
     float Height => avatars.Count;
@@ -49,33 +46,32 @@ public class TimelineBattleTest : MonoBehaviour
         }
     }
 
-    IEnumerator SelectAction(TA avatar)
+    IEnumerator SelectAction(TimelineAvatar avatar)
     {
         actionSelector.ShowSelection(avatar);
         while (!actionSelector.actionSelected)
-        {
             yield return null;
-        }
-        timelineObjects.Add(new TO(avatar, actionSelector.selectedAction, currentTime));
+        
+        //timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, currentTime));
     }
 
     private void OnDrawGizmos()
     {
-        G.color = C.white * .7f;
-        G.DrawWireCube(transform.position + Vector3.right * width / 2, new Vector3(width, Height));
+        Gizmos.color = Color.white * .7f;
+        Gizmos.DrawWireCube(transform.position + Vector3.right * width / 2, new Vector3(width, Height));
 
         for (int i = 0; i < timelineObjects.Count; i++)
         {
             var to = timelineObjects[i];
             var ChargePos = new Vector2(to.start + to.length / 2, i - Height / 2 + .5f);
             var size = new Vector2(to.length, 1);
-            G.color = to.avatar.color * .8f;
-            G.DrawCube(ChargePos, size);
+            Gizmos.color = to.avatar.color * .8f;
+            Gizmos.DrawCube(ChargePos, size);
             
         }
 
-        G.color = C.white;
-        G.DrawLine(new Vector3(currentTime, Height / 2), new Vector3(currentTime, -Height / 2));
+        Gizmos.color = Color.white;
+        Gizmos.DrawLine(new Vector3(currentTime, Height / 2), new Vector3(currentTime, -Height / 2));
     }
 }
 
@@ -85,7 +81,7 @@ public class TimelineObject
     public float length;
     public float start;
     public Action action;
-    public TA avatar;
+    public TimelineAvatar avatar;
 
     public TimelineObject(TimelineAvatar avatar, Action action, float startTime)
     {

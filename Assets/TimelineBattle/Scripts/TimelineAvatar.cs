@@ -18,11 +18,13 @@ public class Action
 {
     public string name;
     public float length;
+    public float coolDown;
     public float charge;
 
-    public Action(string name, float length)
+    public Action(string name, float length, float coolDown = 0)
     {
         this.name = name;
         this.length = length;
+        this.coolDown = coolDown;
     }
 }

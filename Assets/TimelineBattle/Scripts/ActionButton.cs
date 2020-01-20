@@ -17,10 +17,10 @@ public class ActionButton : MonoBehaviour
         transform.GetChild(0).GetComponent<Text>().text = name;
     }
 
-    public void OnClicked()
+    /*public void OnClicked()
     {
         actionSelector.selectedAction = action;
         actionSelector.actionSelected = true;
         actionSelector.RemoveButtons();
-    }
+    }*/
 }
