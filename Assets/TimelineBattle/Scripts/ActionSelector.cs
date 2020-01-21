@@ -11,28 +11,33 @@ public class ActionSelector : MonoBehaviour
     public List<GameObject> buttons;
     public bool actionSelected;
     //public Action selectedAction;
-/*
-    private void Start() {
-        PlanAction();
-    }
 
     async public void PlanAction(TimelineAvatar avatar) {
-        var actionTask = SelectActionTask(avatar);
+        Task<Action> action = SelectAction(avatar);
+        Task<TimelineAvatar> targetAvatar = selectTarget(avatar);
+
         
-
-
-        Action selectedAction = await SelectAction(avatar);
-        await selectTarget();
     }
 
     async Task<Action> SelectAction(TimelineAvatar avatar) {
-        ShowSelection(avatar);
-        await 
+        RemoveButtons();
 
     }
     async Task selectTarget() {
+        var availableTargets = GameObject.FindObjectsOfType<TimelineAvatar>();
+
+        for (int i = 0; i < availableTargets.Length; i++) {
+            var avatar = availableTargets[i];
+            print(avatar.gameObject.name + " is number " + i);
+        }
+        Task<TimelineAvatar> selectedAvatar = SelectionInput(availableTargets);
         
-    }*/
+    }
+
+    TimelineAvatar SelectionInput(TimelineAvatar[] availableAvatars) {
+
+
+    }
 
     public void ShowSelection(TimelineAvatar avatar)
     {
