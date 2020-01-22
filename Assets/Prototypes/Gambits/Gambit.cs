@@ -6,11 +6,14 @@ public class Gambit : MonoBehaviour
 {
     int a;
     int b;
+
+
     private void Update() {
         a++;
         if(a > 100) {
             print("a wins");
         }
+        
     }
     private void FixedUpdate() {
         b++;
