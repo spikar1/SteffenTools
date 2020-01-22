@@ -12,7 +12,7 @@ public class ActionSelector : MonoBehaviour
     public bool actionSelected;
     //public Action selectedAction;
 
-    async public void PlanAction(TimelineAvatar avatar) {
+   /* async public void PlanAction(TimelineAvatar avatar) {
         Task<Action> action = SelectAction(avatar);
         Task<TimelineAvatar> targetAvatar = selectTarget(avatar);
 
@@ -37,7 +37,7 @@ public class ActionSelector : MonoBehaviour
     TimelineAvatar SelectionInput(TimelineAvatar[] availableAvatars) {
 
 
-    }
+    }*/
 
     public void ShowSelection(TimelineAvatar avatar)
     {
@@ -55,6 +55,7 @@ public class ActionSelector : MonoBehaviour
             Button button = Instantiate(buttonPrefab, transform).GetComponent<Button>();
             var a = action;
             button.onClick.AddListener(delegate { SetAction(action); });
+            button.transform.GetChild(0).GetComponent<Text>().text = action.name;
 
             buttons.Add(button.gameObject);
         }
