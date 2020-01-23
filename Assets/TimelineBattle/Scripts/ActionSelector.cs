@@ -33,6 +33,7 @@ public class ActionSelector : MonoBehaviour
         print(action.name);
         actionSelected = true;
         selectedAction = action;
+        RemoveButtons();
     }
 
     public void RemoveButtons()

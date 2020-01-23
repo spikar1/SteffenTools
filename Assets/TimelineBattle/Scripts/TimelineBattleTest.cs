@@ -8,6 +8,7 @@ using UnityEngine;
 public class TimelineBattleTest : MonoBehaviour
 {
     public ActionSelector actionSelector;
+    public TargetSelector targetSelector;
     public List<TimelineObject> timelineObjects = new List<TimelineObject>();
 
     public List<TimelineAvatar> avatars = new List<TimelineAvatar>();
@@ -16,6 +17,7 @@ public class TimelineBattleTest : MonoBehaviour
     float Height => avatars.Count;
 
     public float currentTime = 0;
+    private Transform currentAvatar;
 
     IEnumerator Start()
     {
@@ -46,13 +48,42 @@ public class TimelineBattleTest : MonoBehaviour
         }
     }
 
+    enum SelectState { Action, Target, Path, Done}
     IEnumerator SelectAction(TimelineAvatar avatar)
     {
-        actionSelector.ShowSelection(avatar);
-        while (!actionSelector.actionSelected)
+        var actionIsReady = false;
+        var selectionState = SelectState.Action;
+        currentAvatar = avatar.transform;
+        while (!actionIsReady)
+        {
+            switch (selectionState)
+            {
+                case SelectState.Action:
+                    actionSelector.ShowSelection(avatar);
+                    while (!actionSelector.actionSelected)
+                        yield return null;
+                    selectionState = SelectState.Target;
+                    break;
+                case SelectState.Target:
+                    targetSelector.ShowTargets(avatar);
+                    while (!targetSelector.selectedTarget)
+                        yield return null;
+                    
+                    selectionState = SelectState.Done;
+                    break;
+                case SelectState.Path:
+                    //TODO: Make path function, Component and object
+                    break;
+                case SelectState.Done:
+                    actionIsReady = true;
+                    break;
+                default:
+                    break;
+            }
             yield return null;
-        
-        timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, currentTime));
+        }
+        currentAvatar = null;
+        timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, targetSelector.selectedTarget, currentTime));
     }
 
     private void OnDrawGizmos()
@@ -72,6 +103,9 @@ public class TimelineBattleTest : MonoBehaviour
 
         Gizmos.color = Color.white;
         Gizmos.DrawLine(new Vector3(currentTime, Height / 2), new Vector3(currentTime, -Height / 2));
+
+        if(currentAvatar)
+            Gizmos.DrawWireSphere(currentAvatar.position + Vector3.forward * 2, .6f);
     }
 }
 
@@ -83,7 +117,7 @@ public class TimelineObject
     public Action action;
     public TimelineAvatar avatar;
 
-    public TimelineObject(TimelineAvatar avatar, Action action, float startTime)
+    public TimelineObject(TimelineAvatar avatar, Action action, TimelineAvatar selectedTarget, float startTime)
     {
         this.action = action;
         this.length = action.length;

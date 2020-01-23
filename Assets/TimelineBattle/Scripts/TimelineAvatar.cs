@@ -8,6 +8,8 @@ public class TimelineAvatar : MonoBehaviour
     public List<Action> actions = new List<Action>() { new Action("Attack", 1) };
     public Color color;
 
+    public float MoveSpeed = 5;
+
     private void Awake() {
         GetComponent<MeshRenderer>().material.color = color;
     }
