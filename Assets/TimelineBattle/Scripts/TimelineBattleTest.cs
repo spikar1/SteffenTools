@@ -73,6 +73,7 @@ public class TimelineBattleTest : MonoBehaviour
                     break;
                 case SelectState.Path:
                     //TODO: Make path function, Component and object
+
                     break;
                 case SelectState.Done:
                     actionIsReady = true;
@@ -83,6 +84,7 @@ public class TimelineBattleTest : MonoBehaviour
             yield return null;
         }
         currentAvatar = null;
+
         timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, targetSelector.selectedTarget, currentTime));
     }
 
