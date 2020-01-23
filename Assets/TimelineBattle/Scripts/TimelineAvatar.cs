@@ -20,11 +20,13 @@ public class Action
     public float length;
     public float coolDown;
     public float charge;
+    public float range;
 
-    public Action(string name, float length, float coolDown = 0)
+    public Action(string name, float length, float coolDown = 0, float range = 0)
     {
         this.name = name;
         this.length = length;
         this.coolDown = coolDown;
+        this.range = range;
     }
 }

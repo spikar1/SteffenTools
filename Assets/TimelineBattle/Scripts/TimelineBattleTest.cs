@@ -52,7 +52,7 @@ public class TimelineBattleTest : MonoBehaviour
         while (!actionSelector.actionSelected)
             yield return null;
         
-        //timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, currentTime));
+        timelineObjects.Add(new TimelineObject(avatar, actionSelector.selectedAction, currentTime));
     }
 
     private void OnDrawGizmos()

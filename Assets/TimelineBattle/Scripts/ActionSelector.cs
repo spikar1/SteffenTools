@@ -10,34 +10,7 @@ public class ActionSelector : MonoBehaviour
     public GameObject buttonPrefab;
     public List<GameObject> buttons;
     public bool actionSelected;
-    //public Action selectedAction;
-
-   /* async public void PlanAction(TimelineAvatar avatar) {
-        Task<Action> action = SelectAction(avatar);
-        Task<TimelineAvatar> targetAvatar = selectTarget(avatar);
-
-        
-    }
-
-    async Task<Action> SelectAction(TimelineAvatar avatar) {
-        RemoveButtons();
-
-    }
-    async Task selectTarget() {
-        var availableTargets = GameObject.FindObjectsOfType<TimelineAvatar>();
-
-        for (int i = 0; i < availableTargets.Length; i++) {
-            var avatar = availableTargets[i];
-            print(avatar.gameObject.name + " is number " + i);
-        }
-        Task<TimelineAvatar> selectedAvatar = SelectionInput(availableTargets);
-        
-    }
-
-    TimelineAvatar SelectionInput(TimelineAvatar[] availableAvatars) {
-
-
-    }*/
+    public Action selectedAction;
 
     public void ShowSelection(TimelineAvatar avatar)
     {
@@ -46,11 +19,6 @@ public class ActionSelector : MonoBehaviour
 
         for (int i = 0; i < avatar.actions.Count; i++)
         {
-            /*var action = avatar.actions[i];
-            ActionButton button = Instantiate(buttonPrefab, transform).GetComponent<ActionButton>();
-            button.Initialize(action, this);
-            buttons.Add(button.gameObject);*/
-
             var action = avatar.actions[i];
             Button button = Instantiate(buttonPrefab, transform).GetComponent<Button>();
             var a = action;
@@ -63,6 +31,8 @@ public class ActionSelector : MonoBehaviour
 
     void SetAction(Action action) {
         print(action.name);
+        actionSelected = true;
+        selectedAction = action;
     }
 
     public void RemoveButtons()
