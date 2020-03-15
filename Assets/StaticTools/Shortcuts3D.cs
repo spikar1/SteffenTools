@@ -33,7 +33,7 @@ namespace SteffenTools.Shortcuts.For3D {
                 trans.position = hit.point + Vector3.up * offset;
             }
             else if (hit2D = Physics2D.Raycast(trans.position, Vector2.down, 100)) {
-                trans.position = hit2D.point + Vector2.up * offset;
+                trans.position = (Vector3)hit2D.point + Vector3.up * offset + Vector3.forward * trans.position.z;
             }
             EditorUtility.SetDirty(trans);
         }
