@@ -69,5 +69,13 @@ namespace SteffenTools.Shortcuts.General {
                 EditorUtility.SetDirty(selectedTransform);
             }
         }
+        [MenuItem("SteffenTools/Shortcuts/Reset Transform #Q")]
+        public static void ResetTransform() {
+            ResetPosition();
+            ResetRotation();
+            ResetScale();
+        }
+
+
     }
 }
