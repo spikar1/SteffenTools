@@ -4,9 +4,15 @@ using UnityEngine;
 using UnityEditor;
 
 namespace SteffenTools.Shortcuts.General {
+    public class Shortcuts {
+        // % == ctrl
+        // # == Shift
+        // & == alt
+        // _ == nothing
 
-    public class Shortcuts : MonoBehaviour {
-        [MenuItem("SteffenTools/Shortcuts/Reset Position #W")]
+
+
+        [MenuItem("SteffenTools/Shortcuts/Reset Position    #W")]
         public static void ResetPosition() {
             var selectedTransforms = Selection.transforms;
 
@@ -18,9 +24,8 @@ namespace SteffenTools.Shortcuts.General {
 
                 EditorUtility.SetDirty(selectedTransform);
             }
-
         }
-        [MenuItem("SteffenTools/Shortcuts/Reset Rotation #E")]
+        [MenuItem("SteffenTools/Shortcuts/Reset Rotation    #E")]
         public static void ResetRotation() {
             var selectedTransforms = Selection.transforms;
 
@@ -32,7 +37,7 @@ namespace SteffenTools.Shortcuts.General {
                 EditorUtility.SetDirty(selectedTransform);
             }
         }
-        [MenuItem("SteffenTools/Shortcuts/Reset Scale #R")]
+        [MenuItem("SteffenTools/Shortcuts/Reset Scale       #R")]
         public static void ResetScale() {
             var selectedTransforms = Selection.transforms;
 
@@ -44,13 +49,25 @@ namespace SteffenTools.Shortcuts.General {
                 EditorUtility.SetDirty(selectedTransform);
             }
         }
-        [MenuItem("SteffenTools/Shortcuts/Reset Transform #Q")]
+        [MenuItem("SteffenTools/Shortcuts/Reset Transform   #Q")]
         public static void ResetTransform() {
             ResetPosition();
             ResetRotation();
             ResetScale();
         }
 
+        [MenuItem("SteffenTools/Shortcuts/SnapToGrid        %W")]
+        public static void SnapToGrid() {
+            var selectedTransforms = Selection.transforms;
 
+            //iterate through all selected objects and reset their position
+            foreach (var selectedTransform in selectedTransforms) {
+                Undo.RecordObject(selectedTransform, "ResetPosition of " + selectedTransform.name);
+                var originalPosition = selectedTransform.position;
+                selectedTransform.position = new Vector3(Mathf.Round(originalPosition.x), Mathf.Round(originalPosition.y), Mathf.Round(originalPosition.z));
+
+                EditorUtility.SetDirty(selectedTransform);
+            }
+        }
     }
 }
