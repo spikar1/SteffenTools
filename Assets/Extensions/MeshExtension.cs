@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
+namespace SteffenTools{
 public static class MeshExtension {
     public static Mesh Copy(this Mesh mesh, string newName = null) {
         var copy = Object.Instantiate(mesh);
@@ -107,4 +108,5 @@ public static class Physics2DHelper {
         var yDist = Vector2.SqrMagnitude(yPos - fromPoint);
         return xDist.CompareTo(yDist);
     }
+}
 }
