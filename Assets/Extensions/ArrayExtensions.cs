@@ -1,11 +1,13 @@
-public static class ArrayExtensions {
+namespace SteffenTools{
+    public static class ArrayExtensions {
 
-    public static bool Contains <T>(this T[,] array, T item) {
-        foreach (var i in array) {
-            if(i.Equals(item)) {
-                return true;
+        public static bool Contains <T>(this T[,] array, T item) {
+            foreach (var i in array) {
+                if(i.Equals(item)) {
+                    return true;
+                }
             }
+            return false;
         }
-        return false;
     }
 }
