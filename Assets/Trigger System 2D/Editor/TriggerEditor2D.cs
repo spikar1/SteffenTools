@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -20,6 +20,7 @@ namespace TriggerSystem2D {
             SerializedProperty propEnter = SO.FindProperty("eventEnter");
             SerializedProperty propExit = SO.FindProperty("eventExit");
             SerializedProperty propStay = SO.FindProperty("eventStay");
+            SerializedProperty propOptions = SO.FindProperty("options");
 
             Trigger2D trigger = target as Trigger2D;
 
@@ -37,6 +38,8 @@ namespace TriggerSystem2D {
             if (trigger.onTriggerStay = EditorGUILayout.Foldout(trigger.onTriggerStay, "On Trigger Stay")) {
                 EditorGUILayout.PropertyField(propStay);
             }
+            EditorGUILayout.PropertyField(propOptions);
+
             EditorGUI.EndChangeCheck();
             SO.ApplyModifiedProperties();
 
