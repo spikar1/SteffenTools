@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SteffenTools{
 public static class MoreGizmos {
 
     public static void DrawCircle(Vector3 origin, float radius, Color color) {
@@ -31,4 +32,5 @@ public static class MoreGizmos {
         }
         
     }
+}
 }
