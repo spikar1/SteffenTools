@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -73,21 +73,23 @@ namespace TriggerSystem2D {
                     }
                 }
             }
+            var orgMatrix = Gizmos.matrix;
+            Gizmos.matrix = transform.localToWorldMatrix;
             foreach (var col in GetComponents<Collider2D>()) {
                 if (!col.isTrigger || !col.enabled)
                     continue;
                 if (col.GetType() == typeof(BoxCollider2D)) {
                     BoxCollider2D bc = col as BoxCollider2D;
-                    Gizmos.DrawCube(transform.position + (Vector3)bc.offset.Multiply(transform.localScale), Vector3.Scale(transform.localScale, bc.size));
+                    Gizmos.DrawCube((Vector3)bc.offset, Vector3.Scale(Vector3.one, bc.size));
                 }
                 else if (col.GetType() == typeof(CircleCollider2D)) {
                     CircleCollider2D sc = col as CircleCollider2D;
                     Vector3 s = transform.localScale;
                     float maxScale = Mathf.Max(s.x, s.y, s.z);
-                    Gizmos.DrawSphere(transform.position + (Vector3)sc.offset, sc.radius * maxScale);
+                    Gizmos.DrawSphere((Vector3)sc.offset, sc.radius * maxScale);
                 }
             }
-
+            Gizmos.matrix = orgMatrix;
 
         }
 
