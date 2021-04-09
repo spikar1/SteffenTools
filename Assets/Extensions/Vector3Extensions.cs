@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace SteffenTools{
 static public class Vector3Extensions {
 
     static public Vector2 toVector2(this Vector3 _v3)
@@ -38,4 +39,5 @@ static public class Vector3Extensions {
 
         return vector3;
     }
+}
 }
