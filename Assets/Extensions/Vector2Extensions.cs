@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+namespace SteffenTools{
 public static class Vector2Extensions
 {
     public static Vector3 ToVector3(this Vector2 _v2, float z = 0)
@@ -15,4 +16,5 @@ public static class Vector2Extensions
         result.y = Mathf.Round(vector.y);
         return result;
     }
+}
 }
