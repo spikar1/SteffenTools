@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace SteffenTools{
 public static class Rigidbody2DExtension {
     public static void AddExplosionForce(this Rigidbody2D body, float explosionForce, Vector3 explosionPosition, float explosionRadius) {
         var dir = (body.transform.position - explosionPosition);
@@ -19,4 +20,5 @@ public static class Rigidbody2DExtension {
         Vector3 upliftForce = Vector2.up * explosionForce * upliftWearoff;
         body.AddForce(upliftForce);
     }
+}
 }
